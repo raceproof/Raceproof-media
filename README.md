@@ -2,7 +2,7 @@
 
 Public media host and template library for @raceproof.ai social posts. Buffer pulls post images from raw GitHub links pinned
 to a commit, so a scheduled post never changes under it:
-`https://raw.githubusercontent.com/raceproof/raceproof-media/<commit-sha>/<path>`
+`https://raw.githubusercontent.com/raceproof/Raceproof-media/<commit-sha>/<path>`
 
 Everything here becomes public as soon as it is pushed, a few days before it posts. Never commit anything private.
 
