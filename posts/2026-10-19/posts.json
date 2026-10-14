@@ -1,0 +1,100 @@
+{
+  "week": "2026-10-19",
+  "posts": [
+    {
+      "date": "2026-10-19",
+      "type": "research",
+      "title": "Research: Pacing (Dong & Li 2026)",
+      "slides": [
+        "mon-research-pacing-1.png",
+        "mon-research-pacing-2.png",
+        "mon-research-pacing-3.png",
+        "mon-research-pacing-4.png",
+        "mon-research-pacing-5.png",
+        "mon-research-pacing-6.png",
+        "mon-research-pacing-7.png"
+      ],
+      "caption": "Start a marathon more than 5% faster than your average pace, and 26.6% of runners hit the wall. Start near your average pace: 1.5%.\n\nDong and Li looked at the split times of 78,912 Boston Marathon finishers. Even pacing was the most common pattern (47.9%) and was linked to faster finishes. The authors suggest restraint in the early miles and structured pacing practice, especially for newer marathoners.\n\nLimits: this is observational, so even pacing may mark fitness rather than cause speed. Boston qualifiers only, on one point-to-point, net-downhill course, with no training or weather data.\n\nHow fast do you go out in the first 10K?\n\nSource: Dong Q, Li Z. Pacing strategy patterns and performance outcomes in marathon running. PLOS ONE, 2026. doi.org/10.1371/journal.pone.0352808\n\nSave this for your next build.\n\n#raceproof #marathontraining #marathonrunner #bostonmarathon #runningcommunity",
+      "altText": [
+        "Research post on pacing. Start more than 5% faster than your average pace: 26.6% hit the wall. Start near your average pace: 1.5%. Dong and Li 2026, PLOS ONE.",
+        "What they found: 47.9% ran an even pace. Strong positive splitters were 59.5 minutes slower on average than even pacers. 82.0% of sub-3:00 runners paced evenly, 19.6% of runners over 4:30.",
+        "Bar chart of how often runners hit the wall: 26.6% of those who started more than 5% faster than average pace, 1.5% of those who started near average pace. A link, not proof.",
+        "The study: 78,912 Boston Marathon finishers, 2015 to 2017, sorted into four pacing patterns: even 47.9%, mild positive 31.9%, strong positive 12.2%, variable 8.0%.",
+        "Two quotes from the authors recommending pacing discipline, restraint early in the race, and structured pacing practice for novice marathoners.",
+        "Our take, not a finding of the study: know your goal pace before race day by holding it in long runs on tired legs. Example card: Pacing, 3 goal-pace long runs done, Ready.",
+        "Source and thanks: Pacing strategy patterns and performance outcomes in marathon running, Qizheng Dong and Zaidong Li, PLOS ONE 2026, doi 10.1371/journal.pone.0352808. Save this for your next build."
+      ],
+      "flags": [
+        "Calendar hook said 'Start on pace: 1.5%'. The paper's comparison group is runners whose early pace was near their average, so the slide says 'Start near your average pace: 1.5%'.",
+        "Slide 5 quotes come from the paper's Discussion and Conclusion (read on journals.plos.org); the Research library row has no 'authors advise' text. No numbers taken from outside the library row."
+      ],
+      "buffer": {}
+    },
+    {
+      "date": "2026-10-21",
+      "type": "product",
+      "title": "Product: What Raceproof checks",
+      "slides": [
+        "wed-product-pillars-1.png",
+        "wed-product-pillars-2.png",
+        "wed-product-pillars-3.png",
+        "wed-product-pillars-4.png",
+        "wed-product-pillars-5.png",
+        "wed-product-pillars-6.png",
+        "wed-product-pillars-7.png",
+        "wed-product-pillars-8.png"
+      ],
+      "caption": "Your plan covers the miles. Raceproof checks the rest.\n\nSeven things race day will test: gut, hydration, heat, terrain, durability, pacing and taper. Five are automatic from your watch. Gut and hydration take a 15-second log after key sessions. Each one shows as Ready, Building or Gap against your race.\n\nRaceproof never writes or changes your plan. Coming spring 2027.\n\nJoin the waitlist. Link in bio.\n\n#raceproof #raceprep #endurancesports #marathontraining #ultrarunning",
+      "altText": [
+        "What Raceproof checks. Your plan covers the miles. We check the rest. Seven pillars: gut, hydration, heat, terrain, durability, pacing, taper. Coming spring 2027.",
+        "Gut, quick log: the carbs you've practiced vs what your race needs. Example: 55 of 80 g/h proven, Building.",
+        "Hydration, quick log: your sweat rate and sodium vs your race plan, from weigh-ins or an hDrop or lab sweat test. Example: no sweat rate yet, Gap.",
+        "Heat, automatic: sessions trained in heat vs your race forecast. Example: 9 runs above 80°F, Ready.",
+        "Terrain, automatic: climbing and descending vs your course. Example: longest descent trained 3,500 ft, Building.",
+        "Durability, automatic: heart rate and pace late in your long sessions. Example: HR drifts after 2:40, Building.",
+        "Pacing, automatic: goal pace held in training, and for how long. Example: 3 goal-pace long runs done, Ready.",
+        "Taper, automatic: training load and sleep in your final weeks. Example: sleep 7.4 h average, Building. Join the waitlist, link in bio."
+      ],
+      "flags": [
+        "Calendar asked for one slide per pillar; with a cover that is 8 slides (the brief's maximum), so the CTA sits on the Taper slide instead of a separate CTA slide."
+      ],
+      "buffer": {}
+    },
+    {
+      "date": "2026-10-23",
+      "type": "pain",
+      "title": "Pain: Gut (96% at a 100-miler)",
+      "slides": [
+        "fri-pain-gut-1.png",
+        "fri-pain-gut-2.png"
+      ],
+      "caption": "96% of runners at a 100-miler had at least one gut symptom. For 36% of the runners who dropped out, gut trouble was one of the reasons.\n\nMost symptoms were mild, and nausea was the one behind most gut-related drops. The fix starts in training: take your race fuel on every long run and build toward race-day carbs a little at a time.\n\nJoin the waitlist. Link in bio.\n\nSource: Stuempfle & Hoffman 2015, Journal of Sports Sciences (272 runners at the Western States 100, self-reported after the race).\n\n#raceproof #ultrarunning #100miler #guttraining #racefueling",
+      "altText": [
+        "96% of runners at a 100-miler had gut symptoms. For 36% of dropouts, it was a reason to stop. A grid of 100 dots with 96 filled orange. Any GI symptom, mostly mild, Western States 100. Source: Stuempfle and Hoffman 2015.",
+        "The fix: Gut, 55 of 80 g/h proven, Building. Take your race fuel on every long run. Add a little every week or two until race-day carbs feel normal. That's what Raceproof checks, every week."
+      ],
+      "flags": [
+        "Calendar lists this as a Single; built as a 2-slide carousel per the brief's pain-post rule.",
+        "Softened the hook from 'had stomach problems' to 'had gut symptoms' and labeled them 'mostly mild': the Research library notes the 96% counts any symptom, including mild gas and belching."
+      ],
+      "buffer": {}
+    },
+    {
+      "date": "2026-10-25",
+      "type": "waitlist",
+      "title": "Waitlist: Tell us your goal race",
+      "slides": [
+        "sun-waitlist-goal-race-1.png"
+      ],
+      "caption": "Tell us your goal race. It takes about 60 seconds.\n\nJoin the waitlist and tell us the race you're training for. The race-day plan is free for everyone, and Founding Athletes get 50% off their first year. No payment info.\n\nShare with a training partner. 3 friends get you a free race pass.\n\nTell us your goal race in the 60-second poll. Link in bio.\n\n#raceproof #raceprep #raceday #endurancesports #runningcommunity",
+      "altText": [
+        "Tell us your goal race. It takes 60 seconds. A waitlist form asking: Where should we send your founding price? Email and optional first name fields, a Continue button, about 60 seconds, no payment info. Free race-day plan for everyone. Founding Athletes get 50% off year one."
+      ],
+      "flags": [
+        "The calendar says to show the poll's first question. On raceproof.ai the first step asks 'Where should we send your founding price?' (email); the race question comes after. Check that this matches what you want to show."
+      ],
+      "buffer": {}
+    }
+  ],
+  "reels": []
+}
