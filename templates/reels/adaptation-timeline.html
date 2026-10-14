@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Adaptation timeline reel</title>
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<style>
+  html,body{margin:0;background:#F4F2ED}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#F4F2ED;color:#15171A;font-family:"Inter",sans-serif}
+  .disp{font-family:"Inter Display","Inter",sans-serif;font-weight:800;letter-spacing:-0.02em}
+  .mono{font-family:"JetBrains Mono",monospace}
+  .abs{position:absolute}
+  #hook,#close{left:60px;top:250px;width:960px;font-size:70px;line-height:76px}
+  #hook .l2{color:#B83C0B}
+  #close{opacity:0}
+  #closeSub{left:60px;top:410px;font-size:28px;color:#5B5F64;opacity:0}
+  .axis{top:470px;font-size:24px;color:#5B5F64;transform:translateX(-50%);white-space:nowrap}
+  .grid{top:508px;width:2px;height:972px;background:#E3DFD6;transform-origin:top}
+  #race{left:1018px;top:500px;width:0;height:980px;border-left:3px dashed #5B5F64;transform-origin:top}
+  .row{left:60px;width:960px;height:137px}
+  .row .name{position:absolute;left:0;top:0;font-size:38px;font-weight:600;line-height:44px}
+  .row .track{position:absolute;left:0;top:54px;width:960px;height:30px;border-radius:4px;background:#E6E2DA}
+  .row .band{position:absolute;top:0;height:30px;border-radius:4px;transform-origin:left}
+  .row .dot{position:absolute;top:-5px;width:40px;height:40px;border-radius:50%;transform:translateX(-50%) scale(0)}
+  .row .note{position:absolute;left:0;top:96px;font-size:28px;line-height:34px;color:#5B5F64;white-space:nowrap}
+  #ghost{position:absolute;top:0;height:30px;border-radius:4px;background:#B83C0B;opacity:0}
+  #strike{position:absolute;top:13px;height:4px;background:#15171A;transform-origin:left;transform:scaleX(0)}
+  #ghostNote{position:absolute;left:0;top:96px;font-size:28px;line-height:34px;color:#B83C0B;white-space:nowrap;opacity:0}
+  #end{inset:0;background:#F4F2ED;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:48px}
+  #end img{width:600px;height:auto}
+  #end .url{font-size:36px;color:#15171A;letter-spacing:0.02em}
+  #end .cta{font-size:48px;line-height:56px;font-weight:600;text-align:center;width:900px}
+  #logoStill{left:60px;top:176px;height:44px;display:none}
+</style>
+</head>
+<body>
+<div id="stage">
+  <img id="logoStill" class="abs" src="../../assets/brand/lockup.png" alt="">
+  <div id="hook" class="abs disp"><div class="l1">Heat training 20 weeks out</div><div class="l2">is wasted.</div></div>
+  <div id="close" class="abs disp"><div>Every adaptation</div><div>has its own window.</div></div>
+  <div id="closeSub" class="abs">General guidelines, not a prescription.</div>
+  <div id="axes"></div>
+  <div id="race" class="abs"></div>
+  <div id="rows"></div>
+  <div id="end" class="abs"><img src="../../assets/brand/lockup.png" alt="raceproof"><div class="cta">Save this for your next build.</div><div class="url mono">raceproof.ai</div></div>
+</div>
+<script>
+const X = w => 60 + (20 - w) * 48;            // weeks out -> x (20 weeks out at left, race at right)
+const C = { heat:'#B83C0B', gut:'#1F5FAF', down:'#A23B72', climb:'#A87408', pace:'#008A6C', taper:'#7A4BB0', sweat:'#5B5F64' };
+// rows in time order of when each window starts; bands: [kind, from, to] in weeks out, dots: ['dot', week]
+const ROWS = [
+  { name:'Climbing',   c:C.climb, note:'Builds slowly. Train it all block.',                       bands:[['build',16,0]] },
+  { name:'Sweat rate', c:C.sweat, note:'Measure early. Re-test in race-like heat.',                bands:[['dot',14],['dot',4]] },
+  { name:'Gut',        c:C.gut,   note:'Start 12 weeks out. Race carbs by week 4.',                bands:[['build',12,4],['keep',4,0]] },
+  { name:'Downhill',   c:C.down,  note:'Peak 5 to 3 weeks out. Last long descent 10 to 14 days out.', bands:[['build',12,1.5]] },
+  { name:'Pacing',     c:C.pace,  note:'Goal-pace work in the last 10 weeks.',                     bands:[['build',10,0]] },
+  { name:'Heat',       c:C.heat,  note:'Build 6 to 2 weeks out, then keep it.',                    bands:[['build',6,2],['keep',2,0]], heat:true },
+  { name:'Taper',      c:C.taper, note:'Final 2 to 3 weeks.',                                      bands:[['build',3,0]] }
+];
+const ROW_TOP = 520, ROW_H = 137;
+const q = s => document.querySelector(s);
+
+const axes = q('#axes');
+[20, 16, 12, 8, 4, 0].forEach((w, i, a) => {
+  const l = document.createElement('div');
+  l.className = 'abs mono axis'; l.style.left = X(w) + 'px';
+  l.textContent = i === 0 ? '20 WKS' : (w === 0 ? 'RACE' : String(w));
+  if (i === 0) { l.style.transform = 'none'; l.style.left = '60px'; }
+  if (w === 0) { l.style.transform = 'translateX(-100%)'; l.style.left = '1020px'; }
+  axes.appendChild(l);
+  if (w > 0 && i > 0) { const g = document.createElement('div'); g.className = 'abs grid'; g.style.left = (X(w) - 1) + 'px'; axes.appendChild(g); }
+});
+
+const rowEls = ROWS.map((R, i) => {
+  const r = document.createElement('div');
+  r.className = 'abs row'; r.style.top = (ROW_TOP + i * ROW_H) + 'px';
+  r.innerHTML = `<div class="name">${R.name}</div><div class="track"></div><div class="note">${R.note}</div>`;
+  const track = r.querySelector('.track');
+  const parts = R.bands.map(b => {
+    const e = document.createElement('div');
+    if (b[0] === 'dot') { e.className = 'dot'; e.style.left = (X(b[1]) - 60) + 'px'; e.style.background = R.c; }
+    else {
+      e.className = 'band'; e.style.left = (X(b[1]) - 60) + 'px'; e.style.width = (X(b[2]) - X(b[1])) + 'px';
+      e.style.background = R.c; if (b[0] === 'keep') e.style.opacity = 0.35;
+    }
+    track.appendChild(e); return { kind: b[0], el: e };
+  });
+  if (R.heat) {
+    track.insertAdjacentHTML('beforeend', '<div id="ghost"></div><div id="strike"></div>');
+    r.insertAdjacentHTML('beforeend', '<div id="ghostNote">20 weeks out? Gone by race day.</div>');
+  }
+  q('#rows').appendChild(r);
+  return { R, row: r, name: r.querySelector('.name'), track, note: r.querySelector('.note'), parts };
+});
+const heatRow = rowEls[5];
+const ghost = q('#ghost'), strike = q('#strike'), ghostNote = q('#ghostNote');
+ghost.style.left = (X(20) - 60) + 'px'; ghost.style.width = (X(16) - X(20)) + 'px';
+strike.style.left = (X(20) - 60 - 10) + 'px'; strike.style.width = (X(16) - X(20) + 20) + 'px';
+const heatBuild = heatRow.parts[0].el, heatKeep = heatRow.parts[1].el;
+const SLIDE = X(20) - X(6);                    // px from the ghost position to the real window
+
+const clamp = v => Math.max(0, Math.min(1, v));
+const ease = v => 1 - Math.pow(1 - clamp(v), 3);
+const prog = (t, a, d) => ease((t - a) / d);
+const fadeUp = (el, p, dy = 20) => { el.style.opacity = p; el.style.transform = `translateY(${(1 - p) * dy}px)`; };
+
+// timing (seconds)
+const ROW_START = [3.4, 4.5, 5.6, 6.7, 7.8, 8.9, 11.0];
+const HEAT_HL = [8.9, 10.7];                    // Heat is the only lit row in this window
+const CLOSE_AT = 12.4, END_AT = 16.6;           // full chart is still from ~11.9 to 16.6
+
+window.render = function (t) {
+  // hook
+  const h1 = prog(t, 0, 0.45), h2 = prog(t, 0.15, 0.45), hout = prog(t, CLOSE_AT, 0.4);
+  const l1 = q('#hook .l1'), l2 = q('#hook .l2');
+  l1.style.opacity = h1 * (1 - hout); l1.style.transform = `translateY(${(1 - h1) * 24}px)`;
+  l2.style.opacity = h2 * (1 - hout); l2.style.transform = `translateY(${(1 - h2) * 24}px)`;
+  // axes
+  document.querySelectorAll('.axis').forEach(a => a.style.opacity = prog(t, 0.6, 0.4));
+  document.querySelectorAll('.grid').forEach(g => g.style.transform = `scaleY(${prog(t, 0.6, 0.6)})`);
+  q('#race').style.transform = `scaleY(${prog(t, 0.8, 0.6)})`;
+
+  // heat highlight: dim every other row
+  const dimIn = prog(t, HEAT_HL[0], 0.35), dimOut = prog(t, HEAT_HL[1], 0.35);
+  const dim = 1 - 0.75 * dimIn * (1 - dimOut);
+
+  rowEls.forEach((r, i) => {
+    const s = ROW_START[i];
+    let nameP = prog(t, s, 0.35);
+    if (r.R.heat) nameP = Math.max(nameP, prog(t, 1.3, 0.35) * 0.35);   // Heat name shows faintly with the ghost
+    fadeUp(r.name, nameP, r.R.heat && t < s ? 0 : 16);
+    r.track.style.opacity = r.R.heat ? Math.max(prog(t, 1.3, 0.35), prog(t, s, 0.35)) : prog(t, s, 0.35);
+    if (!r.R.heat) {
+      r.parts.forEach((p, k) => {
+        if (p.kind === 'dot') { const d = prog(t, s + 0.15 + k * 0.3, 0.35); p.el.style.transform = `translateX(-50%) scale(${d})`; p.el.style.opacity = d; }
+        else if (p.kind === 'build') p.el.style.transform = `scaleX(${prog(t, s + 0.15, 0.6)})`;
+        else p.el.style.transform = `scaleX(${prog(t, s + 0.65, 0.4)})`;
+      });
+    }
+    fadeUp(r.note, prog(t, s + 0.45, 0.4), 10);
+    r.row.style.opacity = r.R.heat ? 1 : dim;
+  });
+
+  // Heat: ghost at 20 to 16 weeks, struck through, then the real bar slides into 6 to 2
+  const gIn = prog(t, 1.4, 0.5), gOut = prog(t, ROW_START[5], 0.4);
+  ghost.style.opacity = 0.3 * gIn * (1 - gOut);
+  strike.style.transform = `scaleX(${prog(t, 2.2, 0.4)})`;
+  strike.style.opacity = 1 - gOut;
+  fadeUp(ghostNote, prog(t, 1.7, 0.4) * (1 - prog(t, ROW_START[5] - 0.2, 0.35)), 10);
+  const sIn = prog(t, ROW_START[5] + 0.1, 0.3), slide = prog(t, ROW_START[5] + 0.3, 0.7);
+  heatBuild.style.opacity = sIn;
+  heatBuild.style.transform = `translateX(${SLIDE * (1 - slide)}px)`;
+  heatKeep.style.opacity = 0.35 * prog(t, ROW_START[5] + 1.0, 0.4);
+  heatKeep.style.transform = `scaleX(${prog(t, ROW_START[5] + 1.0, 0.4)})`;
+  // heat note appears after the slide lands
+  fadeUp(heatRow.note, prog(t, ROW_START[5] + 1.0, 0.4), 10);
+
+  // payoff
+  fadeUp(q('#close'), prog(t, CLOSE_AT + 0.4, 0.5));
+  fadeUp(q('#closeSub'), prog(t, CLOSE_AT + 0.7, 0.4), 10);
+  // end card
+  const e = prog(t, END_AT, 0.5);
+  q('#end').style.opacity = e;
+  q('#end img').style.transform = `translateY(${(1 - e) * 24}px)`;
+  fadeUp(q('#end .cta'), prog(t, END_AT + 0.2, 0.45));
+  fadeUp(q('#end .url'), prog(t, END_AT + 0.35, 0.45), 12);
+};
+
+const P = new URLSearchParams(location.search);
+if (P.get('still')) q('#logoStill').style.display = 'block';
+render(parseFloat(P.get('t') || '0'));
+</script>
+</body>
+</html>
