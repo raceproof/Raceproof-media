@@ -28,7 +28,10 @@
         "Calendar hook said 'Start on pace: 1.5%'. The paper's comparison group is runners whose early pace was near their average, so the slide says 'Start near your average pace: 1.5%'.",
         "Slide 5 quotes come from the paper's Discussion and Conclusion (read on journals.plos.org); the Research library row has no 'authors advise' text. No numbers taken from outside the library row."
       ],
-      "buffer": {}
+      "buffer": {
+        "instagram": "6ad011cd5f62d3c5af0fd4d3",
+        "facebook": "6ad011de29c470dd80b4dff8"
+      }
     },
     {
       "date": "2026-10-21",
@@ -58,7 +61,10 @@
       "flags": [
         "Calendar asked for one slide per pillar; with a cover that is 8 slides (the brief's maximum), so the CTA sits on the Taper slide instead of a separate CTA slide."
       ],
-      "buffer": {}
+      "buffer": {
+        "instagram": "6ad011ea5f62d3c5af0fd8a5",
+        "facebook": "6ad011f5909a59a4d34afab4"
+      }
     },
     {
       "date": "2026-10-23",
@@ -77,7 +83,10 @@
         "Calendar lists this as a Single; built as a 2-slide carousel per the brief's pain-post rule.",
         "Softened the hook from 'had stomach problems' to 'had gut symptoms' and labeled them 'mostly mild': the Research library notes the 96% counts any symptom, including mild gas and belching."
       ],
-      "buffer": {}
+      "buffer": {
+        "instagram": "6ad011fb5ae624a5af9d5cba",
+        "facebook": "6ad012015ae624a5af9d5d56"
+      }
     },
     {
       "date": "2026-10-25",
@@ -93,7 +102,10 @@
       "flags": [
         "The calendar says to show the poll's first question. On raceproof.ai the first step asks 'Where should we send your founding price?' (email); the race question comes after. Check that this matches what you want to show."
       ],
-      "buffer": {}
+      "buffer": {
+        "instagram": "6ad0120544227f52a8bd77f2",
+        "facebook": "6ad0120844227f52a8bd7848"
+      }
     }
   ],
   "reels": []
