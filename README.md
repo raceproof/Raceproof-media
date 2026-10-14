@@ -1,7 +1,8 @@
 # raceproof-media
 
-Public media host and template library for @raceproof.ai social posts. GitHub Pages serves every file in this repo at
-`https://<owner>.github.io/raceproof-media/<path>`, and Buffer pulls post images and videos from those links.
+Public media host and template library for @raceproof.ai social posts. Buffer pulls post images from raw GitHub links pinned
+to a commit, so a scheduled post never changes under it:
+`https://raw.githubusercontent.com/raceproof/raceproof-media/<commit-sha>/<path>`
 
 Everything here becomes public as soon as it is pushed, a few days before it posts. Never commit anything private.
 
@@ -12,8 +13,8 @@ Everything here becomes public as soon as it is pushed, a few days before it pos
 3. Render: `python3 scripts/render_stills.py posts/<monday-date>/*.html` (writes a 1080 x 1350 PNG next to each HTML file).
 4. For a Reel, copy a template from `templates/reels/`, change only its data and text, and render it:
    `python3 scripts/render_reel.py <html> posts/<monday-date> <day>-<slug>-reel <duration> <cover_t>`.
-   Reels are not loaded into Buffer. Jonathan posts them himself.
-5. Write `posts/<monday-date>/posts.json` (format below), then commit and push. Wait until every file loads from its Pages link before using it.
+   Reels are not loaded into Buffer. Jonathan posts them from the Instagram app with trending audio and shares to Facebook there.
+5. Write `posts/<monday-date>/posts.json` (format below), then commit and push. Use the pushed commit's SHA in every media link.
 6. In Buffer (organization "My organization"), create one **draft** per feed post on each channel, Instagram `6ac9cdde6a5c39ccb66d7655` and Facebook page `6acd1c4f778b240e2fe9d9aa`, with `saveToDraft: true`, `mode: customScheduled` and `dueAt` set to the post's date at 08:00 America/Los_Angeles. Carousels list every slide image in order. Use Instagram type `post` and Facebook type `post`. Give each image alt text. Never publish or schedule directly: Jonathan approves drafts in Buffer.
 
 ## posts.json
