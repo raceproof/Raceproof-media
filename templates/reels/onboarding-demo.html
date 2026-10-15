@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Onboarding demo</title>
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<!--
+  Concept onboarding demo. Query params:
+    mode=reel   1080x1920, hook + phone frame + step captions + end card (20 s)
+    mode=screen 1080x2340, app screen only, seamless loop of steps (15 s), for the website phone frame
+    lang=en|es  race=ccc|ws  still=1&t=<s>
+-->
+<style>
+  html,body{margin:0;background:#F4F2ED}
+  *{box-sizing:border-box}
+  #stage{position:relative;overflow:hidden;background:#F4F2ED;color:#15171A;font-family:"Inter",sans-serif}
+  .disp{font-family:"Inter Display","Inter",sans-serif;font-weight:800;letter-spacing:-0.02em}
+  .mono{font-family:"JetBrains Mono",monospace}
+  .abs{position:absolute}
+  #label{left:50%;transform:translateX(-50%);padding:10px 22px;border-radius:999px;background:#1F2328;color:#F2F0EB;font-size:22px;font-weight:500;white-space:nowrap;letter-spacing:0.01em;z-index:20}
+  #hook{left:60px;right:60px;text-align:center;font-size:104px;line-height:108px;z-index:5}
+  #stepcap{text-align:center;font-size:46px;line-height:52px}
+  #stepcap .n{font-family:"JetBrains Mono",monospace;font-size:26px;font-weight:500;color:#5B5F64;letter-spacing:0.08em;display:block;margin-bottom:10px}
+  #phone{z-index:3}
+  #phone img.frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
+  #screen{position:absolute;overflow:hidden;background:#F4F2ED}
+  #app{position:absolute;left:0;top:0;width:360px;transform-origin:0 0;font-size:15px;color:#15171A}
+  /* in-app label (screen mode) */
+  #alabel{position:absolute;left:50%;bottom:96px;transform:translateX(-50%);padding:6px 12px;border-radius:999px;background:#1F2328;color:#F2F0EB;font-size:10.5px;font-weight:500;white-space:nowrap;z-index:8;display:none}
+  /* app chrome */
+  .hdr{position:absolute;left:0;right:0;top:0;height:100px;padding:52px 18px 0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #DDD9D0;background:#F4F2ED}
+  .hdr img{height:21px}
+  .hdr .race{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:#5B5F64;letter-spacing:0.04em}
+  .tabs{position:absolute;left:0;right:0;bottom:0;height:84px;padding:10px 6px 26px;display:flex;justify-content:space-around;border-top:1px solid #DDD9D0;background:#FFFFFF}
+  .tab{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;color:#8A8E93;width:64px}
+  .tab.on{color:#15171A;font-weight:600}
+  .tab svg{width:22px;height:22px}
+  .scr{position:absolute;left:0;right:0;top:100px;bottom:84px;padding:20px 18px 0;opacity:0}
+  .h1{font-family:"Inter Display","Inter",sans-serif;font-weight:800;font-size:27px;letter-spacing:-0.02em;line-height:31px;margin:0 0 4px}
+  .sub{font-size:13.5px;color:#5B5F64;margin:0 0 16px}
+  .card{background:#FFFFFF;border:1px solid #DDD9D0;border-radius:10px}
+  .field{height:50px;border:1.5px solid #15171A;border-radius:10px;background:#fff;display:flex;align-items:center;padding:0 14px;font-size:17px;gap:10px}
+  .field .caret{width:2px;height:22px;background:#15171A}
+  .opt{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;font-size:15px}
+  .opt + .opt{border-top:1px solid #DDD9D0}
+  .opt .k{font-family:"JetBrains Mono",monospace;font-size:11px;color:#5B5F64}
+  .opt.sel{background:#1F2328;color:#F2F0EB;border-radius:9px}
+  .opt.sel .k{color:#A4A9AE}
+  .det{padding:15px;display:flex;flex-direction:column;gap:8px}
+  .det .t{font-weight:700;font-size:18px}
+  .det .l{font-family:"JetBrains Mono",monospace;font-size:12px;color:#15171A}
+  .det .a{font-family:"JetBrains Mono",monospace;font-size:10px;color:#5B5F64;letter-spacing:0.06em;margin-top:2px}
+  .conn{display:flex;align-items:center;justify-content:space-between;padding:15px 14px}
+  .conn + .conn{border-top:1px solid #DDD9D0}
+  .conn .nm{font-size:16px;font-weight:600}
+  .btn{height:34px;min-width:110px;border-radius:8px;border:1.5px solid #15171A;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;padding:0 12px;gap:6px}
+  .btn.done{background:#1F2328;color:#F2F0EB;border-color:#1F2328}
+  .sess{padding:11px 14px;display:flex;justify-content:space-between;font-family:"JetBrains Mono",monospace;font-size:11.5px}
+  .sess + .sess{border-top:1px solid #DDD9D0}
+  .sess .d{color:#5B5F64}
+  .cap{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:0.08em;color:#5B5F64;margin:18px 0 8px}
+  .drop{height:120px;border:1.5px dashed #A4A9AE;border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative}
+  .drop .hint{font-size:13px;color:#5B5F64}
+  .pdf{position:absolute;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #DDD9D0;border-radius:10px;padding:10px 14px;font-size:13px;font-weight:600}
+  .pdf .ic{width:28px;height:34px;border:1.5px solid #15171A;border-radius:4px;font-family:"JetBrains Mono",monospace;font-size:8px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:3px}
+  .res{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+  .res .card{padding:14px}
+  .res .lab{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:0.06em;color:#5B5F64}
+  .res .val{font-family:"Inter Display","Inter",sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-top:4px}
+  .res .u{font-family:"JetBrains Mono",monospace;font-size:12px;color:#5B5F64;font-weight:400;margin-left:4px}
+  .note{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:#5B5F64;margin-top:12px}
+  .prow{display:flex;align-items:center;gap:10px;padding:11px 12px}
+  .prow + .prow{border-top:1px solid #DDD9D0}
+  .prow .dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+  .prow .tx{flex-grow:1;min-width:0}
+  .prow .nm{font-size:15px;font-weight:600;line-height:19px}
+  .prow .ev{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:#5B5F64;line-height:14px}
+  .tag{font-size:11.5px;font-weight:600;padding:4px 9px;border-radius:999px;white-space:nowrap;flex-shrink:0}
+  .t-ready{background:#C8F03C;color:#15171A}
+  .t-building{background:#FCE7DC;color:#B83C0B}
+  .t-gap{background:#B42318;color:#FFFFFF}
+  .t-later{background:#ECE9E2;color:#5B5F64}
+  .sample{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:0.06em;color:#5B5F64;margin:-8px 0 12px}
+  /* end card */
+  #end{inset:0;background:#F4F2ED;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;opacity:0;z-index:10}
+  #end img{width:560px}
+  #end .save{font-size:56px;font-weight:800}
+  #end .url{font-size:34px}
+  #end .tm{width:860px;text-align:center;font-size:22px;line-height:30px;color:#5B5F64}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="label" class="abs"></div>
+  <div id="hook" class="abs disp"></div>
+  <div id="stepcap" class="abs disp"><span class="n"></span><span class="t"></span></div>
+  <div id="phone" class="abs">
+    <div id="screen">
+      <div id="app">
+        <div class="hdr"><img src="../../assets/brand/lockup.png" alt="raceproof"><span class="race" id="hdrRace"></span></div>
+
+        <!-- pick race -->
+        <div class="scr" id="s1">
+          <p class="h1" data-t="pickTitle"></p>
+          <p class="sub" data-t="pickSub"></p>
+          <div class="field"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B5F64" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span id="typed"></span><span class="caret" id="caret"></span></div>
+          <div class="card" id="results" style="margin-top:10px;padding:3px">
+            <div class="opt" id="optRace"><span id="optName"></span><span class="k" id="optDist"></span></div>
+            <div class="opt"><span data-t="custom"></span><span class="k" data-t="upload"></span></div>
+          </div>
+          <div class="card det" id="details" style="margin-top:10px">
+            <span class="t" id="detName"></span>
+            <span class="l" id="d1"></span>
+            <span class="l" id="d2"></span>
+            <span class="l" id="d3"></span>
+            <span class="l" id="d4"></span>
+            <span class="a" data-t="approx"></span>
+          </div>
+        </div>
+
+        <!-- connect -->
+        <div class="scr" id="s2">
+          <p class="h1" data-t="connTitle"></p>
+          <p class="sub" data-t="connSub"></p>
+          <div class="card">
+            <div class="conn"><span class="nm">Garmin</span><span class="btn" id="b1"></span></div>
+            <div class="conn"><span class="nm">COROS</span><span class="btn" id="b2"></span></div>
+            <div class="conn"><span class="nm">TrainingPeaks</span><span class="btn" id="b3"></span></div>
+          </div>
+          <div class="cap" id="sessCap" data-t="recent"></div>
+          <div class="card" id="sessions"></div>
+        </div>
+
+        <!-- sweat -->
+        <div class="scr" id="s3">
+          <p class="h1" data-t="sweatTitle"></p>
+          <p class="sub" data-t="sweatSub"></p>
+          <div class="drop" id="drop"><span class="hint" data-t="dropHint" id="dropHint"></span>
+            <div class="pdf" id="pdf"><span class="ic">PDF</span><span data-t="pdfName"></span></div>
+          </div>
+          <div class="res" id="res">
+            <div class="card"><div class="lab" data-t="sweatRate"></div><div class="val"><span id="vRate">0</span><span class="u">oz/h</span></div></div>
+            <div class="card"><div class="lab" data-t="sodium"></div><div class="val"><span id="vNa">0</span><span class="u">mg/L</span></div></div>
+          </div>
+          <div class="note" id="naNote" data-t="naNote"></div>
+        </div>
+
+        <!-- report -->
+        <div class="scr" id="s4">
+          <p class="h1" data-t="repTitle"></p>
+          <p class="sample" id="sample"></p>
+          <div class="card" id="pillars"></div>
+        </div>
+
+        <div id="alabel"></div>
+        <div class="tabs" id="tabs"></div>
+      </div>
+    </div>
+    <img class="frame" id="frame" src="../../assets/brand/phone-frame.png" alt="">
+  </div>
+  <div id="end" class="abs">
+    <img src="../../assets/brand/lockup.png" alt="raceproof">
+    <div class="save disp" data-t="save"></div>
+    <div class="url mono">raceproof.ai</div>
+    <div class="tm" data-t="tm"></div>
+  </div>
+</div>
+<script>
+const P = new URLSearchParams(location.search);
+const LANG = P.get('lang') || 'en';
+const MODE = P.get('mode') || 'reel';
+const RACE = P.get('race') || (MODE === 'screen' ? 'ws' : 'ccc');
+
+// ---------- copy ----------
+const S = {
+  en: {
+    label: 'Concept preview. Integrations in development.',
+    hook: 'Race-ready in 60 seconds.',
+    steps: ['Pick your race', 'Connect your training', 'Add your sweat test', 'Get your report'],
+    pickTitle: 'Pick your race', pickSub: 'Search or upload a course file.',
+    custom: 'Custom race', upload: 'Upload course', approx: 'APPROXIMATE COURSE DATA',
+    connTitle: 'Connect your training', connSub: 'Your watch handles most of it.',
+    connect: 'Connect', connected: 'Connected', recent: 'RECENT SESSIONS',
+    sweatTitle: 'Add your sweat test', sweatSub: 'Drop in your results, or skip and weigh in later.',
+    dropHint: 'Drop a PDF here', pdfName: 'sweat-test-results.pdf',
+    sweatRate: 'SWEAT RATE', sodium: 'SODIUM LOSS', naNote: 'About 700 mg of sodium an hour',
+    repTitle: 'Your readiness',
+    states: { ready: 'Ready', building: 'Building', gap: 'Gap', later: 'Later', low: 'Low priority' },
+    tabs: ['Readiness', 'Plan', 'Race', 'Ask', 'Me'],
+    save: 'Save this',
+    tm: 'Garmin, COROS and TrainingPeaks are trademarks of their owners. Raceproof isn’t affiliated with or endorsed by them. Race names are examples.',
+    races: {
+      ccc: {
+        query: 'CCC', name: 'CCC 100K', dist: '62.1 mi', hdr: 'CCC 100K',
+        d: ['62.1 mi · ~20,000 ft gain and descent', 'Peaks around 8,300 ft', 'Usually 45 to 75°F', 'Late Aug 2027 (date TBC)'],
+        sess: [['Sat', 'Long run', '4:02 · 3,500 ft down'], ['Thu', 'Goal-effort run', '1:50'], ['Tue', 'Hill repeats', '1:15 · 2,100 ft'], ['Mon', 'Easy run', '0:55']],
+        sample: 'SAMPLE ATHLETE · CCC 100K · 9 WEEKS OUT',
+        pillars: [
+          ['Gut', '#1F5FAF', '55 g/h practiced, target 85', 'building'],
+          ['Hydration', '#5B5F64', '25 oz/h · 950 mg/L sodium', 'ready', 'Sweat rate not known yet'],
+          ['Heat', '#B83C0B', 'Cool race, heat is low priority', 'low'],
+          ['Terrain', '#A23B72', 'Peak week 3,500 ft down, target 13,000', 'building'],
+          ['Durability', '#5B5F64', 'Longest 4 h, goal 7 h', 'building'],
+          ['Pacing', '#008A6C', '8 h at goal effort, longest 3 h', 'ready'],
+          ['Taper', '#7A4BB0', 'Final 3 weeks. Nothing to do yet.', 'later']
+        ]
+      },
+      ws: {
+        query: 'Western', name: 'Western States 100', dist: '100.2 mi', hdr: 'WESTERN STATES 100',
+        d: ['100.2 mi · ~18,000 ft up, ~23,000 ft down', 'Peaks around 8,750 ft', 'Canyons often above 90°F', 'Late June 2027 (date TBC)'],
+        sess: [['Sun', 'Long run', '4:05'], ['Sat', 'Long run', '6:02 · 3,500 ft down'], ['Thu', 'Goal-effort run', '1:40'], ['Tue', 'Hill repeats', '1:15 · 2,100 ft']],
+        sample: 'SAMPLE ATHLETE · WESTERN STATES · 9 WEEKS OUT',
+        pillars: [
+          ['Gut', '#1F5FAF', '85 g/h practiced, target 80', 'ready'],
+          ['Durability', '#5B5F64', 'Back-to-back 6 h and 4 h done', 'ready'],
+          ['Pacing', '#008A6C', '4 h 30 min at goal effort, longest 1 h 40 min', 'building'],
+          ['Terrain', '#A23B72', 'Biggest descent week: 3,500 ft', 'building'],
+          ['Hydration', '#5B5F64', '25 oz/h · 950 mg/L sodium', 'ready', 'No sweat rate yet'],
+          ['Heat', '#B83C0B', 'Window opens in 3 weeks', 'later'],
+          ['Taper', '#7A4BB0', 'Final 3 weeks. Nothing to do yet.', 'later']
+        ]
+      }
+    }
+  },
+  es: {
+    label: 'Vista previa del concepto. Integraciones en desarrollo.',
+    hook: 'Listo para tu carrera en 60 segundos.',
+    steps: ['Elige tu carrera', 'Conecta tu entrenamiento', 'Agrega tu prueba de sudor', 'Recibe tu reporte'],
+    pickTitle: 'Elige tu carrera', pickSub: 'Busca o sube el archivo del recorrido.',
+    custom: 'Carrera personalizada', upload: 'Subir recorrido', approx: 'DATOS APROXIMADOS DEL RECORRIDO',
+    connTitle: 'Conecta tu entrenamiento', connSub: 'Tu reloj hace casi todo.',
+    connect: 'Conectar', connected: 'Conectado', recent: 'SESIONES RECIENTES',
+    sweatTitle: 'Agrega tu prueba de sudor', sweatSub: 'Sube tus resultados, o pésate después.',
+    dropHint: 'Suelta un PDF aquí', pdfName: 'resultados-prueba-sudor.pdf',
+    sweatRate: 'TASA DE SUDOR', sodium: 'PÉRDIDA DE SODIO', naNote: 'Unos 700 mg de sodio por hora',
+    repTitle: 'Tu preparación',
+    states: { ready: 'Listo', building: 'En progreso', gap: 'Brecha', later: 'Después', low: 'Baja prioridad' },
+    tabs: ['Preparación', 'Plan', 'Carrera', 'Preguntar', 'Yo'],
+    save: 'Guárdalo',
+    tm: 'Garmin, COROS y TrainingPeaks son marcas de sus respectivos dueños. Raceproof no está afiliado ni respaldado por ellos. Los nombres de carreras son ejemplos.',
+    races: {
+      ccc: {
+        query: 'CCC', name: 'CCC 100K', dist: '62.1 mi', hdr: 'CCC 100K',
+        d: ['62.1 mi · ~20,000 ft de subida y bajada', 'Punto más alto cerca de 8,300 ft', 'Normalmente 45 a 75°F', 'Fines de agosto 2027 (fecha por confirmar)'],
+        sess: [['Sáb', 'Fondo largo', '4:02 · 3,500 ft de bajada'], ['Jue', 'Ritmo de carrera', '1:50'], ['Mar', 'Cuestas', '1:15 · 2,100 ft'], ['Lun', 'Rodaje suave', '0:55']],
+        sample: 'ATLETA DE EJEMPLO · CCC 100K · A 9 SEMANAS',
+        pillars: [
+          ['Intestino', '#1F5FAF', '55 g/h practicados, meta 85', 'building'],
+          ['Hidratación', '#5B5F64', '25 oz/h · 950 mg/L de sodio', 'ready', 'Tasa de sudor aún desconocida'],
+          ['Calor', '#B83C0B', 'Carrera fresca, calor de baja prioridad', 'low'],
+          ['Terreno', '#A23B72', 'Mejor semana 3,500 ft de bajada, meta 13,000', 'building'],
+          ['Resistencia', '#5B5F64', 'Más larga 4 h, meta 7 h', 'building'],
+          ['Ritmo', '#008A6C', '8 h a esfuerzo de carrera, la más larga 3 h', 'ready'],
+          ['Puesta a punto', '#7A4BB0', 'Últimas 3 semanas. Nada que hacer aún.', 'later']
+        ]
+      },
+      ws: {
+        query: 'Western', name: 'Western States 100', dist: '100.2 mi', hdr: 'WESTERN STATES 100',
+        d: ['100.2 mi · ~18,000 ft de subida, ~23,000 ft de bajada', 'Punto más alto cerca de 8,750 ft', 'Cañones a menudo arriba de 90°F', 'Fines de junio 2027 (fecha por confirmar)'],
+        sess: [['Dom', 'Fondo largo', '4:05'], ['Sáb', 'Fondo largo', '6:02 · 3,500 ft de bajada'], ['Jue', 'Ritmo de carrera', '1:40'], ['Mar', 'Cuestas', '1:15 · 2,100 ft']],
+        sample: 'ATLETA DE EJEMPLO · WESTERN STATES · A 9 SEMANAS',
+        pillars: [
+          ['Intestino', '#1F5FAF', '85 g/h practicados, meta 80', 'ready'],
+          ['Resistencia', '#5B5F64', 'Fondos seguidos de 6 h y 4 h hechos', 'ready'],
+          ['Ritmo', '#008A6C', '4 h 30 min a ritmo de carrera, la más larga 1 h 40 min', 'building'],
+          ['Terreno', '#A23B72', 'Semana con más bajada: 3,500 ft', 'building'],
+          ['Hidratación', '#5B5F64', '25 oz/h · 950 mg/L de sodio', 'ready', 'Aún sin tasa de sudor'],
+          ['Calor', '#B83C0B', 'La ventana abre en 3 semanas', 'later'],
+          ['Puesta a punto', '#7A4BB0', 'Últimas 3 semanas. Nada que hacer aún.', 'later']
+        ]
+      }
+    }
+  }
+}[LANG];
+const R = S.races[RACE];
+
+const q = s => document.querySelector(s);
+document.documentElement.lang = LANG;
+document.querySelectorAll('[data-t]').forEach(e => { e.textContent = S[e.dataset.t]; });
+q('#label').textContent = S.label; q('#alabel').textContent = S.label;
+q('#hook').textContent = S.hook;
+q('#optName').textContent = R.name; q('#optDist').textContent = R.dist; q('#detName').textContent = R.name;
+['d1','d2','d3','d4'].forEach((id, i) => q('#' + id).textContent = R.d[i]);
+q('#sample').textContent = R.sample;
+
+// tabs (no hamburger)
+const ICONS = [
+  '<circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 8 8"/>',
+  '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
+  '<path d="M5 21V4h11l-2 4 2 4H5"/>',
+  '<path d="M4 5h16v11H9l-5 4z"/>',
+  '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/>'
+];
+q('#tabs').innerHTML = S.tabs.map((t, i) => `<div class="tab" data-i="${i}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">${ICONS[i]}</svg>${t}</div>`).join('');
+q('#sessions').innerHTML = R.sess.map(s => `<div class="sess"><span><span class="d">${s[0]}</span>&nbsp;&nbsp;${s[1]}</span><span>${s[2]}</span></div>`).join('');
+q('#pillars').innerHTML = R.pillars.map((p, i) => `<div class="prow" id="p${i}"><span class="dot" style="background:${p[1]}"></span><div class="tx"><div class="nm">${p[0]}</div><div class="ev"></div></div><span class="tag"></span></div>`).join('');
+
+// ---------- layout ----------
+const L = {
+  reel:   { W: 1080, H: 1920, labelY: 236, capY: 300, phone: { y: 432, h: 1170 }, end: true, hook: true, frame: true },
+  screen: { W: 1080, H: 2340, end: false, hook: false, frame: false }
+}[MODE];
+const stage = q('#stage');
+stage.style.width = L.W + 'px'; stage.style.height = L.H + 'px';
+const cap = q('#stepcap');
+const ph = q('#phone'), scr = q('#screen');
+let SW, SH;
+if (L.frame) {
+  q('#label').style.top = L.labelY + 'px';
+  cap.style.left = '60px'; cap.style.top = L.capY + 'px'; cap.style.width = '960px';
+  q('#hook').style.top = '760px';
+  const PH = L.phone.h, PW = PH * 1180 / 2409;
+  ph.style.width = PW + 'px'; ph.style.height = PH + 'px'; ph.style.top = L.phone.y + 'px'; ph.style.left = (L.W - PW) / 2 + 'px';
+  SW = PW * 0.9008; SH = PH * 0.9489;
+  scr.style.left = PW * 0.05 + 'px'; scr.style.top = PH * 0.0208 + 'px'; scr.style.borderRadius = (SW * 0.13) + 'px';
+} else {
+  ['#label', '#hook', '#stepcap', '#end', '#frame'].forEach(s => q(s).style.display = 'none');
+  q('#alabel').style.display = 'block';
+  ph.style.left = '0px'; ph.style.top = '0px'; ph.style.width = L.W + 'px'; ph.style.height = L.H + 'px';
+  SW = L.W; SH = L.H; scr.style.left = '0px'; scr.style.top = '0px';
+}
+scr.style.width = SW + 'px'; scr.style.height = SH + 'px';
+const k = SW / 360; q('#app').style.transform = `scale(${k})`; q('#app').style.height = (SH / k) + 'px';
+
+// ---------- animation ----------
+const clamp = v => Math.max(0, Math.min(1, v));
+const ease = v => 1 - Math.pow(1 - clamp(v), 3);
+const pr = (t, a, d) => ease((t - a) / d);
+const fade = (el, p, dy = 16) => { el.style.opacity = p; el.style.transform = `translateY(${(1 - p) * dy}px)`; };
+const between = (t, a, b, f = 0.35) => Math.min(pr(t, a, f), 1 - pr(t, b, f));
+
+// reel timeline (s). The screen loop runs from T.race to T.end, then cross-fades back to an empty search.
+const T = { race: 2, conn: 5, sweat: 9, rep: 12, end: 17 };
+const LOOP = !L.end;
+window.DUR = LOOP ? T.end + 1 - T.race : 20;
+const OFF = LOOP ? T.race : 0;
+const XF = 0.5;   // loop cross-fade length
+
+function setTab(i) { document.querySelectorAll('.tab').forEach(e => e.classList.toggle('on', +e.dataset.i === i)); }
+function tag(el, st) { el.className = 'tag t-' + (st === 'low' ? 'later' : st); el.textContent = S.states[st]; }
+
+window.render = function (tt) {
+  const t = tt + OFF;
+  // loop: last XF seconds fade the report out and the empty search screen in
+  const wrap = LOOP ? pr(tt, DUR - XF / 2, XF / 2) : 0;
+  const wrapOut = LOOP ? pr(tt, DUR - XF, XF / 2) : 0;
+  const t1 = wrap > 0 ? T.race : t;   // state used for step 1 elements
+
+  // hook
+  fade(q('#hook'), L.hook ? between(t, -1, 1.65) : 0, 24);
+  // phone in
+  const phoneIn = L.hook ? pr(t, 1.7, 0.5) : 1;
+  ph.style.opacity = phoneIn; ph.style.transform = `translateY(${(1 - phoneIn) * 60}px)`;
+  // step captions (reel)
+  const capIdx = t < T.conn ? 0 : t < T.sweat ? 1 : t < T.rep ? 2 : 3;
+  const capStart = [T.race, T.conn, T.sweat, T.rep][capIdx];
+  const capEnd = [T.conn, T.sweat, T.rep, T.end + 0.5][capIdx];
+  cap.querySelector('.n').textContent = String(capIdx + 1).padStart(2, '0') + ' / 04';
+  cap.querySelector('.t').textContent = S.steps[capIdx];
+  fade(cap, Math.min(pr(t, capStart, 0.35), 1 - pr(t, capEnd - 0.3, 0.3)), 12);
+  q('#hdrRace').textContent = (t >= T.race + 1.6 && wrap < 0.5) ? R.hdr : '';
+
+  // screens
+  const ids = ['#s1', '#s2', '#s3', '#s4'], starts = [T.race, T.conn, T.sweat, T.rep], ends = [T.conn, T.sweat, T.rep, 99];
+  ids.forEach((s, i) => {
+    const el = q(s);
+    let p = between(t, starts[i] + 0.05, ends[i] - 0.05, 0.3);
+    let x = (1 - pr(t, starts[i], 0.35)) * 30;
+    if (LOOP && i === 0 && t < T.race + 0.3) { p = 1; x = 0; }   // loop starts already on screen
+    if (i === 0 && wrap > 0) { p = wrap; x = 0; }
+    if (i === 3) p *= 1 - wrapOut;
+    el.style.opacity = p; el.style.transform = `translateX(${x}px)`;
+  });
+  setTab(wrap > 0.5 ? 2 : t < T.conn ? 2 : t < T.rep ? 4 : 0);
+
+  // 1. pick race: type, results, select, details
+  const qy = R.query, typeStart = T.race + 0.35, per = 0.9 / qy.length;
+  const n = Math.max(0, Math.min(qy.length, Math.floor((t1 - typeStart) / per) + 1));
+  q('#typed').textContent = t1 < typeStart ? '' : qy.slice(0, n);
+  q('#caret').style.opacity = (Math.floor(t1 * 2) % 2 === 0 || t1 < T.race + 1.3) ? 1 : 0;
+  const showDet = t1 >= T.race + 1.75;
+  q('#results').style.display = showDet ? 'none' : 'block';
+  q('#results').style.opacity = pr(t1, T.race + 1.0, 0.25) * (1 - pr(t1, T.race + 1.55, 0.2));
+  q('#optRace').classList.toggle('sel', t1 >= T.race + 1.35);
+  q('#details').style.display = showDet ? 'flex' : 'none';
+  fade(q('#details'), pr(t1, T.race + 1.75, 0.4), 12);
+  ['d1','d2','d3','d4'].forEach((id, i) => q('#' + id).style.opacity = pr(t1, T.race + 1.9 + i * 0.15, 0.3));
+
+  // 2. connect
+  [['#b1', T.conn + 0.8], ['#b2', 99], ['#b3', T.conn + 1.7]].forEach(([id, at]) => {
+    const b = q(id); const on = t >= at;
+    b.classList.toggle('done', on);
+    b.innerHTML = on ? `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F2F0EB" stroke-width="3" stroke-linecap="square"><path d="M5 12l5 5 9-10"/></svg>${S.connected}` : S.connect;
+  });
+  q('#sessCap').style.opacity = pr(t, T.conn + 2.2, 0.3);
+  q('#sessions').style.opacity = pr(t, T.conn + 2.2, 0.2);
+  document.querySelectorAll('.sess').forEach((e, i) => fade(e, pr(t, T.conn + 2.3 + i * 0.25, 0.35), 8));
+
+  // 3. sweat
+  const pdf = q('#pdf'); const dp = pr(t, T.sweat + 0.4, 0.5);
+  pdf.style.opacity = dp; pdf.style.transform = `translateY(${(1 - dp) * -90}px)`;
+  q('#dropHint').style.opacity = 1 - dp;
+  const cp = pr(t, T.sweat + 1.1, 0.8);
+  q('#vRate').textContent = Math.round(25 * cp);
+  q('#vNa').textContent = Math.round(950 * cp);
+  fade(q('#res'), pr(t, T.sweat + 1.0, 0.35), 10);
+  q('#naNote').style.opacity = pr(t, T.sweat + 1.9, 0.35);
+
+  // 4. report: rows every 0.4 s, hydration flips from Gap to Ready once all rows are in
+  const flip = T.rep + 0.3 + R.pillars.length * 0.4 + 0.3;
+  R.pillars.forEach((p, i) => {
+    const row = q('#p' + i); const a = T.rep + 0.3 + i * 0.4;
+    fade(row, pr(t, a, 0.35), 10);
+    const tg = row.querySelector('.tag'), ev = row.querySelector('.ev');
+    if (p[4]) {
+      tag(tg, t < flip ? 'gap' : 'ready'); ev.textContent = t < flip ? p[4] : p[2];
+      row.style.background = `rgba(200,240,60,${0.22 * between(t, flip, flip + 1.2, 0.3)})`;
+    } else { tag(tg, p[3]); ev.textContent = p[2]; }
+  });
+
+  // end card
+  if (L.end) {
+    q('#end').style.opacity = pr(t, T.end, 0.45);
+    fade(q('#end img'), pr(t, T.end, 0.45));
+    fade(q('#end .save'), pr(t, T.end + 0.15, 0.4));
+    fade(q('#end .url'), pr(t, T.end + 0.3, 0.4));
+    fade(q('#end .tm'), pr(t, T.end + 0.45, 0.4), 8);
+  }
+};
+render(parseFloat(P.get('t') || '0'));
+</script>
+</body>
+</html>
