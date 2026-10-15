@@ -18,9 +18,9 @@
   .mono{font-family:"JetBrains Mono",monospace}
   .abs{position:absolute}
   #label{left:50%;transform:translateX(-50%);padding:10px 22px;border-radius:999px;background:#1F2328;color:#F2F0EB;font-size:22px;font-weight:500;white-space:nowrap;letter-spacing:0.01em;z-index:20}
-  #hook{left:60px;right:60px;text-align:center;font-size:104px;line-height:108px;z-index:5}
-  #stepcap{text-align:center;font-size:46px;line-height:52px}
-  #stepcap .n{font-family:"JetBrains Mono",monospace;font-size:26px;font-weight:500;color:#5B5F64;letter-spacing:0.08em;display:block;margin-bottom:10px}
+  #hook{left:60px;right:60px;text-align:center;white-space:pre-line;font-size:104px;line-height:108px;z-index:5}
+  #stepcap{text-align:center}
+  #stepcap .n{font-family:"JetBrains Mono",monospace;font-size:28px;font-weight:500;color:#5B5F64;letter-spacing:0.08em;display:block}
   #phone{z-index:3}
   #phone img.frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
   #screen{position:absolute;overflow:hidden;background:#F4F2ED}
@@ -71,7 +71,6 @@
   .note{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:#5B5F64;margin-top:12px}
   .prow{display:flex;align-items:center;gap:10px;padding:11px 12px}
   .prow + .prow{border-top:1px solid #DDD9D0}
-  .prow .dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
   .prow .tx{flex-grow:1;min-width:0}
   .prow .nm{font-size:15px;font-weight:600;line-height:19px}
   .prow .ev{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:#5B5F64;line-height:14px}
@@ -80,7 +79,12 @@
   .t-building{background:#FCE7DC;color:#B83C0B}
   .t-gap{background:#B42318;color:#FFFFFF}
   .t-later{background:#ECE9E2;color:#5B5F64}
-  .sample{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:0.06em;color:#5B5F64;margin:-8px 0 12px}
+  .sample{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:0.08em;color:#5B5F64;margin:0 0 8px}
+  .rhead{display:flex;align-items:center;gap:16px;padding:16px 14px 14px;border-bottom:1px solid #DDD9D0}
+  .rhead svg{width:84px;height:84px;flex-shrink:0}
+  .rhead .rl{font-size:13px;color:#5B5F64}
+  .rhead .rp{font-family:"Inter Display","Inter",sans-serif;font-weight:800;font-size:40px;line-height:44px;letter-spacing:-0.02em}
+  .rhead .rs{font-size:12.5px;line-height:16px;color:#5B5F64}
   /* end card */
   #end{inset:0;background:#F4F2ED;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;opacity:0;z-index:10}
   #end img{width:560px}
@@ -93,7 +97,7 @@
 <div id="stage">
   <div id="label" class="abs"></div>
   <div id="hook" class="abs disp"></div>
-  <div id="stepcap" class="abs disp"><span class="n"></span><span class="t"></span></div>
+  <div id="stepcap" class="abs"><span class="n"></span></div>
   <div id="phone" class="abs">
     <div id="screen">
       <div id="app">
@@ -139,7 +143,7 @@
             <div class="pdf" id="pdf"><span class="ic">PDF</span><span data-t="pdfName"></span></div>
           </div>
           <div class="res" id="res">
-            <div class="card"><div class="lab" data-t="sweatRate"></div><div class="val"><span id="vRate">0</span><span class="u">oz/h</span></div></div>
+            <div class="card"><div class="lab" data-t="sweatRate"></div><div class="val"><span id="vRate">0</span><span class="u" id="rateU"></span></div></div>
             <div class="card"><div class="lab" data-t="sodium"></div><div class="val"><span id="vNa">0</span><span class="u">mg/L</span></div></div>
           </div>
           <div class="note" id="naNote" data-t="naNote"></div>
@@ -147,9 +151,11 @@
 
         <!-- report -->
         <div class="scr" id="s4">
-          <p class="h1" data-t="repTitle"></p>
-          <p class="sample" id="sample"></p>
-          <div class="card" id="pillars"></div>
+          <p class="sample" data-t="sample"></p>
+          <div class="card">
+            <div class="rhead"><svg viewBox="0 0 112 112" id="ring"></svg><div><div class="rl" data-t="readiness"></div><div class="rp"><span id="pct">0</span>%</div><div class="rs" id="rsub"></div></div></div>
+            <div id="pillars"></div>
+          </div>
         </div>
 
         <div id="alabel"></div>
@@ -169,13 +175,13 @@
 const P = new URLSearchParams(location.search);
 const LANG = P.get('lang') || 'en';
 const MODE = P.get('mode') || 'reel';
-const RACE = P.get('race') || (MODE === 'screen' ? 'ws' : 'ccc');
+const RACE = P.get('race') || 'ws';
 
 // ---------- copy ----------
 const S = {
   en: {
     label: 'Concept preview. Integrations in development.',
-    hook: 'Race-ready in 60 seconds.',
+    hook: 'Connect once.\nSee if you’re\nrace-ready.',
     steps: ['Pick your race', 'Connect your training', 'Add your sweat test', 'Get your report'],
     pickTitle: 'Pick your race', pickSub: 'Search or upload a course file.',
     custom: 'Custom race', upload: 'Upload course', approx: 'APPROXIMATE COURSE DATA',
@@ -184,7 +190,7 @@ const S = {
     sweatTitle: 'Add your sweat test', sweatSub: 'Drop in your results, or skip and weigh in later.',
     dropHint: 'Drop a PDF here', pdfName: 'sweat-test-results.pdf',
     sweatRate: 'SWEAT RATE', sodium: 'SODIUM LOSS', naNote: 'About 700 mg of sodium an hour',
-    repTitle: 'Your readiness',
+    readiness: 'Readiness', sample: 'SAMPLE ATHLETE', weeks: '9 weeks out', rate: 25, rateDec: 0, rateU: 'oz/h',
     states: { ready: 'Ready', building: 'Building', gap: 'Gap', later: 'Later', low: 'Low priority' },
     tabs: ['Readiness', 'Plan', 'Race', 'Ask', 'Me'],
     save: 'Save this',
@@ -224,7 +230,7 @@ const S = {
   },
   es: {
     label: 'Vista previa del concepto. Integraciones en desarrollo.',
-    hook: 'Listo para tu carrera en 60 segundos.',
+    hook: 'Conecta una vez.\nMira si estás listo para tu carrera.',
     steps: ['Elige tu carrera', 'Conecta tu entrenamiento', 'Agrega tu prueba de sudor', 'Recibe tu reporte'],
     pickTitle: 'Elige tu carrera', pickSub: 'Busca o sube el archivo del recorrido.',
     custom: 'Carrera personalizada', upload: 'Subir recorrido', approx: 'DATOS APROXIMADOS DEL RECORRIDO',
@@ -233,7 +239,7 @@ const S = {
     sweatTitle: 'Agrega tu prueba de sudor', sweatSub: 'Sube tus resultados, o pésate después.',
     dropHint: 'Suelta un PDF aquí', pdfName: 'resultados-prueba-sudor.pdf',
     sweatRate: 'TASA DE SUDOR', sodium: 'PÉRDIDA DE SODIO', naNote: 'Unos 700 mg de sodio por hora',
-    repTitle: 'Tu preparación',
+    readiness: 'Preparación', sample: 'ATLETA DE EJEMPLO', weeks: 'a 9 semanas', rate: 0.74, rateDec: 2, rateU: 'L/h',
     states: { ready: 'Listo', building: 'En progreso', gap: 'Brecha', later: 'Después', low: 'Baja prioridad' },
     tabs: ['Preparación', 'Plan', 'Carrera', 'Preguntar', 'Yo'],
     save: 'Guárdalo',
@@ -251,7 +257,7 @@ const S = {
           ['Terreno', '#A23B72', 'Mejor semana 3,500 ft de bajada, meta 13,000', 'building'],
           ['Resistencia', '#5B5F64', 'Más larga 4 h, meta 7 h', 'building'],
           ['Ritmo', '#008A6C', '8 h a esfuerzo de carrera, la más larga 3 h', 'ready'],
-          ['Puesta a punto', '#7A4BB0', 'Últimas 3 semanas. Nada que hacer aún.', 'later']
+          ['Puesta a punto', '#7A4BB0', 'Últimas 3 semanas. Nada por ahora.', 'later']
         ]
       },
       ws: {
@@ -264,9 +270,9 @@ const S = {
           ['Resistencia', '#5B5F64', 'Fondos seguidos de 6 h y 4 h hechos', 'ready'],
           ['Ritmo', '#008A6C', '4 h 30 min a ritmo de carrera, la más larga 1 h 40 min', 'building'],
           ['Terreno', '#A23B72', 'Semana con más bajada: 3,500 ft', 'building'],
-          ['Hidratación', '#5B5F64', '25 oz/h · 950 mg/L de sodio', 'ready', 'Aún sin tasa de sudor'],
+          ['Hidratación', '#5B5F64', '0.74 L/h · 950 mg/L de sodio', 'ready', 'Aún sin tasa de sudor'],
           ['Calor', '#B83C0B', 'La ventana abre en 3 semanas', 'later'],
-          ['Puesta a punto', '#7A4BB0', 'Últimas 3 semanas. Nada que hacer aún.', 'later']
+          ['Puesta a punto', '#7A4BB0', 'Últimas 3 semanas. Nada por ahora.', 'later']
         ]
       }
     }
@@ -281,7 +287,8 @@ q('#label').textContent = S.label; q('#alabel').textContent = S.label;
 q('#hook').textContent = S.hook;
 q('#optName').textContent = R.name; q('#optDist').textContent = R.dist; q('#detName').textContent = R.name;
 ['d1','d2','d3','d4'].forEach((id, i) => q('#' + id).textContent = R.d[i]);
-q('#sample').textContent = R.sample;
+q('#rsub').innerHTML = R.name + '<br>' + S.weeks;
+q('#rateU').textContent = S.rateU;
 
 // tabs (no hamburger)
 const ICONS = [
@@ -293,11 +300,25 @@ const ICONS = [
 ];
 q('#tabs').innerHTML = S.tabs.map((t, i) => `<div class="tab" data-i="${i}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">${ICONS[i]}</svg>${t}</div>`).join('');
 q('#sessions').innerHTML = R.sess.map(s => `<div class="sess"><span><span class="d">${s[0]}</span>&nbsp;&nbsp;${s[1]}</span><span>${s[2]}</span></div>`).join('');
-q('#pillars').innerHTML = R.pillars.map((p, i) => `<div class="prow" id="p${i}"><span class="dot" style="background:${p[1]}"></span><div class="tx"><div class="nm">${p[0]}</div><div class="ev"></div></div><span class="tag"></span></div>`).join('');
+q('#pillars').innerHTML = R.pillars.map((p, i) => `<div class="prow" id="p${i}"><div class="tx"><div class="nm">${p[0]}</div><div class="ev"></div></div><span class="tag"></span></div>`).join('');
+
+// readiness ring: one segment per counted pillar (Later is not counted), like the homepage card
+const COUNTED = R.pillars.map((p, i) => i).filter(i => R.pillars[i][3] !== 'later' && R.pillars[i][3] !== 'low');
+const PTS = { ready: 20, building: 14, gap: 0 };   // 5 counted pillars: 2 Ready + 2 Building = 68%, as on raceproof.ai
+const COL = { ready: '#C8F03C', building: '#B83C0B', gap: '#E8E5DF' };
+(function () {
+  const n = COUNTED.length, gap = 5, r = 49, c = 56;
+  const pt = a => [c + r * Math.cos((a - 90) * Math.PI / 180), c + r * Math.sin((a - 90) * Math.PI / 180)];
+  q('#ring').innerHTML = COUNTED.map((pi, j) => {
+    const a0 = j * 360 / n + gap / 2, a1 = (j + 1) * 360 / n - gap / 2, [x0, y0] = pt(a0), [x1, y1] = pt(a1);
+    const d = `M${x0},${y0} A${r},${r} 0 0 1 ${x1},${y1}`;
+    return `<path d="${d}" fill="none" stroke="#E8E5DF" stroke-width="14"/><path id="seg${pi}" d="${d}" pathLength="1" fill="none" stroke-width="14"/>`;
+  }).join('');
+})();
 
 // ---------- layout ----------
 const L = {
-  reel:   { W: 1080, H: 1920, labelY: 236, capY: 300, phone: { y: 432, h: 1170 }, end: true, hook: true, frame: true },
+  reel:   { W: 1080, H: 1920, labelY: 150, capY: 222, phone: { y: 276, w: 918 }, end: true, hook: true, frame: true },
   screen: { W: 1080, H: 2340, end: false, hook: false, frame: false }
 }[MODE];
 const stage = q('#stage');
@@ -308,14 +329,18 @@ let SW, SH;
 if (L.frame) {
   q('#label').style.top = L.labelY + 'px';
   cap.style.left = '60px'; cap.style.top = L.capY + 'px'; cap.style.width = '960px';
-  q('#hook').style.top = '760px';
-  const PH = L.phone.h, PW = PH * 1180 / 2409;
+  q('#hook').style.top = '700px'; if (LANG === 'es') { q('#hook').style.fontSize = '92px'; q('#hook').style.lineHeight = '98px'; q('#hook').style.top = '620px'; }
+  const PW = L.phone.w, PH = PW * 2409 / 1180;
   ph.style.width = PW + 'px'; ph.style.height = PH + 'px'; ph.style.top = L.phone.y + 'px'; ph.style.left = (L.W - PW) / 2 + 'px';
   SW = PW * 0.9008; SH = PH * 0.9489;
   scr.style.left = PW * 0.05 + 'px'; scr.style.top = PH * 0.0208 + 'px'; scr.style.borderRadius = (SW * 0.13) + 'px';
 } else {
   ['#label', '#hook', '#stepcap', '#end', '#frame'].forEach(s => q(s).style.display = 'none');
   q('#alabel').style.display = 'block';
+  // label sits under the app header, clear of the notch area Lovable's phone frame will cover
+  q('#alabel').style.top = '110px'; q('#alabel').style.bottom = 'auto';
+  document.querySelectorAll('.scr').forEach(e => e.style.paddingTop = '48px');
+  document.querySelectorAll('.prow').forEach(e => e.style.padding = '10px 12px');
   ph.style.left = '0px'; ph.style.top = '0px'; ph.style.width = L.W + 'px'; ph.style.height = L.H + 'px';
   SW = L.W; SH = L.H; scr.style.left = '0px'; scr.style.top = '0px';
 }
@@ -356,8 +381,7 @@ window.render = function (tt) {
   const capStart = [T.race, T.conn, T.sweat, T.rep][capIdx];
   const capEnd = [T.conn, T.sweat, T.rep, T.end + 0.5][capIdx];
   cap.querySelector('.n').textContent = String(capIdx + 1).padStart(2, '0') + ' / 04';
-  cap.querySelector('.t').textContent = S.steps[capIdx];
-  fade(cap, Math.min(pr(t, capStart, 0.35), 1 - pr(t, capEnd - 0.3, 0.3)), 12);
+  fade(cap, Math.min(pr(t, capStart, 0.3), 1 - pr(t, capEnd - 0.25, 0.25)), 8);
   q('#hdrRace').textContent = (t >= T.race + 1.6 && wrap < 0.5) ? R.hdr : '';
 
   // screens
@@ -401,7 +425,7 @@ window.render = function (tt) {
   pdf.style.opacity = dp; pdf.style.transform = `translateY(${(1 - dp) * -90}px)`;
   q('#dropHint').style.opacity = 1 - dp;
   const cp = pr(t, T.sweat + 1.1, 0.8);
-  q('#vRate').textContent = Math.round(25 * cp);
+  q('#vRate').textContent = (S.rate * cp).toFixed(S.rateDec);
   q('#vNa').textContent = Math.round(950 * cp);
   fade(q('#res'), pr(t, T.sweat + 1.0, 0.35), 10);
   q('#naNote').style.opacity = pr(t, T.sweat + 1.9, 0.35);
@@ -412,11 +436,25 @@ window.render = function (tt) {
     const row = q('#p' + i); const a = T.rep + 0.3 + i * 0.4;
     fade(row, pr(t, a, 0.35), 10);
     const tg = row.querySelector('.tag'), ev = row.querySelector('.ev');
+    let st = p[3];
     if (p[4]) {
-      tag(tg, t < flip ? 'gap' : 'ready'); ev.textContent = t < flip ? p[4] : p[2];
+      st = t < flip ? 'gap' : 'ready'; tag(tg, st); ev.textContent = t < flip ? p[4] : p[2];
       row.style.background = `rgba(200,240,60,${0.22 * between(t, flip, flip + 1.2, 0.3)})`;
     } else { tag(tg, p[3]); ev.textContent = p[2]; }
+    const seg = q('#seg' + i);
+    if (seg) {
+      const drawP = p[4] && t >= flip ? pr(t, flip, 0.6) : pr(t, a, 0.5);
+      seg.setAttribute('stroke', COL[p[4] ? (t >= flip ? 'ready' : 'gap') : st]);
+      seg.setAttribute('stroke-dasharray', `${drawP} 1`);
+    }
   });
+  // percentage counts up with the rows; the sweat test adds Hydration at the end
+  let pct = 0;
+  COUNTED.forEach(i => {
+    const p = R.pillars[i];
+    pct += p[4] ? PTS.ready * pr(t, flip, 0.6) : PTS[p[3]] * pr(t, T.rep + 0.3 + i * 0.4, 0.4);
+  });
+  q('#pct').textContent = Math.round(pct);
 
   // end card
   if (L.end) {
