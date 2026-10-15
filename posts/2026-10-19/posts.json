@@ -89,7 +89,7 @@
       }
     },
     {
-      "date": "2026-10-25",
+      "date": "2026-10-24",
       "type": "waitlist",
       "title": "Waitlist: Tell us your goal race",
       "slides": [
@@ -108,5 +108,13 @@
       }
     }
   ],
-  "reels": []
+  "reels": [
+    {
+      "date": "2026-10-25",
+      "type": "filmed",
+      "title": "Sweat rate in 3 weigh-ins",
+      "script": "See the Reel scripts tab of the social media brief",
+      "status": "to film"
+    }
+  ]
 }

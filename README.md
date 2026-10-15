@@ -6,6 +6,10 @@ to a commit, so a scheduled post never changes under it:
 
 Everything here becomes public as soon as it is pushed, a few days before it posts. Never commit anything private.
 
+## Weekly cadence
+
+Feed posts on Monday, Wednesday, Friday and Saturday (Monday, Wednesday and Friday after Nov 15), each loaded into Buffer as a draft for 08:00 Pacific. Sunday is always a **filmed** Reel: scripts live in the "Reel scripts" tab of the social media brief, Jonathan films them in batches of 4 and posts them from the Instagram app with trending audio. Filmed Reels never go to Buffer and are never rendered here.
+
 ## Weekly workflow (the Saturday "Raceproof weekly posts" task)
 
 1. Read the social media brief (all tabs), the 90-day calendar and the Research library. They are the source of truth for copy, numbers and rules.
