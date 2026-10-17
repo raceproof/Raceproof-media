@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<!-- Transparent overlay laid over the standard end card (raceproof-endcard-*.mp4) for concept content:
+     keeps the "Concept preview" label and adds the trademark line. ?lang=en|es -->
+<style>
+ html,body{margin:0;background:transparent}
+ #s{position:relative;width:1080px;height:1920px;font-family:"Inter",sans-serif}
+ #label{position:absolute;top:150px;left:50%;transform:translateX(-50%);padding:10px 22px;border-radius:999px;background:#1F2328;color:#F2F0EB;font-size:22px;font-weight:500;white-space:nowrap;letter-spacing:0.01em}
+ #tm{position:absolute;left:110px;right:110px;top:1580px;text-align:center;font-size:24px;line-height:32px;color:#5B5F64}
+</style></head><body>
+<div id="s"><div id="label"></div><div id="tm"></div></div>
+<script>
+const L=new URLSearchParams(location.search).get('lang')||'en';
+const S={en:{label:'Concept preview. Integrations in development.',tm:'Garmin, COROS and TrainingPeaks are trademarks of their owners. Raceproof isn’t affiliated with or endorsed by them. Race names are examples.'},
+es:{label:'Vista previa del concepto. Integraciones en desarrollo.',tm:'Garmin, COROS y TrainingPeaks son marcas de sus respectivos dueños. Raceproof no está afiliado ni respaldado por ellos. Los nombres de carreras son ejemplos.'}}[L];
+document.getElementById('label').textContent=S.label;document.getElementById('tm').textContent=S.tm;
+</script></body></html>
