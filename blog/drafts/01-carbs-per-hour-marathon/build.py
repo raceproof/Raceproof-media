@@ -12,7 +12,7 @@ meta={
  'meta_description_en':'Most marathoners should aim for 60 to 90 g of carbs an hour, set by finish time. What the guidelines and studies say, and how to train your gut.',
  'meta_description_es':'Apunta a 60 a 90 g de carbohidratos por hora según tu tiempo final. Qué dicen las guías y los estudios, y cómo entrenar tu estómago.',
  'study_slugs':'ada-dc-acsm-2016;burke-2011;jeukendrup-2014;jimenez-alfageme-2025;smyth-2021;rapoport-2010;norte-2026;mazza-2026;costa-2017a;miall-2018;von-kanel-cordoba-2026;morton-2026;ravikanti-2025;hearris-2022',
- 'published_date':'',
+ 'published_date':'2026-10-17',
 }
 for k in ['meta_title_en','meta_title_es']: assert len(meta[k])<60,(k,len(meta[k]))
 for k in ['meta_description_en','meta_description_es']: assert len(meta[k])<155,(k,len(meta[k]))

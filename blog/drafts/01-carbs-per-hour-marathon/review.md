@@ -168,7 +168,7 @@ Caption: "60 to 90 g of carbs an hour. Most marathoners take 35. / Your finish t
 
 "Your finish time sets your carb target." 15 to 20 s animated, light surface, Gut blue (#1F5FAF). Three finish times appear on a time axis (2:45, 3:45, 4:45). Each fills a fuel bar to its guideline (about 60 g/h, then up to 90 g/h), and a gray dashed line at 35 g/h marks the Seville average. Last beat: "Most runners take 35." Ends on the standard end card (raceproof-endcard-en.mp4 / -es.mp4).
 
-Dates: I'll add the carousel and Reel to the 90-day calendar once you approve the article and pick its publish date.
+Dates (approved Oct 17): article publishes Oct 17, Reel Tue Oct 27, carousel Thu Oct 29.
 
 ---
 
