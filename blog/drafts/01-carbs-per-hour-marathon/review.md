@@ -1,0 +1,174 @@
+# Blog draft 01: How many carbs per hour should I eat in a marathon?
+
+Status: draft for Jonathan's review. Nothing publishes without his OK.
+
+| Field | English | Spanish |
+|---|---|---|
+| Slug | carbs-per-hour-marathon | (same) |
+| SEO title | Carbs per hour in a marathon: what the research says (52) | Carbohidratos por hora en un maratón: qué dice la ciencia (57) |
+| Meta description | Most marathoners should aim for 60 to 90 g of carbs an hour, set by finish time. What the guidelines and studies say, and how to train your gut. (144) | Apunta a 60 a 90 g de carbohidratos por hora según tu tiempo final. Qué dicen las guías y los estudios, y cómo entrenar tu estómago. (132) |
+
+Studies cited (14, all live on raceproof.ai/research): ADA, DC and ACSM 2016; Burke et al. 2011; Jeukendrup 2014; Jiménez-Alfageme et al. 2025; Smyth 2021; Rapoport 2010; Norte et al. 2026; Mazza et al. 2026; Costa et al. 2017 (gut training trial); Miall et al. 2018; von Känel-Cordoba et al. 2026; Morton et al. 2026; Ravikanti et al. 2025; Hearris et al. 2022.
+
+Slugs to confirm in the import: the position statement (I used ada-dc-acsm-2016) and which Costa 2017 is costa-2017a (I used it for the gut training trial in Applied Physiology, Nutrition, and Metabolism).
+
+---
+
+# How many carbs per hour should I eat in a marathon?
+
+Most marathoners should aim for 60 to 90 g of carbohydrate an hour. Guidelines put a 2 to 3 hour effort at about 60 g/h and races longer than about 2.5 to 3 hours at up to 90 g/h, taken as a glucose and fructose mix by a gut you've trained. Most runners take far less: at the 2022 Seville Marathon, runners averaged 35 g/h and only 9% reached 60 to 90 g/h.
+
+## What do the guidelines say?
+
+The 2016 joint position statement from the [Academy of Nutrition and Dietetics, Dietitians of Canada and the American College of Sports Medicine](https://pubmed.ncbi.nlm.nih.gov/26917108/) sets up to 90 g of carbohydrate an hour for exercise lasting more than 2.5 to 3 hours.
+
+Two reviews split it by how long you'll be out there. [Burke et al. 2011](https://doi.org/10.1080/02640414.2011.585473) call 30 to 60 g/h a fitting target for longer events, and up to 90 g/h for events over 2.5 hours, from blends of different carbs. [Jeukendrup 2014](https://doi.org/10.1007/s40279-014-0148-z) recommends up to about 60 g/h from a single carb source for 2 to 3 hours of exercise, and about 90 g/h for longer efforts, which has to come from mixed sugars such as glucose plus fructose. Jeukendrup wrote it while at the Gatorade Sports Science Institute (PepsiCo), which sells sports drinks.
+
+So your target depends on your finish time, not the distance.
+
+## How much do marathoners actually eat?
+
+Much less. [Jiménez-Alfageme et al. 2025](https://doi.org/10.1186/s40798-024-00801-w) surveyed 160 runners at the 2022 Seville Marathon. They averaged 35 g of carbs an hour. 41.3% took under 30 g/h, and only 9.0% landed in the 60 to 90 g/h range. Under-fueling grew with finish time: 22.2% of runners under 3 hours took less than 30 g/h, rising to 42.1% at 3 to 4 hours and 66.7% over 4 hours.
+
+It's a survey of self-reported intake, mostly from men, and carbs stopped predicting finish time once sex was accounted for. It shows what runners do, not what works.
+
+## Does fueling help you avoid the wall?
+
+Hitting the wall is common. [Smyth 2021](https://doi.org/10.1371/journal.pone.0251513) analyzed more than 4 million marathon results and found that 28% of men and 17% of women slowed by at least 25% for 5 km or more late in the race. On average it started at 29.6 km for men and 29.3 km for women, and cost about 31.5 and 33.2 minutes against a recent best. This is observational race data: it shows how often the wall happens, not that fueling alone prevents it.
+
+A computer model of marathon fuel use ([Rapoport 2010](https://doi.org/10.1371/journal.pcbi.1000960)) adds that where you run out depends on your pace and your carb stores, and mid-race carbs can push it back. It's a model, not measured runners.
+
+## Do more carbs protect your late-race pace?
+
+In the lab, for trained athletes, yes. In [Norte et al. 2026](https://doi.org/10.1111/sms.70326), 16 trained cyclists and triathletes rode for 3 hours, then did a short all-out test. Their critical power was 277 W fresh. After the ride it fell to 236 W with water, 257 W with 60 g/h and 266 W with 120 g/h. [Mazza et al. 2026](https://doi.org/10.1249/MSS.0000000000004180) found the same pattern in 15 trained men: after 4 hours of riding, 15-minute time trial power fell 9.3% at 60 g/h and 6.4% at 100 g/h.
+
+Both are small lab studies of cyclists, almost all men, and neither measured race time. They suggest fueling protects late-race power.
+
+## Can you train your gut to take more?
+
+Yes, and fairly quickly. In [Costa et al. 2017](https://doi.org/10.1139/apnm-2016-0453), 25 runners practiced taking carbs on runs for 2 weeks. Gut symptoms fell 60% in the gel group and 63% in the food group, and distance in a 1-hour running test rose 5.2% and 4.3%, while the placebo group's fell 2.1%. In [Miall et al. 2018](https://doi.org/10.1111/sms.12912), 18 runners took 90 g/h on daily 1-hour runs for 2 weeks: gut symptoms and malabsorption dropped, and running distance rose from 11.7 to 12.3 km.
+
+Both are small trials from the same lab, but they agree: your gut adapts to the fueling you practice.
+
+## What it means for your race
+
+**Marathon.** Start from your expected finish time. Around 2 to 3 hours, the guideline is about 60 g/h. Longer than about 2.5 to 3 hours, work toward up to 90 g/h if your gut handles it. Either way, most runners have room to take more than they do now.
+
+**Ultra.** Guidance for long efforts sits around 90 g/h from mixed sugars. Ultras add heat, terrain and many hours of eating, so they get their own article.
+
+**Triathlon.** A 70.3 or full distance lasts well past 2.5 hours for almost everyone, so the up to 90 g/h guidance applies. A review of 70.3 studies, [von Känel-Cordoba et al. 2026](https://doi.org/10.1371/journal.pone.0352506), linked conservative bike pacing that spares glycogen to a better final run. That's an observed link, not proof.
+
+**When to start.** Gut training has its own window: start about 12 weeks out, reach your race-level carbs by 4 to 6 weeks out, then use your race fueling in every long session after that. [See your own timeline: try the demo](https://raceproof.ai/demo).
+
+## Our take
+
+*This is our opinion, not a study finding.* Pick your target from your finish time, not from what a pro takes. Write it down in grams per hour, practice it in every long run from about 12 weeks out, and raise it in small steps only when your stomach stays quiet. For most age-group marathoners, 90 g/h is a ceiling, not a starting point: the studies of 120 g/h used trained or elite athletes, and no study has tested it in recreational runners yet.
+
+## FAQs
+
+### Do I need carbs in a marathon if I run under 3 hours?
+The guidelines say yes: about 60 g/h for 2 to 3 hours of exercise ([Jeukendrup 2014](https://doi.org/10.1007/s40279-014-0148-z)), or 30 to 60 g/h for longer events ([Burke et al. 2011](https://doi.org/10.1080/02640414.2011.585473)). In Seville, 22.2% of runners under 3 hours still took less than 30 g/h.
+
+### Is 120 g an hour better?
+Not proven for most runners. A 2026 review ([Morton et al.](https://doi.org/10.1016/j.tjnut.2026.101442)) says the ceiling could rise from 90 to 120 g/h for trained athletes, and that 120 to 200 g/h is unproven. Several of its authors have ties to Science in Sport. In 8 elite marathoners taking 120 g/h, gut symptoms peaked ([Ravikanti et al. 2025](https://doi.org/10.1152/japplphysiol.00665.2025), funded by Science in Sport).
+
+### Gels, drinks or chews?
+In 9 trained cyclists taking 120 g/h, the body used carbs from drinks, gels and chews about equally ([Hearris et al. 2022](https://doi.org/10.1152/japplphysiol.00091.2022); a co-author lists a Science in Sport affiliation). Pick what you can carry and stomach, and practice it.
+
+### What if my stomach can't handle it?
+Train it. Two weeks of practice cut gut symptoms by about 60% in one trial ([Costa et al. 2017](https://doi.org/10.1139/apnm-2016-0453)). If you have ongoing gut problems, diabetes or another medical condition, talk to your doctor before changing how you fuel.
+
+**See where you stand for your race.** [Try the demo](https://raceproof.ai/demo)
+
+---
+
+# ¿Cuántos carbohidratos por hora debo comer en un maratón?
+
+La mayoría de los maratonistas debería apuntar a 60 a 90 g de carbohidratos por hora. Las guías ponen un esfuerzo de 2 a 3 horas en unos 60 g/h, y las carreras de más de 2.5 a 3 horas en hasta 90 g/h, con una mezcla de glucosa y fructosa y un estómago entrenado. La mayoría come mucho menos: en el Maratón de Sevilla 2022, los corredores promediaron 35 g/h y solo el 9% llegó a 60 a 90 g/h.
+
+## ¿Qué dicen las guías?
+
+La postura conjunta de 2016 de la [Academy of Nutrition and Dietetics, Dietitians of Canada y el American College of Sports Medicine](https://pubmed.ncbi.nlm.nih.gov/26917108/) fija hasta 90 g de carbohidratos por hora para ejercicios de más de 2.5 a 3 horas.
+
+Dos revisiones lo separan por duración. [Burke et al. 2011](https://doi.org/10.1080/02640414.2011.585473) proponen 30 a 60 g/h para eventos largos y hasta 90 g/h para los de más de 2.5 horas, combinando distintos carbohidratos. [Jeukendrup 2014](https://doi.org/10.1007/s40279-014-0148-z) recomienda hasta unos 60 g/h de una sola fuente para 2 a 3 horas, y unos 90 g/h para esfuerzos más largos, con azúcares mezclados como glucosa más fructosa. Jeukendrup lo escribió cuando trabajaba en el Gatorade Sports Science Institute (PepsiCo), que vende bebidas deportivas.
+
+O sea, tu meta depende de tu tiempo final, no de la distancia.
+
+## ¿Cuánto comen de verdad los maratonistas?
+
+[Jiménez-Alfageme et al. 2025](https://doi.org/10.1186/s40798-024-00801-w) encuestaron a 160 corredores del Maratón de Sevilla 2022. Promediaron 35 g de carbohidratos por hora. El 41.3% tomó menos de 30 g/h y solo el 9.0% quedó entre 60 y 90 g/h. Mientras más lento el tiempo, peor: el 22.2% de quienes terminaron en menos de 3 horas tomó menos de 30 g/h, y la cifra subió a 42.1% entre 3 y 4 horas y a 66.7% en más de 4 horas.
+
+Es una encuesta autorreportada, en su mayoría de hombres, y los carbohidratos dejaron de predecir el tiempo al considerar el sexo. Muestra lo que hacen los corredores, no lo que funciona.
+
+## ¿Comer bien te ayuda a no chocar con el muro?
+
+[Smyth 2021](https://doi.org/10.1371/journal.pone.0251513) analizó más de 4 millones de resultados de maratón: el 28% de los hombres y el 17% de las mujeres bajaron su ritmo al menos un 25% durante 5 km o más al final de la carrera. En promedio empezó en el km 29.6 en hombres y 29.3 en mujeres, y les costó unos 31.5 y 33.2 minutos frente a su mejor marca reciente. Son datos observacionales: muestran qué tan seguido pasa, no que comer bien por sí solo lo evite.
+
+Un modelo por computadora ([Rapoport 2010](https://doi.org/10.1371/journal.pcbi.1000960)) agrega que el momento en que te quedas sin reservas depende de tu ritmo y de tus reservas, y que comer en carrera puede retrasarlo. Es un modelo, no corredores medidos.
+
+## ¿Más carbohidratos protegen tu ritmo al final?
+
+En el laboratorio y con atletas entrenados, sí. En [Norte et al. 2026](https://doi.org/10.1111/sms.70326), 16 ciclistas y triatletas entrenados pedalearon 3 horas y luego hicieron una prueba corta a tope. Su potencia crítica era de 277 W descansados. Después del pedaleo bajó a 236 W con agua, 257 W con 60 g/h y 266 W con 120 g/h. [Mazza et al. 2026](https://doi.org/10.1249/MSS.0000000000004180) vio el mismo patrón en 15 hombres entrenados: tras 4 horas de bici, la potencia en una contrarreloj de 15 minutos cayó 9.3% con 60 g/h y 6.4% con 100 g/h.
+
+Son estudios chicos de laboratorio, con ciclistas casi todos hombres, y ninguno midió tiempo de carrera. Sugieren que comer bien protege la potencia al final.
+
+## ¿Se puede entrenar el estómago para comer más?
+
+Sí, y bastante rápido. En [Costa et al. 2017](https://doi.org/10.1139/apnm-2016-0453), 25 corredores practicaron comer carbohidratos en sus rodajes durante 2 semanas. Las molestias digestivas bajaron 60% con geles y 63% con comida, y la distancia en una prueba de 1 hora subió 5.2% y 4.3%, contra una baja de 2.1% con placebo. En [Miall et al. 2018](https://doi.org/10.1111/sms.12912), 18 corredores tomaron 90 g/h en rodajes diarios de 1 hora durante 2 semanas: las molestias y la mala absorción bajaron, y la distancia recorrida subió de 11.7 a 12.3 km.
+
+Son estudios chicos del mismo laboratorio, pero coinciden: tu estómago se adapta a lo que practicas.
+
+## Qué significa para tu carrera
+
+**Maratón.** Parte de tu tiempo esperado. De 2 a 3 horas, la guía es de unos 60 g/h. Más de 2.5 a 3 horas, sube hasta 90 g/h si tu estómago lo tolera. Casi todos tienen margen para comer más de lo que comen hoy.
+
+**Ultra.** La guía para esfuerzos largos ronda los 90 g/h de azúcares mezclados. Los ultras suman calor, terreno y muchas horas comiendo: tendrán su propio artículo.
+
+**Triatlón.** Un 70.3 o una distancia completa dura más de 2.5 horas para casi todos, así que aplica la guía de hasta 90 g/h. Una revisión de estudios de 70.3 ([von Känel-Cordoba et al. 2026](https://doi.org/10.1371/journal.pone.0352506)) relacionó un ritmo conservador en la bici, que ahorra glucógeno, con una mejor carrera a pie. Es una relación, no una prueba.
+
+**Cuándo empezar.** El entrenamiento del estómago tiene su propia ventana: empieza unas 12 semanas antes, llega a los carbohidratos de carrera entre 4 y 6 semanas antes, y desde ahí usa tu plan de carrera en cada fondo largo. [Mira tu propia línea de tiempo: prueba la demo](https://raceproof.ai/demo).
+
+## Nuestra opinión
+
+*Esta es nuestra opinión, no el resultado de un estudio.* Elige tu meta según tu tiempo, no según lo que come un profesional. Anótala en gramos por hora, practícala en cada fondo largo desde unas 12 semanas antes y súbela de a poco solo si tu estómago va bien. Para la mayoría de los amateurs, 90 g/h es un techo, no un punto de partida: los estudios con 120 g/h usaron atletas entrenados o de élite, y ninguno lo ha probado en corredores recreativos.
+
+## Preguntas frecuentes
+
+### ¿Necesito carbohidratos si corro el maratón en menos de 3 horas?
+Las guías dicen que sí: unos 60 g/h para 2 a 3 horas de ejercicio ([Jeukendrup 2014](https://doi.org/10.1007/s40279-014-0148-z)), o 30 a 60 g/h para eventos largos ([Burke et al. 2011](https://doi.org/10.1080/02640414.2011.585473)). En Sevilla, el 22.2% de quienes corrieron en menos de 3 horas igual tomó menos de 30 g/h.
+
+### ¿Es mejor tomar 120 g por hora?
+No está probado para la mayoría. Una revisión de 2026 ([Morton et al.](https://doi.org/10.1016/j.tjnut.2026.101442)) dice que el techo podría subir de 90 a 120 g/h en atletas entrenados, y que 120 a 200 g/h no está probado; varios autores tienen vínculos con Science in Sport. En 8 maratonistas de élite, las molestias digestivas fueron máximas con 120 g/h ([Ravikanti et al. 2025](https://doi.org/10.1152/japplphysiol.00665.2025), financiado por Science in Sport).
+
+### ¿Geles, bebidas o gomitas?
+En 9 ciclistas entrenados que tomaron 120 g/h, el cuerpo aprovechó los carbohidratos de bebidas, geles y gomitas de forma parecida ([Hearris et al. 2022](https://doi.org/10.1152/japplphysiol.00091.2022); uno de los autores declara un vínculo con Science in Sport). Usa lo que toleres y practícalo.
+
+### ¿Y si mi estómago no lo aguanta?
+Entrénalo. Dos semanas de práctica bajaron las molestias digestivas cerca de un 60% en un estudio ([Costa et al. 2017](https://doi.org/10.1139/apnm-2016-0453)). Si tienes problemas digestivos frecuentes, diabetes u otra condición médica, habla con tu médico antes de cambiar cómo comes en carrera.
+
+**Mira qué tan listo estás para tu carrera.** [Prueba la demo](https://raceproof.ai/demo)
+
+---
+
+# Research breakdowns carousel (cut from the article)
+
+7 slides, 1080 x 1350, same format as the Research posts tab. Numbers only from the article.
+
+1. Hook: "60 to 90 g of carbs an hour. Most marathoners take 35." Small: Seville Marathon 2022, Jiménez-Alfageme et al. 2025.
+2. Your finish time sets the target. 2 to 3 h: about 60 g/h. Over 2.5 to 3 h: up to 90 g/h, mixed sugars. Sources: ADA, DC and ACSM 2016; Jeukendrup 2014 (Gatorade Sports Science Institute); Burke et al. 2011.
+3. What runners actually do: 35 g/h average, 41.3% under 30 g/h, only 9% in range (160 runners, self-reported).
+4. The wall: 28% of men and 17% of women, starting around 29 to 30 km, costing about half an hour (Smyth 2021, observational).
+5. Late power: after 3 h, 236 W on water, 257 W at 60 g/h, 266 W at 120 g/h (Norte et al. 2026, 16 cyclists, lab).
+6. Train the gut: 2 weeks of practice cut gut symptoms about 60% (Costa et al. 2017, 25 runners).
+7. Our take: pick your target from your finish time, practice it from 12 weeks out, treat 90 g/h as a ceiling. CTA "Full article on raceproof.ai". Small logo.
+
+Caption: "60 to 90 g of carbs an hour. Most marathoners take 35. / Your finish time sets your target, and your gut can be trained to hit it. / Full article on raceproof.ai (link in bio)." Hashtags: #raceproof #marathontraining #racefueling #guttraining #sportsnutrition
+
+# Reel idea
+
+"Your finish time sets your carb target." 15 to 20 s animated, light surface, Gut blue (#1F5FAF). Three finish times appear on a time axis (2:45, 3:45, 4:45). Each fills a fuel bar to its guideline (about 60 g/h, then up to 90 g/h), and a gray dashed line at 35 g/h marks the Seville average. Last beat: "Most runners take 35." Ends on the standard end card (raceproof-endcard-en.mp4 / -es.mp4).
+
+Dates: I'll add the carousel and Reel to the 90-day calendar once you approve the article and pick its publish date.
+
+---
+
