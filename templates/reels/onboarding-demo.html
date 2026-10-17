@@ -192,7 +192,7 @@ const S = {
     dropHint: 'Drop a PDF here', pdfName: 'sweat-test-results.pdf',
     sweatRate: 'SWEAT RATE', sodium: 'SODIUM LOSS', naNote: 'About 700 mg of sodium an hour',
     readiness: 'Readiness', sample: 'SAMPLE ATHLETE', weeks: '9 weeks out', rate: 25, rateDec: 0, rateU: 'oz/h',
-    states: { ready: 'Ready', building: 'Building', gap: 'Gap', later: 'Later', low: 'Low priority', nt: 'Not tested' }, based: n => `Based on ${n} of 7 pillars`,
+    states: { ready: 'Ready', building: 'Building', gap: 'Gap', later: 'Later', low: 'Low priority', nt: 'Not tested' }, notTested: '1 pillar not tested yet',
     tabs: ['Readiness', 'Plan', 'Race', 'Ask', 'Me'],
     save: 'Save this',
     tm: 'Garmin, COROS and TrainingPeaks are trademarks of their owners. Raceproof isn’t affiliated with or endorsed by them. Race names are examples.',
@@ -241,7 +241,7 @@ const S = {
     dropHint: 'Suelta un PDF aquí', pdfName: 'resultados-prueba-sudor.pdf',
     sweatRate: 'TASA DE SUDOR', sodium: 'PÉRDIDA DE SODIO', naNote: 'Unos 700 mg de sodio por hora',
     readiness: 'Preparación', sample: 'ATLETA DE EJEMPLO', weeks: 'a 9 semanas', rate: 0.74, rateDec: 2, rateU: 'L/h',
-    states: { ready: 'Listo', building: 'En progreso', gap: 'Brecha', later: 'Después', low: 'Baja prioridad', nt: 'Sin medir' }, based: n => `Basado en ${n} de 7 pilares`,
+    states: { ready: 'Listo', building: 'En progreso', gap: 'Brecha', later: 'Después', low: 'Baja prioridad', nt: 'Sin medir' }, notTested: '1 pilar sin medir',
     tabs: ['Preparación', 'Plan', 'Carrera', 'Preguntar', 'Yo'],
     save: 'Guárdalo',
     tm: 'Garmin, COROS y TrainingPeaks son marcas de sus respectivos dueños. Raceproof no está afiliado ni respaldado por ellos. Los nombres de carreras son ejemplos.',
@@ -464,7 +464,8 @@ window.render = function (tt) {
   drawRing(weights, fills);
   const den = RING.length - 1 + h;
   q('#pct').textContent = Math.round(100 * num / den);
-  q('#based').textContent = S.based(t < flip ? 6 : 7);
+  q('#based').textContent = S.notTested;
+  q('#based').style.opacity = 1 - pr(t, flip, 0.5);
 
   // end card
   if (L.end) {
