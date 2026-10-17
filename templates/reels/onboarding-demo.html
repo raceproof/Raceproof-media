@@ -85,6 +85,7 @@
   .rhead .rl{font-size:13px;color:#5B5F64}
   .rhead .rp{font-family:"Inter Display","Inter",sans-serif;font-weight:800;font-size:40px;line-height:44px;letter-spacing:-0.02em}
   .rhead .rs{font-size:12.5px;line-height:16px;color:#5B5F64}
+  .rhead .rb{font-size:11.5px;line-height:15px;color:#5B5F64;margin:0 0 3px}
   /* end card */
   #end{inset:0;background:#F4F2ED;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;opacity:0;z-index:10}
   #end img{width:560px}
@@ -153,7 +154,7 @@
         <div class="scr" id="s4">
           <p class="sample" data-t="sample"></p>
           <div class="card">
-            <div class="rhead"><svg viewBox="0 0 112 112" id="ring"></svg><div><div class="rl" data-t="readiness"></div><div class="rp"><span id="pct">0</span>%</div><div class="rs" id="rsub"></div></div></div>
+            <div class="rhead"><svg viewBox="0 0 112 112" id="ring"></svg><div><div class="rl" data-t="readiness"></div><div class="rp"><span id="pct">0</span>%</div><div class="rb" id="based"></div><div class="rs" id="rsub"></div></div></div>
             <div id="pillars"></div>
           </div>
         </div>
@@ -191,7 +192,7 @@ const S = {
     dropHint: 'Drop a PDF here', pdfName: 'sweat-test-results.pdf',
     sweatRate: 'SWEAT RATE', sodium: 'SODIUM LOSS', naNote: 'About 700 mg of sodium an hour',
     readiness: 'Readiness', sample: 'SAMPLE ATHLETE', weeks: '9 weeks out', rate: 25, rateDec: 0, rateU: 'oz/h',
-    states: { ready: 'Ready', building: 'Building', gap: 'Gap', later: 'Later', low: 'Low priority' },
+    states: { ready: 'Ready', building: 'Building', gap: 'Gap', later: 'Later', low: 'Low priority', nt: 'Not tested' }, based: n => `Based on ${n} of 7 pillars`,
     tabs: ['Readiness', 'Plan', 'Race', 'Ask', 'Me'],
     save: 'Save this',
     tm: 'Garmin, COROS and TrainingPeaks are trademarks of their owners. Raceproof isn’t affiliated with or endorsed by them. Race names are examples.',
@@ -240,7 +241,7 @@ const S = {
     dropHint: 'Suelta un PDF aquí', pdfName: 'resultados-prueba-sudor.pdf',
     sweatRate: 'TASA DE SUDOR', sodium: 'PÉRDIDA DE SODIO', naNote: 'Unos 700 mg de sodio por hora',
     readiness: 'Preparación', sample: 'ATLETA DE EJEMPLO', weeks: 'a 9 semanas', rate: 0.74, rateDec: 2, rateU: 'L/h',
-    states: { ready: 'Listo', building: 'En progreso', gap: 'Brecha', later: 'Después', low: 'Baja prioridad' },
+    states: { ready: 'Listo', building: 'En progreso', gap: 'Brecha', later: 'Después', low: 'Baja prioridad', nt: 'Sin medir' }, based: n => `Basado en ${n} de 7 pilares`,
     tabs: ['Preparación', 'Plan', 'Carrera', 'Preguntar', 'Yo'],
     save: 'Guárdalo',
     tm: 'Garmin, COROS y TrainingPeaks son marcas de sus respectivos dueños. Raceproof no está afiliado ni respaldado por ellos. Los nombres de carreras son ejemplos.',
@@ -302,19 +303,27 @@ q('#tabs').innerHTML = S.tabs.map((t, i) => `<div class="tab" data-i="${i}"><svg
 q('#sessions').innerHTML = R.sess.map(s => `<div class="sess"><span><span class="d">${s[0]}</span>&nbsp;&nbsp;${s[1]}</span><span>${s[2]}</span></div>`).join('');
 q('#pillars').innerHTML = R.pillars.map((p, i) => `<div class="prow" id="p${i}"><div class="tx"><div class="nm">${p[0]}</div><div class="ev"></div></div><span class="tag"></span></div>`).join('');
 
-// readiness ring: one segment per counted pillar (Later is not counted), like the homepage card
-const COUNTED = R.pillars.map((p, i) => i).filter(i => R.pillars[i][3] !== 'later' && R.pillars[i][3] !== 'low');
-const PTS = { ready: 20, building: 14, gap: 0 };   // 5 counted pillars: 2 Ready + 2 Building = 68%, as on raceproof.ai
-const COL = { ready: '#C8F03C', building: '#B83C0B', gap: '#E8E5DF' };
-(function () {
-  const n = COUNTED.length, gap = 5, r = 49, c = 56;
-  const pt = a => [c + r * Math.cos((a - 90) * Math.PI / 180), c + r * Math.sin((a - 90) * Math.PI / 180)];
-  q('#ring').innerHTML = COUNTED.map((pi, j) => {
-    const a0 = j * 360 / n + gap / 2, a1 = (j + 1) * 360 / n - gap / 2, [x0, y0] = pt(a0), [x1, y1] = pt(a1);
-    const d = `M${x0},${y0} A${r},${r} 0 0 1 ${x1},${y1}`;
-    return `<path d="${d}" fill="none" stroke="#E8E5DF" stroke-width="14"/><path id="seg${pi}" d="${d}" pathLength="1" fill="none" stroke-width="14"/>`;
-  }).join('');
-})();
+// readiness ring and score, matching the homepage card: Not tested and Later pillars are left out.
+// Ready counts 1, Building 0.6 (2 Ready + 2 Building = 80%, as on raceproof.ai). Ring order: Ready first, then Building.
+const SCORE = { ready: 1, building: 0.6 };
+const COL = { ready: '#C8F03C', building: '#B83C0B' };
+const HYD = R.pillars.findIndex(p => p[4]);
+const RING = R.pillars.map((p, i) => i).filter(i => i === HYD || (p => p[3] === 'ready' || p[3] === 'building')(R.pillars[i]))
+  .sort((a, b) => ((i => i === HYD ? 0 : R.pillars[i][3] === 'ready' ? 0 : 1)(a)) - ((i => i === HYD ? 0 : R.pillars[i][3] === 'ready' ? 0 : 1)(b)) || a - b);
+q('#ring').innerHTML = RING.map(i => `<path id="trk${i}" fill="none" stroke="#E8E5DF" stroke-width="14"/><path id="seg${i}" pathLength="1" fill="none" stroke-width="14"/>`).join('');
+const ringPt = a => [56 + 49 * Math.cos((a - 90) * Math.PI / 180), 56 + 49 * Math.sin((a - 90) * Math.PI / 180)];
+function drawRing(weights, fills) {
+  const tot = RING.reduce((s, i) => s + weights[i], 0); let acc = 0;
+  RING.forEach(i => {
+    const w = weights[i], seg = q('#seg' + i), trk = q('#trk' + i);
+    const span = w / tot * 360, gap = w > 0.05 ? 5 : 0;
+    const a0 = acc + gap / 2, a1 = acc + Math.max(span - gap / 2, gap / 2 + 0.01); acc += span;
+    const [x0, y0] = ringPt(a0), [x1, y1] = ringPt(a1);
+    const d = w > 0.001 ? `M${x0},${y0} A49,49 0 ${a1 - a0 > 180 ? 1 : 0} 1 ${x1},${y1}` : '';
+    seg.setAttribute('d', d); trk.setAttribute('d', d);
+    seg.setAttribute('stroke', fills[i].col); seg.setAttribute('stroke-dasharray', `${fills[i].p} 1`);
+  });
+}
 
 // ---------- layout ----------
 const L = {
@@ -362,7 +371,7 @@ const OFF = LOOP ? T.race : 0;
 const XF = 0.5;   // loop cross-fade length
 
 function setTab(i) { document.querySelectorAll('.tab').forEach(e => e.classList.toggle('on', +e.dataset.i === i)); }
-function tag(el, st) { el.className = 'tag t-' + (st === 'low' ? 'later' : st); el.textContent = S.states[st]; }
+function tag(el, st) { el.className = 'tag t-' + (st === 'low' || st === 'nt' ? 'later' : st); el.textContent = S.states[st]; }
 
 window.render = function (tt) {
   const t = tt + OFF;
@@ -430,31 +439,32 @@ window.render = function (tt) {
   fade(q('#res'), pr(t, T.sweat + 1.0, 0.35), 10);
   q('#naNote').style.opacity = pr(t, T.sweat + 1.9, 0.35);
 
-  // 4. report: rows every 0.4 s, hydration flips from Gap to Ready once all rows are in
+  // 4. report: rows every 0.4 s; hydration starts Not tested and turns Ready once all rows are in
   const flip = T.rep + 0.3 + R.pillars.length * 0.4 + 0.3;
+  const h = pr(t, flip, 0.6);                 // hydration joins the score and the ring
+  const weights = {}, fills = {};
+  let num = 0;
   R.pillars.forEach((p, i) => {
     const row = q('#p' + i); const a = T.rep + 0.3 + i * 0.4;
-    fade(row, pr(t, a, 0.35), 10);
+    const ap = pr(t, a, 0.35);
+    fade(row, ap, 10);
     const tg = row.querySelector('.tag'), ev = row.querySelector('.ev');
-    let st = p[3];
-    if (p[4]) {
-      st = t < flip ? 'gap' : 'ready'; tag(tg, st); ev.textContent = t < flip ? p[4] : p[2];
+    if (i === HYD) {
+      tag(tg, t < flip ? 'nt' : 'ready'); ev.textContent = t < flip ? p[4] : p[2];
       row.style.background = `rgba(200,240,60,${0.22 * between(t, flip, flip + 1.2, 0.3)})`;
-    } else { tag(tg, p[3]); ev.textContent = p[2]; }
-    const seg = q('#seg' + i);
-    if (seg) {
-      const drawP = p[4] && t >= flip ? pr(t, flip, 0.6) : pr(t, a, 0.5);
-      seg.setAttribute('stroke', COL[p[4] ? (t >= flip ? 'ready' : 'gap') : st]);
-      seg.setAttribute('stroke-dasharray', `${drawP} 1`);
+      weights[i] = h; fills[i] = { col: COL.ready, p: h }; num += SCORE.ready * h;
+    } else {
+      tag(tg, p[3]); ev.textContent = p[2];
+      if (SCORE[p[3]] !== undefined) {
+        const dp = pr(t, a, 0.5);
+        weights[i] = 1; fills[i] = { col: COL[p[3]], p: dp }; num += SCORE[p[3]] * dp;
+      }
     }
   });
-  // percentage counts up with the rows; the sweat test adds Hydration at the end
-  let pct = 0;
-  COUNTED.forEach(i => {
-    const p = R.pillars[i];
-    pct += p[4] ? PTS.ready * pr(t, flip, 0.6) : PTS[p[3]] * pr(t, T.rep + 0.3 + i * 0.4, 0.4);
-  });
-  q('#pct').textContent = Math.round(pct);
+  drawRing(weights, fills);
+  const den = RING.length - 1 + h;
+  q('#pct').textContent = Math.round(100 * num / den);
+  q('#based').textContent = S.based(t < flip ? 6 : 7);
 
   // end card
   if (L.end) {
