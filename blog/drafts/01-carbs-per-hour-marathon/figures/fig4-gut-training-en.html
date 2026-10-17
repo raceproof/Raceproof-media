@@ -1,0 +1,31 @@
+<style>
+.rp-fig{--ink:#15171A;--muted:#5B5F64;--line:#DDD9D0;--card:#FFFFFF;--gut:#1F5FAF;--gut2:#7FA3D6;--heat:#B83C0B;--ref:#A4A9AE;
+ position:relative;margin:32px 0;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:10px;font-family:Inter,system-ui,sans-serif;color:var(--ink)}
+.rp-fig *{box-sizing:border-box}
+.rp-fig h4{margin:0;font-family:"Inter Display",Inter,sans-serif;font-weight:800;font-size:20px;line-height:1.25;letter-spacing:-0.01em}
+.rp-fig .rp-sub{margin:4px 0 16px;font-size:14px;color:var(--muted)}
+.rp-fig .rp-row{display:grid;grid-template-columns:minmax(88px,28%) 1fr;gap:10px;align-items:center;margin:10px 0}
+.rp-fig .rp-lab{font-size:14px;font-weight:600;line-height:1.25}
+.rp-fig .rp-lab small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.rp-fig .rp-track{position:relative;height:24px}
+.rp-fig .rp-bar{position:absolute;top:2px;height:20px;border-radius:0 4px 4px 0}
+.rp-fig .rp-bar.rp-range{border-radius:4px}
+.rp-fig .rp-val{position:absolute;top:2px;line-height:20px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:var(--ink);white-space:nowrap;padding-left:6px}
+.rp-fig .rp-axis{position:relative;height:18px;margin-left:calc(28% + 10px);border-top:1px solid var(--line);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;color:var(--muted)}
+.rp-fig .rp-axis span{position:absolute;top:3px;transform:translateX(-50%)}
+.rp-fig .rp-plot{position:relative}
+.rp-fig .rp-ref{position:absolute;top:24px;bottom:0;border-left:2px dashed var(--muted)}
+.rp-fig .rp-refl{position:absolute;top:-22px;transform:translateX(-50%);font-size:12px;color:var(--muted);white-space:nowrap;background:var(--card);padding:0 4px}
+.rp-fig .rp-zero{position:absolute;top:0;bottom:0;border-left:1px solid var(--muted)}
+.rp-fig .rp-stats{display:flex;gap:24px;flex-wrap:wrap;margin:0 0 14px}
+.rp-fig .rp-stat b{display:block;font-family:"Inter Display",Inter,sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.02em;color:var(--ink)}
+.rp-fig .rp-stat span{font-size:13px;color:var(--muted)}
+.rp-fig .rp-key{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:2px 0 6px}
+.rp-fig .rp-key i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.rp-fig figcaption{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;line-height:1.5;color:var(--muted)}
+.rp-fig figcaption a{color:var(--muted)}
+.rp-fig .rp-sr{position:absolute;left:0;top:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.rp-fig .rp-in{position:absolute;top:2px;line-height:20px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;white-space:nowrap;padding-right:8px;transform:translateX(-100%)}
+@media (max-width:480px){.rp-fig{padding:16px}.rp-fig h4{font-size:18px}.rp-fig .rp-row{grid-template-columns:96px 1fr}.rp-fig .rp-axis{margin-left:106px}}
+</style>
+<figure class="rp-fig" aria-label="Two weeks of gut training paid off"><h4>Two weeks of gut training paid off</h4><p class="rp-sub">Change in distance on a 1-hour running test after 2 weeks of practice</p><div class="rp-key"><span><i style="background:var(--gut)"></i>Gut training</span><span><i style="background:var(--heat)"></i>Placebo</span></div><div class="rp-row"><div class="rp-lab">Carb gels<small>symptoms down 60%</small></div><div class="rp-track" title="Carb gels: +5.2%"><div class="rp-zero" style="left:33.33%"></div><div class="rp-bar" style="left:33.33%;width:43.33%;background:var(--gut)"></div><div class="rp-val" style="left:76.67%">+5.2%</div></div></div><div class="rp-row"><div class="rp-lab">Carb food<small>symptoms down 63%</small></div><div class="rp-track" title="Carb food: +4.3%"><div class="rp-zero" style="left:33.33%"></div><div class="rp-bar" style="left:33.33%;width:35.83%;background:var(--gut)"></div><div class="rp-val" style="left:69.17%">+4.3%</div></div></div><div class="rp-row"><div class="rp-lab">Placebo</div><div class="rp-track" title="Placebo: -2.1%"><div class="rp-zero" style="left:33.33%"></div><div class="rp-bar" style="left:15.83%;width:17.50%;background:var(--heat);border-radius:4px 0 0 4px"></div><div class="rp-val" style="left:33.33%">-2.1%</div></div></div><div class="rp-axis"><span style="left:0.00%">-4%</span><span style="left:33.33%">0%</span><span style="left:66.67%">+4%</span><span style="left:100.00%">+8%</span></div><div class="rp-sr"><table><caption>Change in distance on a 1-hour running test after 2 weeks of practice</caption><thead><tr><th>Group</th><th>Distance change</th></tr></thead><tbody><tr><td>Carb gels</td><td>+5.2%</td></tr><tr><td>Carb food</td><td>+4.3%</td></tr><tr><td>Placebo</td><td>-2.1%</td></tr></tbody></table></div><figcaption><a href="https://doi.org/10.1139/apnm-2016-0453">Costa et al. 2017</a>. 25 endurance runners, lab trial.</figcaption></figure>

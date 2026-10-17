@@ -2,7 +2,7 @@ import re, csv, io
 def parts(f):
     s=open(f).read()
     d={}
-    for k,v in re.findall(r'<!-- (\w+) -->\n(.*?)(?=\n<!-- |\Z)',s,re.S): d[k]=v.strip()
+    for k,v in re.findall(r'<!-- (\w+) -->\n(.*?)(?=\n<!-- \w+ -->|\Z)',s,re.S): d[k]=v.strip()
     return d
 en,es=parts('en.md'),parts('es.md')
 meta={
@@ -16,15 +16,23 @@ meta={
 }
 for k in ['meta_title_en','meta_title_es']: assert len(meta[k])<60,(k,len(meta[k]))
 for k in ['meta_description_en','meta_description_es']: assert len(meta[k])<155,(k,len(meta[k]))
-def body(d): return d['body']+'\n\n'+d['cta']
+def embed(text, lang):
+    first=[True]
+    def rep(m):
+        snip=open(f"figures/{m.group(1)}-{lang}.html").read()
+        if not first[0]: snip=snip.split('</style>',1)[1].strip()
+        first[0]=False
+        return snip.strip()
+    return re.sub(r'<!-- fig:([\w-]+) -->', rep, text)
+def body(d, lang='en'): return embed(d['body'], lang)+'\n\n'+d['cta']
 row={'slug':meta['slug'],'title_en':en['title'],'title_es':es['title'],'answer_en':en['answer'],'answer_es':es['answer'],
- 'body_en':body(en),'body_es':body(es),'faq_en':en['faq'],'faq_es':es['faq'],
+ 'body_en':body(en,'en'),'body_es':body(es,'es'),'faq_en':en['faq'],'faq_es':es['faq'],
  'meta_title_en':meta['meta_title_en'],'meta_title_es':meta['meta_title_es'],'meta_description_en':meta['meta_description_en'],
  'meta_description_es':meta['meta_description_es'],'study_slugs':meta['study_slugs'],'published_date':meta['published_date']}
 hdr='slug,title_en,title_es,answer_en,answer_es,body_en,body_es,faq_en,faq_es,meta_title_en,meta_title_es,meta_description_en,meta_description_es,study_slugs,published_date'.split(',')
 with open('carbs-per-hour-marathon.csv','w',newline='') as f:
     w=csv.DictWriter(f,fieldnames=hdr,quoting=csv.QUOTE_ALL); w.writeheader(); w.writerow(row)
-def wc(t): t=re.sub(r'\]\([^)]*\)',']',t); return len(re.findall(r"[A-Za-zÀ-ÿ0-9][\w'.%/-]*",t))
+def wc(t): t=re.sub(r'<!--.*?-->','',t); t=re.sub(r'\]\([^)]*\)',']',t); return len(re.findall(r"[A-Za-zÀ-ÿ0-9][\w'.%/-]*",t))
 print({k:(len(meta[k])) for k in meta if k.startswith('meta')})
 print('words en',wc('\n'.join(en.values())),'es',wc('\n'.join(es.values())))
 allt=open('en.md').read()+open('es.md').read()

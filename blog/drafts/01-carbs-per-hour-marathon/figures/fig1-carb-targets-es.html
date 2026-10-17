@@ -1,0 +1,31 @@
+<style>
+.rp-fig{--ink:#15171A;--muted:#5B5F64;--line:#DDD9D0;--card:#FFFFFF;--gut:#1F5FAF;--gut2:#7FA3D6;--heat:#B83C0B;--ref:#A4A9AE;
+ position:relative;margin:32px 0;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:10px;font-family:Inter,system-ui,sans-serif;color:var(--ink)}
+.rp-fig *{box-sizing:border-box}
+.rp-fig h4{margin:0;font-family:"Inter Display",Inter,sans-serif;font-weight:800;font-size:20px;line-height:1.25;letter-spacing:-0.01em}
+.rp-fig .rp-sub{margin:4px 0 16px;font-size:14px;color:var(--muted)}
+.rp-fig .rp-row{display:grid;grid-template-columns:minmax(88px,28%) 1fr;gap:10px;align-items:center;margin:10px 0}
+.rp-fig .rp-lab{font-size:14px;font-weight:600;line-height:1.25}
+.rp-fig .rp-lab small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.rp-fig .rp-track{position:relative;height:24px}
+.rp-fig .rp-bar{position:absolute;top:2px;height:20px;border-radius:0 4px 4px 0}
+.rp-fig .rp-bar.rp-range{border-radius:4px}
+.rp-fig .rp-val{position:absolute;top:2px;line-height:20px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:var(--ink);white-space:nowrap;padding-left:6px}
+.rp-fig .rp-axis{position:relative;height:18px;margin-left:calc(28% + 10px);border-top:1px solid var(--line);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;color:var(--muted)}
+.rp-fig .rp-axis span{position:absolute;top:3px;transform:translateX(-50%)}
+.rp-fig .rp-plot{position:relative}
+.rp-fig .rp-ref{position:absolute;top:24px;bottom:0;border-left:2px dashed var(--muted)}
+.rp-fig .rp-refl{position:absolute;top:-22px;transform:translateX(-50%);font-size:12px;color:var(--muted);white-space:nowrap;background:var(--card);padding:0 4px}
+.rp-fig .rp-zero{position:absolute;top:0;bottom:0;border-left:1px solid var(--muted)}
+.rp-fig .rp-stats{display:flex;gap:24px;flex-wrap:wrap;margin:0 0 14px}
+.rp-fig .rp-stat b{display:block;font-family:"Inter Display",Inter,sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.02em;color:var(--ink)}
+.rp-fig .rp-stat span{font-size:13px;color:var(--muted)}
+.rp-fig .rp-key{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:2px 0 6px}
+.rp-fig .rp-key i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.rp-fig figcaption{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;line-height:1.5;color:var(--muted)}
+.rp-fig figcaption a{color:var(--muted)}
+.rp-fig .rp-sr{position:absolute;left:0;top:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.rp-fig .rp-in{position:absolute;top:2px;line-height:20px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;white-space:nowrap;padding-right:8px;transform:translateX(-100%)}
+@media (max-width:480px){.rp-fig{padding:16px}.rp-fig h4{font-size:18px}.rp-fig .rp-row{grid-template-columns:96px 1fr}.rp-fig .rp-axis{margin-left:106px}}
+</style>
+<figure class="rp-fig" aria-label="Tu tiempo final define tu meta de carbohidratos"><h4>Tu tiempo final define tu meta de carbohidratos</h4><p class="rp-sub">Carbohidratos por hora que recomiendan las guías, según cuánto tiempo vas a correr</p><div class="rp-plot" style="padding-top:30px"><div class="rp-ref" style="left:calc(28% + 10px + (100% - 28% - 10px) * 0.3500)"><span class="rp-refl">Promedio en Sevilla: 35 g/h</span></div><div class="rp-row"><div class="rp-lab">2 a 3 horas<small>30 a 60 g/h · un solo azúcar</small></div><div class="rp-track" title="2 a 3 horas: 30 a 60 g/h"><div class="rp-bar rp-range" style="left:30.00%;width:30.00%;background:var(--gut)"></div></div></div><div class="rp-row"><div class="rp-lab">Más de 2.5 a 3 h<small>hasta 90 g/h · azúcares mezclados</small></div><div class="rp-track" title="Más de 2.5 a 3 h: hasta 90 g/h"><div class="rp-bar rp-range" style="left:60.00%;width:30.00%;background:var(--gut)"></div></div></div></div><div class="rp-axis"><span style="left:0.00%">0</span><span style="left:30.00%">30</span><span style="left:60.00%">60</span><span style="left:90.00%">90</span></div><div class="rp-sr"><table><caption>Tu tiempo final define tu meta de carbohidratos</caption><thead><tr><th>Duración</th><th>Guía</th></tr></thead><tbody><tr><td>2 a 3 horas</td><td>30 a 60 g/h</td></tr><tr><td>Más de 2.5 a 3 h</td><td>hasta 90 g/h</td></tr></tbody></table></div><figcaption>Guías: <a href="https://doi.org/10.1080/02640414.2011.585473">Burke et al. 2011</a>, <a href="https://doi.org/10.1007/s40279-014-0148-z">Jeukendrup 2014</a> (escrito en el Gatorade Sports Science Institute), <a href="https://pubmed.ncbi.nlm.nih.gov/26917108/">ADA, DC y ACSM 2016</a>. Promedio en Sevilla: <a href="https://doi.org/10.1186/s40798-024-00801-w">Jiménez-Alfageme et al. 2025</a>.</figcaption></figure>

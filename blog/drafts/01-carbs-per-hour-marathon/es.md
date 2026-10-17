@@ -13,9 +13,13 @@ Dos revisiones lo separan por duración. [Burke et al. 2011](https://doi.org/10.
 
 O sea, tu meta depende de tu tiempo final, no de la distancia.
 
+<!-- fig:fig1-carb-targets -->
+
 ## ¿Cuánto comen de verdad los maratonistas?
 
 [Jiménez-Alfageme et al. 2025](https://doi.org/10.1186/s40798-024-00801-w) encuestaron a 160 corredores del Maratón de Sevilla 2022. Promediaron 35 g de carbohidratos por hora. El 41.3% tomó menos de 30 g/h y solo el 9.0% quedó entre 60 y 90 g/h. Mientras más lento el tiempo, peor: el 22.2% de quienes terminaron en menos de 3 horas tomó menos de 30 g/h, y la cifra subió a 42.1% entre 3 y 4 horas y a 66.7% en más de 4 horas.
+
+<!-- fig:fig2-seville-intake -->
 
 Es una encuesta autorreportada, en su mayoría de hombres, y los carbohidratos dejaron de predecir el tiempo al considerar el sexo. Muestra lo que hacen los corredores, no lo que funciona.
 
@@ -29,11 +33,15 @@ Un modelo por computadora ([Rapoport 2010](https://doi.org/10.1371/journal.pcbi.
 
 En el laboratorio y con atletas entrenados, sí. En [Norte et al. 2026](https://doi.org/10.1111/sms.70326), 16 ciclistas y triatletas entrenados pedalearon 3 horas y luego hicieron una prueba corta a tope. Su potencia crítica era de 277 W descansados. Después del pedaleo bajó a 236 W con agua, 257 W con 60 g/h y 266 W con 120 g/h. [Mazza et al. 2026](https://doi.org/10.1249/MSS.0000000000004180) vio el mismo patrón en 15 hombres entrenados: tras 4 horas de bici, la potencia en una contrarreloj de 15 minutos cayó 9.3% con 60 g/h y 6.4% con 100 g/h.
 
+<!-- fig:fig3-late-power -->
+
 Son estudios chicos de laboratorio, con ciclistas casi todos hombres, y ninguno midió tiempo de carrera. Sugieren que comer bien protege la potencia al final.
 
 ## ¿Se puede entrenar el estómago para comer más?
 
 Sí, y bastante rápido. En [Costa et al. 2017](https://doi.org/10.1139/apnm-2016-0453), 25 corredores practicaron comer carbohidratos en sus rodajes durante 2 semanas. Las molestias digestivas bajaron 60% con geles y 63% con comida, y la distancia en una prueba de 1 hora subió 5.2% y 4.3%, contra una baja de 2.1% con placebo. En [Miall et al. 2018](https://doi.org/10.1111/sms.12912), 18 corredores tomaron 90 g/h en rodajes diarios de 1 hora durante 2 semanas: las molestias y la mala absorción bajaron, y la distancia recorrida subió de 11.7 a 12.3 km.
+
+<!-- fig:fig4-gut-training -->
 
 Son estudios chicos del mismo laboratorio, pero coinciden: tu estómago se adapta a lo que practicas.
 

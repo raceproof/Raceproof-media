@@ -13,9 +13,13 @@ Two reviews split it by how long you'll be out there. [Burke et al. 2011](https:
 
 So your target depends on your finish time, not the distance.
 
+<!-- fig:fig1-carb-targets -->
+
 ## How much do marathoners actually eat?
 
 Much less. [Jiménez-Alfageme et al. 2025](https://doi.org/10.1186/s40798-024-00801-w) surveyed 160 runners at the 2022 Seville Marathon. They averaged 35 g of carbs an hour. 41.3% took under 30 g/h, and only 9.0% landed in the 60 to 90 g/h range. Under-fueling grew with finish time: 22.2% of runners under 3 hours took less than 30 g/h, rising to 42.1% at 3 to 4 hours and 66.7% over 4 hours.
+
+<!-- fig:fig2-seville-intake -->
 
 It's a survey of self-reported intake, mostly from men, and carbs stopped predicting finish time once sex was accounted for. It shows what runners do, not what works.
 
@@ -29,11 +33,15 @@ A computer model of marathon fuel use ([Rapoport 2010](https://doi.org/10.1371/j
 
 In the lab, for trained athletes, yes. In [Norte et al. 2026](https://doi.org/10.1111/sms.70326), 16 trained cyclists and triathletes rode for 3 hours, then did a short all-out test. Their critical power was 277 W fresh. After the ride it fell to 236 W with water, 257 W with 60 g/h and 266 W with 120 g/h. [Mazza et al. 2026](https://doi.org/10.1249/MSS.0000000000004180) found the same pattern in 15 trained men: after 4 hours of riding, 15-minute time trial power fell 9.3% at 60 g/h and 6.4% at 100 g/h.
 
+<!-- fig:fig3-late-power -->
+
 Both are small lab studies of cyclists, almost all men, and neither measured race time. They suggest fueling protects late-race power.
 
 ## Can you train your gut to take more?
 
 Yes, and fairly quickly. In [Costa et al. 2017](https://doi.org/10.1139/apnm-2016-0453), 25 runners practiced taking carbs on runs for 2 weeks. Gut symptoms fell 60% in the gel group and 63% in the food group, and distance in a 1-hour running test rose 5.2% and 4.3%, while the placebo group's fell 2.1%. In [Miall et al. 2018](https://doi.org/10.1111/sms.12912), 18 runners took 90 g/h on daily 1-hour runs for 2 weeks: gut symptoms and malabsorption dropped, and running distance rose from 11.7 to 12.3 km.
+
+<!-- fig:fig4-gut-training -->
 
 Both are small trials from the same lab, but they agree: your gut adapts to the fueling you practice.
 
