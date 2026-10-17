@@ -13,7 +13,12 @@ meta={
  'meta_description_es':'Apunta a 60 a 90 g de carbohidratos por hora según tu tiempo final. Qué dicen las guías y los estudios, y cómo entrenar tu estómago.',
  'study_slugs':'',
  'published_date':'2026-10-17',
+ 'cover_stat_en':'9%','cover_stat_es':'9%',
+ 'cover_label_en':'of Seville marathoners reached the 60 to 90 g/h guideline',
+ 'cover_label_es':'de los maratonistas de Sevilla llegó a 60 a 90 g/h',
+ 'cover_pillar':'Gut',
 }
+for k in ['cover_label_en','cover_label_es']: assert len(meta[k].split())<12,k
 for k in ['meta_title_en','meta_title_es']: assert len(meta[k])<60,(k,len(meta[k]))
 for k in ['meta_description_en','meta_description_es']: assert len(meta[k])<155,(k,len(meta[k]))
 def embed(text, lang):
@@ -41,8 +46,8 @@ meta['study_slugs']=study_urls(en['body'],en['faq'])
 row={'slug':meta['slug'],'title_en':en['title'],'title_es':es['title'],'answer_en':en['answer'],'answer_es':es['answer'],
  'body_en':body(en,'en'),'body_es':body(es,'es'),'faq_en':faq_json(en['faq']),'faq_es':faq_json(es['faq']),
  'meta_title_en':meta['meta_title_en'],'meta_title_es':meta['meta_title_es'],'meta_description_en':meta['meta_description_en'],
- 'meta_description_es':meta['meta_description_es'],'study_slugs':meta['study_slugs'],'published_date':meta['published_date']}
-hdr='slug,title_en,title_es,answer_en,answer_es,body_en,body_es,faq_en,faq_es,meta_title_en,meta_title_es,meta_description_en,meta_description_es,study_slugs,published_date'.split(',')
+ 'meta_description_es':meta['meta_description_es'],'study_slugs':meta['study_slugs'],'published_date':meta['published_date'],'cover_stat_en':meta['cover_stat_en'],'cover_stat_es':meta['cover_stat_es'],'cover_label_en':meta['cover_label_en'],'cover_label_es':meta['cover_label_es'],'cover_pillar':meta['cover_pillar']}
+hdr='slug,title_en,title_es,answer_en,answer_es,body_en,body_es,faq_en,faq_es,meta_title_en,meta_title_es,meta_description_en,meta_description_es,study_slugs,published_date,cover_stat_en,cover_stat_es,cover_label_en,cover_label_es,cover_pillar'.split(',')
 with open('carbs-per-hour-marathon.csv','w',newline='') as f:
     w=csv.DictWriter(f,fieldnames=hdr,quoting=csv.QUOTE_ALL); w.writeheader(); w.writerow(row)
 def wc(t): t=re.sub(r'<!--.*?-->','',t); t=re.sub(r'\]\([^)]*\)',']',t); return len(re.findall(r"[A-Za-zÀ-ÿ0-9][\w'.%/-]*",t))
