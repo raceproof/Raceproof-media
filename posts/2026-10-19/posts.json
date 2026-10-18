@@ -91,7 +91,11 @@
       ],
       "flags": [
         "Added Oct 18 to fill Thursday: moved up from Thu Oct 29 since article 1 went live Oct 17."
-      ]
+      ],
+      "buffer": {
+        "instagram": "6ad40e50769b4579349d1f34",
+        "facebook": "6ad40e5d938409f1d0aa7b0d"
+      }
     },
     {
       "date": "2026-10-23",
