@@ -32,7 +32,9 @@ Feed posts on Monday, Wednesday, Friday and Saturday (Monday, Wednesday and Frid
       "type": "research",
       "title": "Research: Pacing (Dong & Li 2026)",
       "slides": ["mon-research-pacing-1.png", "mon-research-pacing-2.png"],
-      "caption": "…",
+      "caption": "… (Instagram caption)",
+      "caption_facebook": "… (only when the post has a link)",
+      "link": "https://raceproof.ai/blog/<slug> (only when the post points to a page)",
       "altText": "…",
       "flags": ["anything Jonathan must check or fill in"],
       "buffer": {"instagram": "<post id>", "facebook": "<post id>"}
@@ -51,5 +53,14 @@ Feed posts on Monday, Wednesday, Friday and Saturday (Monday, Wednesday and Frid
 ## Rules that every file must follow
 
 Brand system only: asphalt `#1F2328`, surface `#F4F2ED`, lime `#C8F03C` only for "ready", heat `#B83C0B` and heat-soft `#FCE7DC` for problems, pillar colors from the brief. No em or en dashes, no exclamation marks, no AI-sounding phrasing. Every number comes from the brief's stats table or a Research library row, with its source on the slide or in the caption. Feed slides are 1080 x 1350 with the small logo; reels are 1080 x 1920 with text kept out of the top 220 px and bottom 420 px.
+
+## Links in captions
+
+Any post about a blog article or a race page points to that exact page, never the homepage.
+- `link` is the full URL: `https://raceproof.ai/blog/<slug>` (slug = the article CSV's `slug`) or `https://raceproof.ai/races/<slug>` (the queue row's Page link). Copy it from the source; never build it from the title.
+- Before drafting, fetch the URL and confirm it loads that article or race (not a 404 or the homepage). If it doesn't, don't create the Buffer drafts: flag it.
+- Instagram (`caption`): `Full article: raceproof.ai/blog/<slug> (link in bio).` or `Full breakdown: raceproof.ai/races/<slug> (link in bio).` Caption links aren't clickable on Instagram.
+- Facebook (`caption_facebook`): the same caption with the full clickable URL on its own line: `Read the full article: https://raceproof.ai/blog/<slug>`.
+- Before saving, check that `link` appears in both captions and that the Facebook caption has `https://`.
 
 Fonts: Inter and JetBrains Mono are under the SIL Open Font License 1.1.
