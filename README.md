@@ -64,3 +64,16 @@ Any post about a blog article or a race page points to that exact page, never th
 - Before saving, check that `link` appears in both captions and that the Facebook caption has `https://`.
 
 Fonts: Inter and JetBrains Mono are under the SIL Open Font License 1.1.
+
+## Route files
+
+`races/<slug>/route.json` holds each race's course for the animated course maps (written by the weekly race pages task from the official course file):
+
+```json
+{"slug":"…","name":"…","race_type":"Marathon|Ultra|70.3|Full distance","source":"…",
+ "legs":[{"leg":"course|swim|bike|run","km":42.2,"points":[[lon,lat,km,m],…]}],
+ "places":[{"name":"…","lon":0,"lat":0,"kind":"start|finish|town|landmark"}],
+ "sections":[{"leg":"…","from_km":0,"to_km":0,"label_en":"…","label_es":"…"}]}
+```
+
+Each point's km and m match the race page's charted profile. Up to 600 points per leg. Maps are drawn by us from these points (no third-party map tiles), so they need no image credit.
