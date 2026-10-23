@@ -10,7 +10,7 @@ Status: Draft for Jonathan's review. Nothing publishes without his OK.
 | Cover | 5 days: "of hot rides raised plasma volume 7.3% in trained men" (Heat) | 5 días: "de bici en calor subieron 7.3% el volumen de plasma" |
 | Planned dates | Publish Wed Oct 28, 2026; carousel Thu Oct 29, 2026 | |
 
-Words: 1,198 English (title to CTA), 1,386 Spanish. 3 figures (Heat orange #B83C0B), checked at 390 and 1200 px: no overflow or overlap.
+Words: 1,198 English (title to CTA, counting "et al."), Spanish in step. Oct 23 update: added "How do pros use heat training?" (Vincent Luis, Solveig Løvseth, from the Pro breakdowns tab) and trimmed elsewhere to stay near 1,200; dropped the "How quickly do I lose heat acclimation?" FAQ (covered in the body). 3 figures (Heat orange #B83C0B), checked at 390 and 1200 px: no overflow or overlap.
 
 Studies cited (9), all live on raceproof.ai/research (checked Oct 23). Each link is the exact link the study shows on /research, so the importer matches all 9 (Klous 2020 sits under Hydration there).
 
@@ -62,29 +62,27 @@ Plan on 1 to 2 weeks of repeated sessions in the heat. That's what a 2015 expert
 
 ## What do the experts recommend?
 
-The [Racinais et al. 2015](https://doi.org/10.1136/bjsports-2015-094915) consensus statement, written by 17 authors, calls heat acclimatisation the most important step to reduce strain and protect performance in a hot race. It should be repeated exercise in the heat over 1 to 2 weeks. It's expert consensus, not new data, aimed mainly at elite events.
+The [Racinais et al. 2015](https://doi.org/10.1136/bjsports-2015-094915) consensus statement, written by 17 authors, calls heat acclimatisation the most important step to reduce strain and protect performance in a hot race. It should be repeated exercise in the heat over 1 to 2 weeks. It's expert consensus aimed mainly at elite events.
 
-A meta-analysis by [Tyler et al. 2016](https://doi.org/10.1007/s40279-016-0538-5) pooled 96 articles on heat adaptation. The most common block lasted 7 to 14 days. Heat adaptation had a moderate benefit on performance in the heat whatever the plan, and longer blocks worked better: under 14 days brings many benefits, but adaptations are greatest beyond 14 days. Methods varied widely, so read it as a direction, not a dose.
+A meta-analysis by [Tyler et al. 2016](https://doi.org/10.1007/s40279-016-0538-5) pooled 96 articles on heat adaptation. The most common block lasted 7 to 14 days. Heat adaptation had a moderate benefit on performance in the heat whatever the plan, and longer blocks worked better: under 14 days brings many benefits, but adaptations are greatest beyond 14 days.
 
 ## How fast do the first changes show up?
 
-In [Snape et al. 2026](https://doi.org/10.1371/journal.pone.0345346), 14 endurance-trained men were randomized to 5 days of 90-minute rides either in the heat (32.2°C, 69.7% humidity, core temperature pushed to 38.5°C or more) or at 21.3°C. In the heat group, heart rate fell 8 bpm, plasma volume rose 7.3%, sweat loss rose 500 mL and peak effort rating fell 2 points. It's a small lab study with 7 men per group and no performance test, and the authors declared no competing interests.
+In [Snape et al. 2026](https://doi.org/10.1371/journal.pone.0345346), 14 endurance-trained men were randomized to 5 days of 90-minute rides either in the heat (32.2°C, 69.7% humidity, core temperature pushed to 38.5°C or more) or at 21.3°C. In the heat group, heart rate fell 8 bpm, plasma volume rose 7.3% and sweat loss rose 500 mL. It's a small lab study (7 men per group, no performance test); the authors declared no competing interests.
 
-A meta-analysis of heat decay, [Daanen et al. 2018](https://doi.org/10.1007/s40279-017-0808-x), agrees: 5 or more heat days are enough for adaptations in heart rate and core temperature.
-
-Sweat adapts on its own schedule. In [Klous et al. 2020](https://doi.org/10.1016/j.jtherbio.2020.102697), 8 people cycled in the heat (33°C, 65% humidity) for 10 days in a row. Sweat sodium began to fall from day 3, but sweat rate only rose from day 7 to 8. By day 10, local sweat rate was up 58% on the arm and 36% on the back, and sweat sodium had fallen to about 60% of its day 1 level. It's a small lab study using skin patches.
+In [Klous et al. 2020](https://doi.org/10.1016/j.jtherbio.2020.102697), 8 people cycled in the heat (33°C, 65% humidity) for 10 days in a row. Sweat sodium fell from day 3; sweat rate only rose from day 7 to 8. By day 10, local sweat rate was up 58% on the arm and 36% on the back, and sweat sodium had fallen to about 60% of its day 1 level. It's a small lab study using skin patches.
 
 ## Does it make you faster in the heat?
 
-In a controlled trial, yes. In [Zurawlew et al. 2016](https://doi.org/10.1111/sms.12638), 17 men who weren't used to heat ran 40 minutes at 18°C each day for 6 days, then sat for 40 minutes in water at 40°C (10 men) or a neutral 34°C (7 men). After the hot baths, their 5 km treadmill time trial in 33°C improved 4.9%, with no change at 18°C. The control group didn't change.
+In a controlled trial, yes. In [Zurawlew et al. 2016](https://doi.org/10.1111/sms.12638), 17 men who weren't used to heat ran 40 minutes at 18°C each day for 6 days, then sat for 40 minutes in water at 40°C (10 men) or a neutral 34°C (7 men). After the hot baths, their 5 km treadmill time trial in 33°C improved 4.9%, with no change at 18°C.
 
-It's a small group and a 5 km lab test, not a long race. The gain was specific to the heat.
+A small group and a short lab test, not a long race.
 
 ## Do sauna and hot baths count?
 
-Small studies suggest they do. In an observational study, [Stanley et al. 2015](https://doi.org/10.1007/s00421-014-3060-1), 7 well-trained male cyclists added 30 minutes of sauna at 87°C after training for 10 days. Plasma volume peaked after four sessions, at 17.8% above baseline. No control group, no performance test, and a debated statistics method.
+Small studies suggest they do. In an observational study by [Stanley et al. 2015](https://doi.org/10.1007/s00421-014-3060-1), 7 well-trained male cyclists added 30 minutes of sauna at 87°C after training for 10 days. Plasma volume peaked after four sessions, at 17.8% above baseline. No control group, no performance test, and a debated statistics method.
 
-Longer use may do something else. In [Jenkins et al. 2025](https://doi.org/10.1113/jp289874), 10 well-trained runners (9 men) added five 45-minute hot baths a week at 40°C or hotter for 5 weeks. VO2max rose 2.7 mL/kg/min and blood volume 284 mL against a control period. That's an aerobic gain, separate from getting ready for a hot race, in a small study of mostly men.
+Over 5 weeks, five 45-minute hot baths a week raised VO2max 2.7 mL/kg/min in 10 well-trained runners, 9 of them men ([Jenkins et al. 2025](https://doi.org/10.1113/jp289874)), an aerobic gain separate from heat readiness.
 
 Hot baths and sauna aren't for everyone. If you have a heart condition, high or low blood pressure, take blood pressure medication, are pregnant, or have fainted or had heat illness before, talk to your doctor before trying them.
 
@@ -94,17 +92,27 @@ Hot baths and sauna aren't for everyone. If you have a heart condition, high or 
 
 ## What it means for your race
 
-**Marathon.** If your race is usually cool, heat is a low priority. If it's often hot, the research points to 1 to 2 weeks of repeated heat sessions before it, not a single hot long run.
+**Marathon.** If your race is usually cool, heat is a low priority. If it's often hot, plan 1 to 2 weeks of repeated heat sessions, not one hot long run.
 
-**Ultra.** In a survey at the 2025 Western States 100, [Mougin et al. 2026](https://www.sciencedirect.com/science/article/pii/S1440244026002318) found 90% of runners did heat preparation, and over 70% reported more than 10 days or exposures. It's a self-reported survey at one race, so it shows what runners did, not what worked.
+**Ultra.** In a survey at the 2025 Western States 100, [Mougin et al. 2026](https://www.sciencedirect.com/science/article/pii/S1440244026002318) found 90% of runners did heat preparation, and over 70% reported more than 10 days or exposures. It's a self-reported survey at one race.
 
-**Triathlon.** Most of the trials above used indoor cycling, so a ride in the heat is a real heat session. Your sweat changes as you adapt, so re-check your sweat rate after a heat block.
+**Triathlon.** Most of the trials above used indoor cycling, so a hot ride counts. Re-check your sweat rate after a heat block.
 
-**When to start.** Heat has its own window: build it 6 to 2 weeks before your race. It takes about 10 to 14 days of heat sessions, then some heat exposure to race day keeps it, since gains fade within a few weeks. [See your own timeline: try the demo](https://raceproof.ai/demo).
+**When to start.** Heat has its own window: build it 6 to 2 weeks before your race, over about 10 to 14 days of heat sessions, then keep some heat to race day, since gains fade within a few weeks. [See your own timeline: try the demo](https://raceproof.ai/demo).
+
+## How do pros use heat training?
+
+Pro stories are n = 1 and come from interviews, not studies.
+
+Vincent Luis, who won the 2026 IRONMAN World Championship in Kona, "started with passive" heat in January and February: hot baths and sauna. Before IRONMAN Texas in April, which he raced partly for its heat and humidity ([ProTriNews](https://youtu.be/6Mpl1odkY5g)), he added easy rides and runs in the heat. Three weeks out from Kona he was doing IRONMAN-pace sessions in a heat chamber at 32°C and 80% humidity, at altitude ([All-In Triathlon](https://youtu.be/TXpXTfYTn28), an episode sponsored by Precision Fuel & Hydration). He skipped the race in Nice because "four weeks out of the race... is the exact moment you want to clock big weeks and you want to do the heat prep" ([The Triathlon Hour](https://www.youtube.com/watch?v=uY61pcBHsyQ)).
+
+Solveig Løvseth, the 2025 Kona winner, called acclimatising the biggest factor in her race. She did "a lot of heat training" and tested her sweat rate to plan her fluid ([Precision Fuel & Hydration case study](https://www.precisionhydration.com/athletes/case-studies/triathlon/solveig-lovseth/11-10-2025/); the company sponsors her).
+
+Luis's hardest heat work fell inside the last 6 weeks, the same window the studies point to. It came with altitude and very high training loads, so copy the timing, not the plan.
 
 ## Our take
 
-*This is our opinion, not a study finding.* Count heat in days, not workouts. Aim for 10 to 14 days of heat sessions inside the window 6 to 2 weeks out, then keep one or two short sessions a week until race day. Five days is a fair start if that's all you have. A hot bath or sauna after training adds heat without adding miles, built up slowly and never alone. Heat done 20 weeks out will mostly be gone by race day.
+*This is our opinion, not a study finding.* Aim for 10 to 14 days of heat sessions inside the window 6 to 2 weeks out, then keep one or two short sessions a week until race day. A hot bath or sauna after training adds heat without adding miles, built up slowly and never alone.
 
 ## FAQs
 
@@ -113,9 +121,6 @@ It's a start. In [Snape et al. 2026](https://doi.org/10.1371/journal.pone.034534
 
 ### Does a sauna after running count as heat training?
 In small studies, yes. Four post-training sauna sessions raised plasma volume 17.8% in 7 cyclists ([Stanley et al. 2015](https://doi.org/10.1007/s00421-014-3060-1)), and 6 days of hot baths after runs improved a 5 km test in the heat by 4.9% ([Zurawlew et al. 2016](https://doi.org/10.1111/sms.12638)). If you have a heart or blood pressure condition or are pregnant, talk to your doctor first.
-
-### How quickly do I lose heat acclimation?
-About 2.5% of the adaptations are lost per day without heat ([Daanen et al. 2018](https://doi.org/10.1007/s40279-017-0808-x)). In a small study, part of them was still there after 28 days ([Klous et al. 2020](https://doi.org/10.1016/j.jtherbio.2020.102697)).
 
 ### Should I re-test my sweat rate after heat training?
 For a hot race, yes. After 10 days of heat, local sweat rate rose 36 to 58% and sweat sodium fell to about 60% of day 1 in 8 people ([Klous et al. 2020](https://doi.org/10.1016/j.jtherbio.2020.102697)). A test from before your heat block may overstate sodium loss and understate your sweat rate.
@@ -130,29 +135,27 @@ Cuenta con 1 a 2 semanas de sesiones repetidas en calor. Eso recomienda un conse
 
 ## ¿Qué recomiendan los expertos?
 
-El consenso de [Racinais et al. 2015](https://doi.org/10.1136/bjsports-2015-094915), firmado por 17 autores, dice que aclimatarte al calor es el paso más importante para reducir el esfuerzo y proteger tu rendimiento en una carrera calurosa. Debe ser ejercicio repetido en calor durante 1 a 2 semanas. Es un consenso de expertos, no datos nuevos, y piensa sobre todo en eventos de élite.
+El consenso de [Racinais et al. 2015](https://doi.org/10.1136/bjsports-2015-094915), firmado por 17 autores, dice que aclimatarte al calor es el paso más importante para reducir el esfuerzo y proteger tu rendimiento en una carrera calurosa. Debe ser ejercicio repetido en calor durante 1 a 2 semanas. Es un consenso de expertos pensado sobre todo para eventos de élite.
 
-Un metaanálisis de [Tyler et al. 2016](https://doi.org/10.1007/s40279-016-0538-5) reunió 96 artículos sobre adaptación al calor. El bloque más común duró de 7 a 14 días. Adaptarse al calor tuvo un beneficio moderado en el rendimiento con calor, sin importar el plan, y los bloques más largos funcionaron mejor: menos de 14 días ya trae muchos beneficios, pero las adaptaciones son mayores pasados los 14 días. Los métodos variaron mucho, así que tómalo como una dirección, no como una dosis exacta.
+Un metaanálisis de [Tyler et al. 2016](https://doi.org/10.1007/s40279-016-0538-5) reunió 96 artículos sobre adaptación al calor. El bloque más común duró de 7 a 14 días. Adaptarse al calor tuvo un beneficio moderado en el rendimiento con calor, sin importar el plan, y los bloques más largos funcionaron mejor: menos de 14 días ya trae muchos beneficios, pero las adaptaciones son mayores pasados los 14 días.
 
 ## ¿Qué tan rápido aparecen los primeros cambios?
 
-En [Snape et al. 2026](https://doi.org/10.1371/journal.pone.0345346), 14 hombres entrenados en resistencia fueron asignados al azar a 5 días de bici de 90 minutos, en calor (32.2°C, 69.7% de humedad, con la temperatura corporal llevada a 38.5°C o más) o a 21.3°C. En el grupo de calor, la frecuencia cardíaca bajó 8 latidos por minuto, el volumen de plasma subió 7.3%, la pérdida de sudor subió 500 mL y el esfuerzo percibido máximo bajó 2 puntos. Es un estudio chico de laboratorio, con 7 hombres por grupo y sin prueba de rendimiento, y los autores declararon no tener conflictos de interés.
+En [Snape et al. 2026](https://doi.org/10.1371/journal.pone.0345346), 14 hombres entrenados en resistencia fueron asignados al azar a 5 días de bici de 90 minutos, en calor (32.2°C, 69.7% de humedad, con la temperatura corporal llevada a 38.5°C o más) o a 21.3°C. En el grupo de calor, la frecuencia cardíaca bajó 8 latidos por minuto, el volumen de plasma subió 7.3% y la pérdida de sudor subió 500 mL. Es un estudio chico de laboratorio (7 hombres por grupo, sin prueba de rendimiento); los autores declararon no tener conflictos de interés.
 
-Un metaanálisis sobre la pérdida de la aclimatación, [Daanen et al. 2018](https://doi.org/10.1007/s40279-017-0808-x), coincide: 5 días o más de calor bastan para que se adapten la frecuencia cardíaca y la temperatura corporal.
-
-El sudor va a su propio ritmo. En [Klous et al. 2020](https://doi.org/10.1016/j.jtherbio.2020.102697), 8 personas pedalearon en calor (33°C, 65% de humedad) 10 días seguidos. El sodio del sudor empezó a bajar desde el día 3, pero la tasa de sudoración recién subió entre el día 7 y el 8. Al día 10, la sudoración local había subido 58% en el brazo y 36% en la espalda, y el sodio del sudor había bajado a cerca del 60% del nivel del día 1. Es un estudio chico de laboratorio, con parches en la piel.
+En [Klous et al. 2020](https://doi.org/10.1016/j.jtherbio.2020.102697), 8 personas pedalearon en calor (33°C, 65% de humedad) 10 días seguidos. El sodio del sudor bajó desde el día 3; la sudoración recién subió entre el día 7 y el 8. Al día 10, la sudoración local había subido 58% en el brazo y 36% en la espalda, y el sodio del sudor había bajado a cerca del 60% del nivel del día 1. Es un estudio chico de laboratorio, con parches en la piel.
 
 ## ¿Te hace más rápido con calor?
 
-En un ensayo controlado, sí. En [Zurawlew et al. 2016](https://doi.org/10.1111/sms.12638), 17 hombres no acostumbrados al calor corrieron 40 minutos a 18°C cada día durante 6 días y luego se metieron 40 minutos en agua a 40°C (10 hombres) o a 34°C, una temperatura neutra (7 hombres). Después de los baños calientes, su contrarreloj de 5 km en cinta a 33°C mejoró 4.9%, sin cambios a 18°C. El grupo de control no cambió.
+En un ensayo controlado, sí. En [Zurawlew et al. 2016](https://doi.org/10.1111/sms.12638), 17 hombres no acostumbrados al calor corrieron 40 minutos a 18°C cada día durante 6 días y luego se metieron 40 minutos en agua a 40°C (10 hombres) o a 34°C, una temperatura neutra (7 hombres). Después de los baños calientes, su contrarreloj de 5 km en cinta a 33°C mejoró 4.9%, sin cambios a 18°C.
 
-Es un grupo chico y una prueba de 5 km en laboratorio, no una carrera larga. La mejora fue específica para el calor.
+Es un grupo chico y una prueba de 5 km en laboratorio, no una carrera larga.
 
 ## ¿Cuentan el sauna y los baños calientes?
 
-Los estudios chicos sugieren que sí. En un estudio observacional ([Stanley et al. 2015](https://doi.org/10.1007/s00421-014-3060-1)), 7 ciclistas hombres bien entrenados sumaron 30 minutos de sauna a 87°C después de entrenar durante 10 días. El volumen de plasma llegó a su punto más alto tras cuatro sesiones, 17.8% por encima del inicio. No hubo grupo de control ni prueba de rendimiento, y usó un método estadístico discutido.
+Los estudios chicos sugieren que sí. En un estudio observacional de [Stanley et al. 2015](https://doi.org/10.1007/s00421-014-3060-1), 7 ciclistas hombres bien entrenados sumaron 30 minutos de sauna a 87°C después de entrenar durante 10 días. El volumen de plasma llegó a su punto más alto tras cuatro sesiones, 17.8% por encima del inicio. No hubo grupo de control ni prueba de rendimiento, y usó un método estadístico discutido.
 
-Usarlos más tiempo podría hacer otra cosa. En [Jenkins et al. 2025](https://doi.org/10.1113/jp289874), 10 corredores bien entrenados (9 hombres) sumaron cinco baños calientes de 45 minutos por semana, a 40°C o más, durante 5 semanas. Su VO2max subió 2.7 mL/kg/min y su volumen de sangre 284 mL frente a un periodo de control. Es una mejora aeróbica, distinta de prepararte para una carrera con calor, en un estudio chico y casi todo con hombres.
+Durante 5 semanas, cinco baños calientes de 45 minutos por semana subieron el VO2max 2.7 mL/kg/min en 10 corredores bien entrenados, 9 de ellos hombres ([Jenkins et al. 2025](https://doi.org/10.1113/jp289874)). Es una mejora aeróbica, distinta de estar listo para el calor.
 
 El sauna y los baños calientes no son para todos. Si tienes una condición cardíaca, presión alta o baja, tomas medicamentos para la presión, estás embarazada, o te has desmayado o has tenido un golpe de calor, habla con tu médico antes de probarlos.
 
@@ -162,17 +165,27 @@ El sauna y los baños calientes no son para todos. Si tienes una condición card
 
 ## Qué significa para tu carrera
 
-**Maratón.** Si tu carrera suele ser fresca, el calor no es prioridad. Si suele hacer calor, la evidencia apunta a 1 a 2 semanas de sesiones repetidas en calor antes, no a un solo fondo largo con calor.
+**Maratón.** Si tu carrera suele ser fresca, el calor no es prioridad. Si suele hacer calor, planea 1 a 2 semanas de sesiones repetidas en calor, no un solo fondo largo con calor.
 
-**Ultra.** En una encuesta en la Western States 100 de 2025, [Mougin et al. 2026](https://www.sciencedirect.com/science/article/pii/S1440244026002318) encontró que el 90% de los corredores se preparó para el calor, y más del 70% reportó más de 10 días o exposiciones. Es una encuesta autorreportada en una sola carrera: muestra lo que hicieron, no lo que funcionó.
+**Ultra.** En una encuesta en la Western States 100 de 2025, [Mougin et al. 2026](https://www.sciencedirect.com/science/article/pii/S1440244026002318) encontró que el 90% de los corredores se preparó para el calor, y más del 70% reportó más de 10 días o exposiciones. Es una encuesta autorreportada en una sola carrera.
 
-**Triatlón.** Casi todos los estudios de arriba usaron bici en interiores, así que una salida en bici con calor es una sesión de calor de verdad. Tu sudor cambia a medida que te adaptas, así que vuelve a medir tu tasa de sudoración después de un bloque de calor.
+**Triatlón.** Casi todos los estudios de arriba usaron bici en interiores, así que una salida en bici con calor cuenta. Vuelve a medir tu tasa de sudoración después de un bloque de calor.
 
-**Cuándo empezar.** El calor tiene su propia ventana: constrúyelo entre 6 y 2 semanas antes de tu carrera. Toma unos 10 a 14 días de sesiones en calor, y luego algo de calor hasta el día de la carrera lo mantiene, porque lo ganado se pierde en pocas semanas. [Mira tu propia línea de tiempo: prueba la demo](https://raceproof.ai/demo).
+**Cuándo empezar.** El calor tiene su propia ventana: constrúyelo entre 6 y 2 semanas antes de tu carrera, con unos 10 a 14 días de sesiones en calor, y luego mantén algo de calor hasta el día de la carrera, porque lo ganado se pierde en pocas semanas. [Mira tu propia línea de tiempo: prueba la demo](https://raceproof.ai/demo).
+
+## ¿Cómo usan los profesionales el entrenamiento con calor?
+
+Las historias de profesionales son n = 1 y vienen de entrevistas, no de estudios.
+
+Vincent Luis, campeón del Mundial de IRONMAN 2026 en Kona, empezó con calor pasivo en enero y febrero: baños calientes y sauna. Antes del IRONMAN Texas en abril, que corrió en parte por su calor y humedad ([ProTriNews](https://youtu.be/6Mpl1odkY5g)), sumó rodajes y salidas suaves en calor. A tres semanas de Kona ya hacía sesiones a ritmo de IRONMAN en una cámara de calor a 32°C y 80% de humedad, en altura ([All-In Triathlon](https://youtu.be/TXpXTfYTn28), un episodio patrocinado por Precision Fuel & Hydration). Se saltó la carrera de Niza porque, en sus palabras, cuatro semanas antes de la carrera "es el momento exacto" para meter semanas grandes y hacer la preparación para el calor ([The Triathlon Hour](https://www.youtube.com/watch?v=uY61pcBHsyQ)).
+
+Solveig Løvseth, campeona de Kona en 2025, dijo que aclimatarse fue el factor más importante de su carrera. Hizo mucho entrenamiento con calor y midió su tasa de sudoración para planear sus líquidos ([caso de estudio de Precision Fuel & Hydration](https://www.precisionhydration.com/athletes/case-studies/triathlon/solveig-lovseth/11-10-2025/); la empresa la patrocina).
+
+El trabajo de calor más duro de Luis cayó dentro de las últimas 6 semanas, la misma ventana que señalan los estudios. Lo hizo junto con altura y cargas de entrenamiento muy altas, así que copia el momento, no el plan.
 
 ## Nuestra opinión
 
-*Esta es nuestra opinión, no el resultado de un estudio.* Cuenta el calor en días, no en entrenamientos. Apunta a 10 a 14 días de sesiones en calor dentro de la ventana de 6 a 2 semanas antes, y después mantén una o dos sesiones cortas por semana hasta la carrera. Cinco días son un buen comienzo si es todo lo que tienes. Un baño caliente o un sauna después de entrenar suma calor sin sumar kilómetros, siempre de a poco y nunca a solas. El calor que hagas 20 semanas antes casi no te va a quedar el día de la carrera.
+*Esta es nuestra opinión, no el resultado de un estudio.* Apunta a 10 a 14 días de sesiones en calor dentro de la ventana de 6 a 2 semanas antes, y después mantén una o dos sesiones cortas por semana hasta la carrera. Un baño caliente o un sauna después de entrenar suma calor sin sumar kilómetros, siempre de a poco y nunca a solas.
 
 ## Preguntas frecuentes
 
@@ -181,9 +194,6 @@ Es un comienzo. En [Snape et al. 2026](https://doi.org/10.1371/journal.pone.0345
 
 ### ¿El sauna después de correr cuenta como entrenamiento con calor?
 En estudios chicos, sí. Cuatro sesiones de sauna después de entrenar subieron el volumen de plasma 17.8% en 7 ciclistas ([Stanley et al. 2015](https://doi.org/10.1007/s00421-014-3060-1)), y 6 días de baños calientes después de correr mejoraron 4.9% una prueba de 5 km con calor ([Zurawlew et al. 2016](https://doi.org/10.1111/sms.12638)). Si tienes una condición cardíaca o de presión, o estás embarazada, habla primero con tu médico.
-
-### ¿Qué tan rápido se pierde la aclimatación al calor?
-Se pierde cerca del 2.5% de las adaptaciones por cada día sin calor ([Daanen et al. 2018](https://doi.org/10.1007/s40279-017-0808-x)). En un estudio chico, una parte seguía ahí después de 28 días ([Klous et al. 2020](https://doi.org/10.1016/j.jtherbio.2020.102697)).
 
 ### ¿Debo volver a medir mi sudoración después de entrenar con calor?
 Para una carrera calurosa, sí. Tras 10 días de calor, la sudoración local subió de 36 a 58% y el sodio del sudor bajó a cerca del 60% del día 1 en 8 personas ([Klous et al. 2020](https://doi.org/10.1016/j.jtherbio.2020.102697)). Una prueba de antes de tu bloque de calor puede sobrestimar tu pérdida de sodio y subestimar cuánto sudas.
