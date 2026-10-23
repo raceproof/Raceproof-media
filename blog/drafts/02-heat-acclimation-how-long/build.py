@@ -39,7 +39,7 @@ def faq_json(t):
 def study_urls(*texts):
     seen=[]
     for t in texts:
-        for u in re.findall(r'\((https://(?:doi\.org|pubmed\.ncbi\.nlm\.nih\.gov)/[^)\s]+)\)', t):
+        for u in re.findall(r'\((https://(?:doi\.org|pubmed\.ncbi\.nlm\.nih\.gov|www\.sciencedirect\.com)/[^)\s]+)\)', t):
             if u not in seen: seen.append(u)
     return json.dumps(seen)
 meta['study_slugs']=study_urls(en['body'],en['faq'])

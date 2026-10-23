@@ -32,13 +32,13 @@ CSS = """<style>
 </style>"""
 
 L = {
- 'racinais': '<a href="https://pubmed.ncbi.nlm.nih.gov/25943653/">Racinais et al. 2015</a>',
- 'tyler': '<a href="https://pubmed.ncbi.nlm.nih.gov/27106556/">Tyler et al. 2016</a>',
+ 'racinais': '<a href="https://doi.org/10.1136/bjsports-2015-094915">Racinais et al. 2015</a>',
+ 'tyler': '<a href="https://doi.org/10.1007/s40279-016-0538-5">Tyler et al. 2016</a>',
  'snape': '<a href="https://doi.org/10.1371/journal.pone.0345346">Snape et al. 2026</a>',
- 'stanley': '<a href="https://pubmed.ncbi.nlm.nih.gov/25432420/">Stanley et al. 2015</a>',
- 'klous': '<a href="https://pubmed.ncbi.nlm.nih.gov/33077118/">Klous et al. 2020</a>',
- 'zurawlew': '<a href="https://pubmed.ncbi.nlm.nih.gov/26661992/">Zurawlew et al. 2016</a>',
- 'daanen': '<a href="https://pubmed.ncbi.nlm.nih.gov/29129022/">Daanen et al. 2018</a>',
+ 'stanley': '<a href="https://doi.org/10.1007/s00421-014-3060-1">Stanley et al. 2015</a>',
+ 'klous': '<a href="https://doi.org/10.1016/j.jtherbio.2020.102697">Klous et al. 2020</a>',
+ 'zurawlew': '<a href="https://doi.org/10.1111/sms.12638">Zurawlew et al. 2016</a>',
+ 'daanen': '<a href="https://doi.org/10.1007/s40279-017-0808-x">Daanen et al. 2018</a>',
 }
 
 def pct(v, lo, hi): return (v - lo) / (hi - lo) * 100
