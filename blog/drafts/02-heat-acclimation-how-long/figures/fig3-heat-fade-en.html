@@ -1,0 +1,30 @@
+<style>
+.rp-fig{--ink:#15171A;--muted:#5B5F64;--line:#DDD9D0;--card:#FFFFFF;--heat:#B83C0B;--heat2:#FCE7DC;--ref:#A4A9AE;
+ position:relative;margin:32px 0;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:10px;font-family:Inter,system-ui,sans-serif;color:var(--ink)}
+.rp-fig *{box-sizing:border-box}
+.rp-fig h4{margin:0;font-family:"Inter Display",Inter,sans-serif;font-weight:800;font-size:20px;line-height:1.25;letter-spacing:-0.01em}
+.rp-fig .rp-sub{margin:4px 0 16px;font-size:14px;color:var(--muted)}
+.rp-fig .rp-row{display:grid;grid-template-columns:minmax(120px,40%) 1fr;gap:10px;align-items:center;margin:10px 0}
+.rp-fig .rp-lab{font-size:14px;font-weight:600;line-height:1.25}
+.rp-fig .rp-lab small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.rp-fig .rp-track{position:relative;height:24px}
+.rp-fig .rp-grid{position:absolute;top:0;bottom:0;border-left:1px solid var(--line)}
+.rp-fig .rp-bar{position:absolute;top:2px;height:20px;border-radius:0 4px 4px 0}
+.rp-fig .rp-bar.rp-range{border-radius:4px}
+.rp-fig .rp-dot{position:absolute;top:5px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--heat)}
+.rp-fig .rp-val{position:absolute;top:2px;line-height:20px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:var(--ink);white-space:nowrap;padding-left:10px}
+.rp-fig .rp-val.rp-left{padding-left:0;padding-right:10px;transform:translateX(-100%)}
+.rp-fig .rp-axis{position:relative;height:18px;margin-left:calc(40% + 10px);border-top:1px solid var(--line);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;color:var(--muted)}
+.rp-fig .rp-axis span{position:absolute;top:3px;transform:translateX(-50%);white-space:nowrap}
+.rp-fig .rp-axl{margin:6px 0 0 calc(40% + 10px);font-size:12px;color:var(--muted)}
+.rp-fig .rp-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rp-fig .rp-card{background:var(--heat2);border-radius:10px;padding:14px 16px}
+.rp-fig .rp-card b{display:block;font-family:"Inter Display",Inter,sans-serif;font-weight:800;font-size:28px;line-height:1.1;letter-spacing:-0.02em;color:var(--heat)}
+.rp-fig .rp-card span{display:block;margin-top:4px;font-size:14px;line-height:1.35;color:var(--ink)}
+.rp-fig .rp-card small{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
+.rp-fig figcaption{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;line-height:1.5;color:var(--muted)}
+.rp-fig figcaption a{color:var(--muted)}
+.rp-fig .rp-sr{position:absolute;left:0;top:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+@media (max-width:480px){.rp-fig{padding:16px}.rp-fig h4{font-size:18px}.rp-fig .rp-row{grid-template-columns:132px 1fr}.rp-fig .rp-axis,.rp-fig .rp-axl{margin-left:142px}.rp-fig .rp-cards{grid-template-columns:1fr}.rp-fig .rp-card b{font-size:24px}}
+</style>
+<figure class="rp-fig" aria-label="Heat gains fade slowly"><h4>Heat gains fade slowly</h4><p class="rp-sub">How heat adaptations hold up once the heat stops</p><div class="rp-cards" aria-hidden="true"><div class="rp-card"><b>5+ days</b><span>of heat are enough for heart rate and core temperature changes</span><small>Daanen 2018</small></div><div class="rp-card"><b>About 2.5%</b><span>of the adaptations are lost for every day without heat</span><small>Daanen 2018</small></div><div class="rp-card"><b>28 days</b><span>after stopping, part of the adaptations was still there</span><small>Klous 2020, 4 people</small></div><div class="rp-card"><b>5 days</b><span>of heat again may restore them</span><small>Klous 2020</small></div></div><div class="rp-sr"><table><caption>How heat adaptations hold up once the heat stops</caption><thead><tr><th>Number</th><th>Finding</th><th>Study</th></tr></thead><tbody><tr><td>5+ days</td><td>of heat are enough for heart rate and core temperature changes</td><td>Daanen 2018</td></tr><tr><td>About 2.5%</td><td>of the adaptations are lost for every day without heat</td><td>Daanen 2018</td></tr><tr><td>28 days</td><td>after stopping, part of the adaptations was still there</td><td>Klous 2020, 4 people</td></tr><tr><td>5 days</td><td>of heat again may restore them</td><td>Klous 2020</td></tr></tbody></table></div><figcaption>Sources: <a href="https://pubmed.ncbi.nlm.nih.gov/29129022/">Daanen et al. 2018</a> (systematic review and meta-analysis, mostly lab studies); <a href="https://pubmed.ncbi.nlm.nih.gov/33077118/">Klous et al. 2020</a> (lab study, 4 people in the decay phase).</figcaption></figure>
