@@ -16,8 +16,7 @@
     "Race breakdown, Tokyo Marathon, Mar 7, 2027. Tokyo started at 4.7°C in 2024 and hit 20.6°C in 2025. A temperature scale marks 4.7°C, the typical high of 15.4°C and 20.6°C. Distance 42.195 km, gain 150 m, loss 180 m. Full breakdown on raceproof.ai."
    ],
    "flags": [
-    "Race page could not be verified from this run (fetch of the URL needed approval nobody was there to give), so no Buffer drafts were created. Open the link, confirm it loads the right race, then create the drafts or ask the next run to.",
-    "Every number is from the Race breakdowns queue row only; the page itself wasn't read, so nothing is labeled approximate. Check against the page."
+    "Page confirmed Oct 24 (link sent by Jonathan): gain and loss are labeled approximate on the page, so the slide now says so. The 2025 figure is the 4 pm reading (the 9 am start was 14.2°C)."
    ],
    "buffer": {}
   },
@@ -69,9 +68,9 @@
    "duration_s": 19.6,
    "audio": "A calm, steady instrumental trending track at low volume; no voice.",
    "flags": [
-    "Race page could not be verified from this run (fetch of the URL needed approval nobody was there to give), so no Buffer drafts were created. Open the link, confirm it loads the right race, then create the drafts or ask the next run to.",
+    "Page confirmed Oct 24 (link sent by Jonathan): Heat rated Low on the page, so Heat stays off the timeline.",
     "New template templates/reels/race-when-to-start.html (built from adaptation-timeline): please review.",
-    "Numbers are from the queue row only. Timeline dates are the brief's general adaptation windows counted back from Feb 13, 2027. Heat and sweat rate are left off because the row's typical high is 17.2°C and the page's pillar ratings couldn't be read: add them if the page rates Heat higher."
+    "Timeline dates are the brief's general windows counted back from Feb 13, 2027. The page's chart summary showed '12 weeks (Nov 2)'; 12 weeks before Feb 13 is Nov 21, as the Reel says. Check the page's chart."
    ],
    "buffer": {}
   },
