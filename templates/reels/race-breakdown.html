@@ -240,8 +240,8 @@ q('#dNotes').innerHTML = `<div class="a">${R.a}</div><div class="b">${R.b}</div>
 q('#close .t').textContent = DATA.close; q('#close .s').textContent = DATA.closeSub;
 
 // ---- timing (seconds)
-const T = { aOut: 4.8, bIn: 5.1, rows: [5.7, 6.7, 7.7, 8.7, 9.7], sel: 12.4, bOut: 13.55, cIn: 13.8, cOut: 19.6, dIn: 19.9, dOut: 26.6, eIn: 26.9 };
-window.DURATION = 28.6;
+const T = { aOut: 3.7, bIn: 4.0, rows: [4.6, 5.6, 6.6, 7.6, 8.6], sel: 11.3, bOut: 12.45, cIn: 12.7, cOut: 18.5, dIn: 18.8, dOut: 25.5, eIn: 25.8 };
+window.DURATION = 27.5;
 const segs = [...document.querySelectorAll('#cChart .seg')], bars = [...document.querySelectorAll('#dChart .bar')], bvs = [...document.querySelectorAll('#dChart .bv')];
 
 window.render = function (t) {
@@ -249,7 +249,7 @@ window.render = function (t) {
   const aOut = prog(t, T.aOut, 0.35);
   q('#A').style.opacity = 1 - aOut;
   fadeUp(q('#aHook'), prog(t, 0.35, 0.45), 24);
-  q('#aNums').querySelectorAll('.n').forEach((n, i) => fadeUp(n, prog(t, 1.3 + i * 0.3, 0.4), 18));
+  q('#aNums').querySelectorAll('.n').forEach((n, i) => fadeUp(n, prog(t, 0.75 + i * 0.25, 0.4), 18));
   // B
   const bIn = prog(t, T.bIn, 0.4), bOut = prog(t, T.bOut, 0.25);
   q('#B').style.opacity = bIn * (1 - bOut);
@@ -271,7 +271,7 @@ window.render = function (t) {
       r.hl.style.opacity = sel; r.tag.style.opacity = prog(t, T.sel + 0.2, 0.35);
       const top = ROW_TOP + i * ROW_H, to = 270;
       r.row.style.transform = `translateY(${(to - top) * rise}px) scale(${1 + 0.04 * sel})`;
-      r.row.style.transformOrigin = 'left top';
+      r.row.style.transformOrigin = '480px top';   // scale about the frame's centre so the card stays inside 1080 px
     } else {
       r.row.style.opacity = (1 - 0.88 * sel) * (1 - rise);
     }
