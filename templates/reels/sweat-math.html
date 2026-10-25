@@ -45,7 +45,7 @@ body.card #title{display:block}
 <script>
 const Q=new URLSearchParams(location.search);
 const MODE=Q.get('mode')||'overlay';           // overlay (transparent), green (green screen) or card (brand background)
-const D={before:174.4, after:169.4, drank:14, hours:1.5, ozPerLb:16};
+const D={before:174.4, after:169.4, drank:28, hours:1.5, ozPerLb:16};
 const lost=+(D.before-D.after).toFixed(1), sweatFromLoss=lost*D.ozPerLb, sweat=sweatFromLoss+D.drank;
 const rate=sweat/D.hours, litres=(lost*0.4536+D.drank*0.02957)/D.hours;
 const S={head:'YOUR SWEAT RATE',k1:'Before the run',k2:'After, toweled off',k3:'Weight lost',k4:'16 oz per lb',k5:'Drank on the run',k6:'Sweat lost',k7:'Hours run',
