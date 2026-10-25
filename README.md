@@ -52,7 +52,7 @@ Feed posts on Monday, Wednesday, Friday and Saturday (Monday, Wednesday and Frid
 
 ## Rules that every file must follow
 
-Brand system only: asphalt `#1F2328`, surface `#F4F2ED`, lime `#C8F03C` only for "ready", heat `#B83C0B` and heat-soft `#FCE7DC` for problems, pillar colors from the brief. No em or en dashes, no exclamation marks, no AI-sounding phrasing. Every number comes from the brief's stats table or a Research library row, with its source on the slide or in the caption. Feed slides are 1080 x 1350 with the small logo; reels are 1080 x 1920 with text kept out of the top 220 px and bottom 420 px.
+Brand system only: asphalt `#1F2328`, surface `#F4F2ED`, lime `#C8F03C` only for "ready", heat `#B83C0B` and heat-soft `#FCE7DC` for problems, pillar colors from the brief. No em or en dashes, no exclamation marks, no AI-sounding phrasing. Every number comes from the brief's stats table or a Research library row, with its source on the slide or in the caption. Feed slides are 1080 x 1350 with the small logo; reels are 1080 x 1920 with text kept out of the top 220 px and bottom 420 px. Reels never open on a blank frame: frame 0 already shows the eyebrow and headline fully drawn (no fade in from empty).
 
 ## Links in captions
 
