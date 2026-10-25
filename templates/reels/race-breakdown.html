@@ -42,6 +42,9 @@
   .row .name{position:absolute;left:0;top:0;font-size:48px;font-weight:700;line-height:54px}
   .row .track{position:absolute;left:0;top:66px;width:960px;height:42px;border-radius:5px;background:#E6E2DA}
   .row .band{position:absolute;top:0;height:42px;border-radius:5px;transform-origin:left}
+  .row .hl{position:absolute;left:-24px;top:-22px;width:1008px;height:198px;border-radius:12px;background:#FFFFFF;box-sizing:border-box;border:3px solid;opacity:0;z-index:0}
+  .row .name,.row .track,.row .note,.row .tag{z-index:1}
+  .row .tag{position:absolute;right:0;top:6px;font-size:24px;letter-spacing:0.08em;opacity:0}
   .row .note{position:absolute;left:0;top:122px;font-size:32px;line-height:38px;color:#5B5F64;white-space:nowrap}
   /* C */
   #cEye{left:60px;top:250px}
@@ -114,6 +117,8 @@ const DATA = {
     { name:'Pacing',   c:'#008A6C', note:'Goal-pace work from Dec 5.',                    bands:[['build',10,0]] },
     { name:'Taper',    c:'#7A4BB0', note:'Final 3 weeks, from Jan 23.',                   bands:[['build',3,0]] }
   ],
+  keyRow: 2,                          // index in rows of the pillar the deep dive covers
+  keyTag: 'KEY PILLAR',
   key: {
     c: '#A23B72',
     eyebrow: 'KEY PILLAR · TERRAIN · DESCENT',
@@ -169,7 +174,7 @@ const X = w => 60 + (16 - w) * 60;
 const ROW_TOP = 480, ROW_H = 205;
 const rowEls = DATA.rows.map((R, i) => {
   const r = document.createElement('div'); r.className = 'abs row'; r.style.top = (ROW_TOP + i * ROW_H) + 'px';
-  r.innerHTML = `<div class="name">${R.name}</div><div class="track"></div><div class="note">${R.note}</div>`;
+  r.innerHTML = `<div class="hl" style="border-color:${R.c}"></div><div class="tag mono" style="color:${R.c}">${DATA.keyTag}</div><div class="name">${R.name}</div><div class="track"></div><div class="note">${R.note}</div>`;
   const track = r.querySelector('.track');
   const parts = R.bands.map(b => {
     const e = document.createElement('div'); e.className = 'band';
@@ -178,7 +183,7 @@ const rowEls = DATA.rows.map((R, i) => {
     track.appendChild(e); return { kind: b[0], el: e, base: parseFloat(e.style.opacity) };
   });
   q('#rows').appendChild(r);
-  return { row: r, name: r.querySelector('.name'), track, note: r.querySelector('.note'), parts };
+  return { row: r, hl: r.querySelector('.hl'), tag: r.querySelector('.tag'), name: r.querySelector('.name'), track, note: r.querySelector('.note'), parts };
 });
 
 // ---- C: profile chart
@@ -235,7 +240,7 @@ q('#dNotes').innerHTML = `<div class="a">${R.a}</div><div class="b">${R.b}</div>
 q('#close .t').textContent = DATA.close; q('#close .s').textContent = DATA.closeSub;
 
 // ---- timing (seconds)
-const T = { aOut: 4.8, bIn: 5.1, rows: [5.7, 6.7, 7.7, 8.7, 9.7], bOut: 13.4, cIn: 13.7, cOut: 19.6, dIn: 19.9, dOut: 26.6, eIn: 26.9 };
+const T = { aOut: 4.8, bIn: 5.1, rows: [5.7, 6.7, 7.7, 8.7, 9.7], sel: 12.4, bOut: 13.55, cIn: 13.8, cOut: 19.6, dIn: 19.9, dOut: 26.6, eIn: 26.9 };
 window.DURATION = 28.6;
 const segs = [...document.querySelectorAll('#cChart .seg')], bars = [...document.querySelectorAll('#dChart .bar')], bvs = [...document.querySelectorAll('#dChart .bv')];
 
@@ -246,7 +251,7 @@ window.render = function (t) {
   fadeUp(q('#aHook'), prog(t, 0.35, 0.45), 24);
   q('#aNums').querySelectorAll('.n').forEach((n, i) => fadeUp(n, prog(t, 1.3 + i * 0.3, 0.4), 18));
   // B
-  const bIn = prog(t, T.bIn, 0.4), bOut = prog(t, T.bOut, 0.35);
+  const bIn = prog(t, T.bIn, 0.4), bOut = prog(t, T.bOut, 0.25);
   q('#B').style.opacity = bIn * (1 - bOut);
   fadeUp(q('#bHead'), bIn, 20);
   document.querySelectorAll('.axis').forEach(a => a.style.opacity = prog(t, T.bIn + 0.2, 0.4));
@@ -260,7 +265,22 @@ window.render = function (t) {
       p.el.style.transform = `scaleX(${p.kind === 'keep' ? prog(t, s + 0.55, 0.4) : prog(t, s + 0.15, 0.6)})`;
     });
     fadeUp(r.note, prog(t, s + 0.4, 0.4), 12);
+    // select the key pillar: others dim, key row lifts onto a card, then rises toward the next scene
+    const sel = prog(t, T.sel, 0.5), rise = prog(t, T.sel + 0.6, 0.6);
+    if (i === DATA.keyRow) {
+      r.hl.style.opacity = sel; r.tag.style.opacity = prog(t, T.sel + 0.2, 0.35);
+      const top = ROW_TOP + i * ROW_H, to = 270;
+      r.row.style.transform = `translateY(${(to - top) * rise}px) scale(${1 + 0.04 * sel})`;
+      r.row.style.transformOrigin = 'left top';
+    } else {
+      r.row.style.opacity = (1 - 0.88 * sel) * (1 - rise);
+    }
   });
+  const dimB = (1 - 0.88 * prog(t, T.sel, 0.5)) * (1 - prog(t, T.sel + 0.6, 0.5));
+  q('#bHead').style.opacity = bIn * dimB;
+  document.querySelectorAll('.axis').forEach(a => a.style.opacity = prog(t, T.bIn + 0.2, 0.4) * dimB);
+  document.querySelectorAll('.grid').forEach(g => g.style.opacity = dimB);
+  q('#race').style.opacity = dimB;
   // C
   const cIn = prog(t, T.cIn, 0.4), cOut = prog(t, T.cOut, 0.35);
   q('#C').style.opacity = cIn * (1 - cOut);
