@@ -17,7 +17,7 @@ Feed posts on Monday, Wednesday, Friday and Saturday (Monday, Wednesday and Frid
 3. Render: `python3 scripts/render_stills.py posts/<monday-date>/*.html` (writes a 1080 x 1350 PNG next to each HTML file).
 4. For a Reel, copy a template from `templates/reels/`, change only its data and text, and render it:
    `python3 scripts/render_reel.py <html> posts/<monday-date> <day>-<slug>-reel <duration> <cover_t>`.
-   Reels are not loaded into Buffer. Jonathan posts them from the Instagram app with trending audio and shares to Facebook there.
+   Animated race Reels go to Buffer as Reel drafts; filmed Reels are posted by Jonathan from the Instagram app with trending audio.
 5. Write `posts/<monday-date>/posts.json` (format below), then commit and push. Use the pushed commit's SHA in every media link.
 6. In Buffer (organization "My organization"), create one **draft** per feed post on each channel, Instagram `6ac9cdde6a5c39ccb66d7655` and Facebook page `6acd1c4f778b240e2fe9d9aa`, with `saveToDraft: true`, `mode: customScheduled` and `dueAt` set to the post's date at 08:00 America/Los_Angeles. Carousels list every slide image in order. Use Instagram type `post` and Facebook type `post`. Give each image alt text. Never publish or schedule directly: Jonathan approves drafts in Buffer.
 
@@ -48,6 +48,8 @@ Feed posts on Monday, Wednesday, Friday and Saturday (Monday, Wednesday and Frid
 
 - `templates/posts/`: approved feed designs to copy from. `pain-terrain-1-problem.html` and `pain-terrain-2-fix.html` are the model for every pain post (2-slide rule in the brief). `education-gut-*.html` is the education carousel. `single-keep-your-coach.html` is a single post with icons. `founding-offer.html`, `launch-intro.html` and `stat-pain-28pct.html` are the launch row.
 - `templates/reels/adaptation-timeline.html`: the approved 19-second adaptation timeline reel. It defines `window.render(t)` and shows its logo with `?still=1`.
+- `templates/reels/race-breakdown.html`: the approved race breakdown Reel (locked Oct 25, 2026; first used for Black Canyon 100K). Scenes: intro fully drawn at frame 0 (eyebrow, race name, date), the race's hook and its 4 key numbers (about 4 s); "When to start" with the pillars in one at a time, a short hold, then the key pillar selected and carried up into the deep dive; the deep dive on what the race asks (course profile from `races/<slug>/route.json`, per-km ratio, key sessions); the build-toward number and weekly ramp from the Adaptation rates tab; the closing line. Copy it, change only the DATA block (race, numbers, rows, `keyRow`, key pillar, profile, ramp), then render:
+  `python3 scripts/render_reel.py <html> <scratch> body 27.5 3.0` and `python3 scripts/add_endcard.py <html> <scratch>/body.mp4 posts/<monday>/<day>-race-<slug>-reel.mp4 en` (crossfades the standard end card and keeps the closing line over it). About 32 s in total. Race Reels go to Buffer as Instagram and Facebook Reel drafts.
 - Assets: `assets/brand/` (lockups, mark, app icon, phone frame), `assets/fonts/` (Inter, Inter Display, JetBrains Mono, loaded with `fonts.css`). Link them relatively, e.g. `../../assets/brand/lockup.png` from a file two folders deep.
 
 ## Rules that every file must follow

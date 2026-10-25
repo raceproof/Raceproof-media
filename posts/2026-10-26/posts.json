@@ -71,15 +71,13 @@
    "duration_s": 32.1,
    "audio": "A calm, steady instrumental trending track at low volume; no voice.",
    "flags": [
-    "v2 built Oct 25 from templates/reels/race-breakdown.html; Oct 25 update: pillar hold 1 s shorter (now 1.8 s, under the 3 s still-chart spec at Jonathan's request) and a key-pillar selection that lifts Descent onto a card and carries it into the deep dive. Please review. Oct 25 (2): intro cut to about 4 s, numbers follow the hook with no gap, selected card kept inside the frame, closing line stays over the end card (scripts/add_endcard.py).",
-    "Descent numbers from the Adaptation rates tab (Black Canyon box); confidence there is low for weekly volume and ramp. The lighter week bar (Dec 19) is drawn back at 600 m as an illustration; the tab gives no value for it.",
-    "Course profile drawn from races/black-canyon-100k/route.json; the 490 m figure is labeled approximate as on the page.",
-    "Runs 33.2 s including the end card; length to be decided."
+    "Approved by Jonathan Oct 25, 2026; template locked as templates/reels/race-breakdown.html."
    ],
    "buffer": {
     "instagram": "6adcf265bd33ce99c337801a",
     "facebook": "6adcf2660b5343d0709776ca"
-   }
+   },
+   "status": "approved"
   },
   {
    "date": "2026-11-01",
