@@ -2,144 +2,283 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Race breakdown reel: when to start</title>
+<title>Race breakdown reel</title>
 <link rel="stylesheet" href="../../assets/fonts/fonts.css">
-<!-- Race breakdown Wednesday Reel. Hook (the race's queue-row hook) and key numbers first, then the
-     "When to start" adaptation timeline counted back from race day. Ends on a still CTA; the standard
-     end card (assets/video/endcard/raceproof-endcard-en|es.mp4) is crossfaded on after render.
-     Change only the DATA block. Built from adaptation-timeline.html (same specs: 1080 x 1920, 30 fps,
-     text inside y 220 to 1500, ease-out motion of 300 ms or more, hook in the first second). -->
+<!-- Race breakdown Wednesday Reel (v2, replaces race-when-to-start.html).
+     Scenes: (A) intro, fully drawn at frame 0: eyebrow, race name, date; then the race's hook and its 4 key numbers.
+     (B) "When to start": the pillars come in one at a time, large, then hold as a full stack (3 s or more).
+     (C) Key pillar deep dive 1: the race's demand for that variable (course profile + per-km ratio + key sessions).
+     (D) Key pillar deep dive 2: the build-toward number and the weekly ramp, from the Adaptation rates tab.
+     The standard end card (assets/video/endcard/raceproof-endcard-en|es.mp4) is crossfaded on after render.
+     Change only the DATA block. Specs: 1080 x 1920, 30 fps, text inside y 220 to 1500, ease-out motion of
+     300 ms or more, never a blank first frame. -->
 <style>
   html,body{margin:0;background:#F4F2ED}
   #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#F4F2ED;color:#15171A;font-family:"Inter",sans-serif}
   .disp{font-family:"Inter Display","Inter",sans-serif;font-weight:800;letter-spacing:-0.02em}
   .mono{font-family:"JetBrains Mono",monospace}
   .abs{position:absolute}
-  #kicker{left:60px;top:250px;font-size:28px;letter-spacing:0.08em;color:#B83C0B}
-  #hook{left:60px;top:310px;width:960px;font-size:72px;line-height:80px}
-  #hook .hl{color:#B83C0B}
-  #nums{left:60px;top:640px;width:960px;display:flex;flex-wrap:wrap;gap:20px}
-  #nums .n{background:#FFFFFF;border:1px solid #DDD9D0;border-radius:10px;padding:22px 28px;display:flex;flex-direction:column;gap:6px;min-width:400px;box-sizing:border-box}
-  #nums .n .l{font-size:22px;letter-spacing:0.08em;color:#5B5F64}
-  #nums .n .v{font-size:52px;line-height:58px;font-weight:600;letter-spacing:-0.02em}
-  #head{left:60px;top:250px;width:960px}
-  #head .t{font-size:76px;line-height:82px}
-  #head .s{font-size:30px;color:#5B5F64;margin-top:14px}
-  #close{left:60px;top:250px;width:960px;opacity:0}
+  .scene{position:absolute;inset:0}
+  .eyebrow{font-size:28px;letter-spacing:0.08em}
+  /* A */
+  #aEye{left:60px;top:250px;color:#B83C0B}
+  #aName{left:60px;top:300px;width:960px;font-size:104px;line-height:108px}
+  #aDate{left:60px;top:430px;font-size:30px;color:#5B5F64}
+  #aHook{left:60px;top:540px;width:960px;font-size:62px;line-height:70px}
+  #aHook .hl{color:#B83C0B}
+  #aNums{left:60px;top:860px;width:960px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .n{background:#FFFFFF;border:1px solid #DDD9D0;border-radius:10px;padding:28px 32px;display:flex;flex-direction:column;gap:8px}
+  .n .l{font-size:24px;letter-spacing:0.08em;color:#5B5F64}
+  .n .v{font-size:64px;line-height:70px;font-weight:600;letter-spacing:-0.02em}
+  .n .s{font-size:24px;color:#5B5F64}
+  /* B */
+  #bHead{left:60px;top:250px;width:960px}
+  #bHead .t{font-size:80px;line-height:86px}
+  #bHead .s{font-size:28px;color:#5B5F64;margin-top:12px}
+  .axis{top:430px;font-size:26px;color:#5B5F64;transform:translateX(-50%);white-space:nowrap}
+  .grid{top:470px;width:2px;height:1020px;background:#E3DFD6;transform-origin:top}
+  #race{left:1018px;top:465px;width:0;height:1030px;border-left:3px dashed #5B5F64;transform-origin:top}
+  .row{left:60px;width:960px;height:205px}
+  .row .name{position:absolute;left:0;top:0;font-size:48px;font-weight:700;line-height:54px}
+  .row .track{position:absolute;left:0;top:66px;width:960px;height:42px;border-radius:5px;background:#E6E2DA}
+  .row .band{position:absolute;top:0;height:42px;border-radius:5px;transform-origin:left}
+  .row .note{position:absolute;left:0;top:122px;font-size:32px;line-height:38px;color:#5B5F64;white-space:nowrap}
+  /* C */
+  #cEye{left:60px;top:250px}
+  #cHead{left:60px;top:300px;width:960px;font-size:76px;line-height:82px}
+  #cChart{left:60px;top:520px;width:960px;height:420px;background:#FFFFFF;border:1px solid #DDD9D0;border-radius:10px;box-sizing:border-box}
+  #cRows{left:60px;top:990px;width:960px;display:flex;flex-direction:column}
+  .kv{display:flex;flex-direction:column;gap:6px;padding:24px 0;border-top:1px solid #DDD9D0}
+  .kv .l{font-size:24px;letter-spacing:0.08em;color:#5B5F64}
+  .kv .v{font-size:44px;line-height:52px;font-weight:700}
+  .kv .s{font-size:30px;line-height:38px;color:#5B5F64}
+  /* D */
+  #dEye{left:60px;top:250px}
+  #dHead{left:60px;top:300px;width:960px;font-size:76px;line-height:82px}
+  #dChart{left:60px;top:500px;width:960px;height:640px;background:#FFFFFF;border:1px solid #DDD9D0;border-radius:10px;box-sizing:border-box}
+  #dNotes{left:60px;top:1170px;width:960px;display:flex;flex-direction:column;gap:14px}
+  #dNotes .a{font-size:32px;line-height:40px}
+  #dNotes .b{font-size:26px;line-height:34px;color:#5B5F64}
+  /* close */
+  #close{left:60px;top:250px;width:960px}
   #close .t{font-size:66px;line-height:74px}
   #close .s{font-size:30px;color:#5B5F64;margin-top:14px}
-  .axis{top:560px;font-size:24px;color:#5B5F64;transform:translateX(-50%);white-space:nowrap}
-  .grid{top:598px;width:2px;height:820px;background:#E3DFD6;transform-origin:top}
-  #race{left:1018px;top:590px;width:0;height:830px;border-left:3px dashed #5B5F64;transform-origin:top}
-  .row{left:60px;width:960px;height:160px}
-  .row .name{position:absolute;left:0;top:0;font-size:38px;font-weight:600;line-height:44px}
-  .row .track{position:absolute;left:0;top:54px;width:960px;height:30px;border-radius:4px;background:#E6E2DA}
-  .row .band{position:absolute;top:0;height:30px;border-radius:4px;transform-origin:left}
-  .row .note{position:absolute;left:0;top:96px;font-size:28px;line-height:34px;color:#5B5F64;white-space:nowrap}
-  #logoStill{left:60px;top:176px;height:44px;display:none}
+  #logoStill{left:60px;top:170px;height:44px;display:none}
 </style>
 </head>
 <body>
 <div id="stage">
   <img id="logoStill" class="abs" src="../../assets/brand/lockup.png" alt="">
-  <div id="hookWrap">
-    <div id="kicker" class="abs mono"></div>
-    <div id="hook" class="abs disp"></div>
-    <div id="nums" class="abs"></div>
+  <div id="A" class="scene">
+    <div id="aEye" class="abs mono eyebrow"></div>
+    <div id="aName" class="abs disp"></div>
+    <div id="aDate" class="abs mono"></div>
+    <div id="aHook" class="abs disp"></div>
+    <div id="aNums" class="abs"></div>
   </div>
-  <div id="head" class="abs"><div class="t disp"></div><div class="s mono"></div></div>
-  <div id="close" class="abs"><div class="t disp"></div><div class="s"></div></div>
-  <div id="axes"></div>
-  <div id="race" class="abs"></div>
-  <div id="rows"></div>
+  <div id="B" class="scene">
+    <div id="bHead" class="abs"><div class="t disp"></div><div class="s mono"></div></div>
+    <div id="axes"></div>
+    <div id="race" class="abs"></div>
+    <div id="rows"></div>
+  </div>
+  <div id="C" class="scene">
+    <div id="cEye" class="abs mono eyebrow"></div>
+    <div id="cHead" class="abs disp"></div>
+    <div id="cChart" class="abs"></div>
+    <div id="cRows" class="abs"></div>
+  </div>
+  <div id="D" class="scene">
+    <div id="dEye" class="abs mono eyebrow"></div>
+    <div id="dHead" class="abs disp"></div>
+    <div id="dChart" class="abs"></div>
+    <div id="dNotes" class="abs"></div>
+  </div>
+  <div id="E" class="scene"><div id="close" class="abs"><div class="t disp"></div><div class="s"></div></div></div>
 </div>
 <script>
 // ===== DATA (change only this block) =====
+const PROFILE = [[0.0,1217],[0.4,1212],[1.0,1205],[1.4,1200],[2.0,1208],[2.4,1217],[3.0,1233],[3.4,1239],[4.0,1241],[4.4,1246],[5.0,1248],[5.4,1242],[6.0,1234],[6.4,1230],[7.0,1252],[7.4,1260],[8.0,1260],[8.4,1242],[9.0,1220],[9.4,1212],[10.0,1214],[10.4,1219],[11.0,1210],[11.4,1205],[12.0,1197],[12.4,1191],[13.0,1178],[13.4,1167],[14.0,1156],[14.4,1148],[15.1,1118],[15.4,1099],[16.1,1070],[16.4,1050],[17.1,1024],[17.4,1013],[18.1,991],[18.5,976],[19.1,951],[19.5,938],[20.1,925],[20.5,926],[21.1,928],[21.5,929],[22.1,928],[22.5,927],[23.1,928],[23.5,929],[24.1,931],[24.5,940],[25.1,943],[25.5,938],[26.1,919],[26.5,904],[27.1,877],[27.5,866],[28.1,853],[28.5,839],[29.1,822],[29.5,813],[30.1,789],[30.5,774],[31.1,770],[31.5,780],[32.1,804],[32.5,829],[33.1,847],[33.5,845],[34.1,835],[34.5,830],[35.1,834],[35.5,835],[36.1,835],[36.5,833],[37.1,830],[37.5,828],[38.1,823],[38.5,819],[39.1,812],[39.5,806],[40.1,799],[40.5,798],[41.1,802],[41.5,806],[42.1,815],[42.5,814],[43.1,791],[43.5,783],[44.1,768],[44.5,744],[45.1,705],[45.5,680],[46.1,648],[46.5,638],[47.1,657],[47.5,662],[48.1,666],[48.5,664],[49.1,653],[49.5,642],[50.1,674],[50.5,680],[51.1,644],[51.5,627],[52.2,611],[52.6,613],[53.2,625],[53.6,637],[54.2,647],[54.6,650],[55.2,646],[55.6,634],[56.2,617],[56.6,611],[57.2,605],[57.6,601],[58.2,621],[58.6,632],[59.2,642],[59.6,636],[60.2,630],[60.6,631],[61.2,635],[61.6,638],[62.2,633],[62.6,618],[63.2,579],[63.6,599],[64.2,633],[64.6,657],[65.2,702],[65.6,733],[66.2,750],[66.6,751],[67.2,737],[67.6,729],[68.2,714],[68.6,703],[69.2,685],[69.6,673],[70.2,662],[70.6,655],[71.2,647],[71.6,638],[72.2,634],[72.6,640],[73.2,631],[73.6,620],[74.2,623],[74.6,617],[75.2,597],[75.6,596],[76.2,599],[76.6,607],[77.2,589],[77.6,570],[78.2,559],[78.6,550],[79.2,536],[79.6,549],[80.2,560],[80.6,559],[81.2,570],[81.6,580],[82.2,588],[82.7,593],[83.2,601],[83.7,612],[84.2,630],[84.7,642],[85.3,666],[85.7,683],[86.3,710],[86.7,719],[87.3,723],[87.7,711],[88.3,707],[88.7,715],[89.3,717],[89.7,716],[90.3,703],[90.7,712],[91.3,732],[91.7,718],[92.3,694],[92.7,677],[93.3,650],[93.7,634],[94.3,622],[94.7,617],[95.3,611],[95.7,604],[96.3,595],[96.7,590],[97.3,584],[97.7,581],[98.3,579],[98.7,578],[99.3,576],[99.7,574],[100.1,571]];
 const DATA = {
-  kicker: 'RACE BREAKDOWN · BLACK CANYON 100K',
+  eyebrow: 'RACE BREAKDOWN',
+  name: 'Black Canyon 100K',
+  date: 'FEB 13, 2027 · ARIZONA',
   hook: 'In 2024, overnight snow delayed the desert start to <span class="hl">9:30 am</span>.',
-  nums: [['DISTANCE','100.1 km'],['TYPICAL HIGH','17.2°C'],['GAIN','1,591 m'],['LOSS','2,236 m']],
-  head: 'When to start',
-  headSub: 'RACE DAY FEB 13, 2027 · 15 WEEKS FROM OCT 28',
+  nums: [['DISTANCE','100.1 km','62.2 mi'],['TYPICAL HIGH','17.2°C','63°F'],['GAIN','1,591 m','5,220 ft'],['LOSS','2,236 m','7,336 ft']],
+  windowsHead: 'When to start',
+  windowsSub: 'RACE DAY FEB 13, 2027 · 15 WEEKS FROM OCT 28',
   rows: [
-    { name:'Climbing', c:'#A87408', note:'All block. 16 weeks out was Oct 24.',        bands:[['build',16,0]] },
-    { name:'Gut',      c:'#1F5FAF', note:'Start Nov 21. Race carbs by Jan 16.',         bands:[['build',12,4],['keep',4,0]] },
-    { name:'Downhill', c:'#A23B72', note:'Biggest weeks Jan 9 to 23. Last by Feb 3.',    bands:[['build',12,1.5]] },
-    { name:'Pacing',   c:'#008A6C', note:'Goal-pace work from Dec 5.',                  bands:[['build',10,0]] },
-    { name:'Taper',    c:'#7A4BB0', note:'Final 3 weeks, from Jan 23.',                 bands:[['build',3,0]] }
+    { name:'Climbing', c:'#A87408', note:'All block. 16 weeks out was Oct 24.',          bands:[['build',16,0]] },
+    { name:'Gut',      c:'#1F5FAF', note:'Start Nov 21. Race carbs by Jan 16.',           bands:[['build',12,4],['keep',4,0]] },
+    { name:'Descent',  c:'#A23B72', note:'Start Nov 21. Biggest weeks Jan 9 to 23.',      bands:[['build',12,5],['peak',5,3],['build',3,1.5]] },
+    { name:'Pacing',   c:'#008A6C', note:'Goal-pace work from Dec 5.',                    bands:[['build',10,0]] },
+    { name:'Taper',    c:'#7A4BB0', note:'Final 3 weeks, from Jan 23.',                   bands:[['build',3,0]] }
   ],
+  key: {
+    c: '#A23B72',
+    eyebrow: 'KEY PILLAR · TERRAIN · DESCENT',
+    head: 'It drops 2,236&nbsp;m. About 22&nbsp;m every&nbsp;km.',
+    profile: PROFILE,                   // [[km, m], ...] from races/<slug>/route.json
+    profileNote: 'First 31 km: about 490 m down (approx.)',
+    shade: [[0, 31.2]],                 // km ranges to label on the profile
+    rows: [
+      ['LONG RUNS', 'About 22 m down per km', 'A 30 km long run: about 670 m of descent'],
+      ['STEEP SESSIONS', '1 to 2 a week, Jan 9 to 23', 'Grade 7% or steeper, faster than race pace'],
+      ['LAST BIG DOWNHILL', 'Jan 30 to Feb 3', '10 to 14 days before race day']
+    ]
+  },
+  ramp: {
+    eyebrow: 'BUILD IT · DESCENT PER WEEK',
+    head: 'Add 10% a week or less.',
+    unit: 'm',
+    axisLabel: 'METERS OF DESCENT PER WEEK',
+    weeks: [['NOV 21',600],['28',660],['DEC 5',726],['12',799],['19',600,'light'],['26',879],['JAN 2',967],['9',1064]],
+    target: [2236, 'Race total: one peak week, advanced athletes'],
+    a: 'Example: 600 m a week on Nov 21 reaches about 1,060 m by mid January, with a lighter week every 4th.',
+    b: 'New to steep downhills? Start with relaxed downhills inside your long runs. Sore for more than 3 days? Wait before the next one. General guideline, not a plan. Coaching sources (Roche, Koop) and Byrnes 1985.'
+  },
   close: 'Full breakdown on raceproof.ai',
-  closeSub: 'General guidelines, not a prescription.'
+  closeSub: 'raceproof.ai/races/black-canyon-100k'
 };
 // ===== END DATA =====
-
-const X = w => 60 + (16 - w) * 60;              // weeks out -> x (16 weeks out at left, race at right)
-const ROW_TOP = 620, ROW_H = 160;
+</script>
+<script>
 const q = s => document.querySelector(s);
-q('#kicker').textContent = DATA.kicker;
-q('#hook').innerHTML = DATA.hook;
-q('#nums').innerHTML = DATA.nums.map(n => `<div class="n"><span class="l mono">${n[0]}</span><span class="v mono">${n[1]}</span></div>`).join('');
-q('#head .t').textContent = DATA.head; q('#head .s').textContent = DATA.headSub;
-q('#close .t').textContent = DATA.close; q('#close .s').textContent = DATA.closeSub;
+const clamp = v => Math.max(0, Math.min(1, v));
+const ease = v => 1 - Math.pow(1 - clamp(v), 3);
+const prog = (t, a, d) => ease((t - a) / d);
+const fadeUp = (el, p, dy = 20) => { el.style.opacity = p; el.style.transform = `translateY(${(1 - p) * dy}px)`; };
+const SVG = 'http://www.w3.org/2000/svg';
 
-const axes = q('#axes');
+// ---- A
+q('#aEye').textContent = DATA.eyebrow; q('#aName').textContent = DATA.name; q('#aDate').textContent = DATA.date;
+q('#aHook').innerHTML = DATA.hook;
+q('#aNums').innerHTML = DATA.nums.map(n => `<div class="n"><span class="l mono">${n[0]}</span><span class="v mono">${n[1]}</span><span class="s mono">${n[2] || ''}</span></div>`).join('');
+
+// ---- B
+q('#bHead .t').textContent = DATA.windowsHead; q('#bHead .s').textContent = DATA.windowsSub;
+const X = w => 60 + (16 - w) * 60;
 [16, 12, 8, 4, 0].forEach((w, i) => {
-  const l = document.createElement('div');
-  l.className = 'abs mono axis'; l.style.left = X(w) + 'px';
+  const l = document.createElement('div'); l.className = 'abs mono axis'; l.style.left = X(w) + 'px';
   l.textContent = i === 0 ? '16 WKS' : (w === 0 ? 'RACE' : String(w));
   if (i === 0) { l.style.transform = 'none'; l.style.left = '60px'; }
   if (w === 0) { l.style.transform = 'translateX(-100%)'; l.style.left = '1020px'; }
-  axes.appendChild(l);
-  if (w > 0 && i > 0) { const g = document.createElement('div'); g.className = 'abs grid'; g.style.left = (X(w) - 1) + 'px'; axes.appendChild(g); }
+  q('#axes').appendChild(l);
+  if (w > 0 && i > 0) { const g = document.createElement('div'); g.className = 'abs grid'; g.style.left = (X(w) - 1) + 'px'; q('#axes').appendChild(g); }
 });
-
+const ROW_TOP = 480, ROW_H = 205;
 const rowEls = DATA.rows.map((R, i) => {
-  const r = document.createElement('div');
-  r.className = 'abs row'; r.style.top = (ROW_TOP + i * ROW_H) + 'px';
+  const r = document.createElement('div'); r.className = 'abs row'; r.style.top = (ROW_TOP + i * ROW_H) + 'px';
   r.innerHTML = `<div class="name">${R.name}</div><div class="track"></div><div class="note">${R.note}</div>`;
   const track = r.querySelector('.track');
   const parts = R.bands.map(b => {
-    const e = document.createElement('div');
-    e.className = 'band'; e.style.left = (X(b[1]) - 60) + 'px'; e.style.width = (X(b[2]) - X(b[1])) + 'px';
-    e.style.background = R.c; if (b[0] === 'keep') e.style.opacity = 0.35;
-    track.appendChild(e); return { kind: b[0], el: e };
+    const e = document.createElement('div'); e.className = 'band';
+    e.style.left = (X(b[1]) - 60) + 'px'; e.style.width = (X(b[2]) - X(b[1])) + 'px';
+    e.style.background = R.c; e.style.opacity = b[0] === 'keep' ? 0.35 : (b[0] === 'peak' ? 1 : (R.bands.some(x => x[0] === 'peak') ? 0.55 : 1));
+    track.appendChild(e); return { kind: b[0], el: e, base: parseFloat(e.style.opacity) };
   });
   q('#rows').appendChild(r);
   return { row: r, name: r.querySelector('.name'), track, note: r.querySelector('.note'), parts };
 });
 
-const clamp = v => Math.max(0, Math.min(1, v));
-const ease = v => 1 - Math.pow(1 - clamp(v), 3);
-const prog = (t, a, d) => ease((t - a) / d);
-const fadeUp = (el, p, dy = 20) => { el.style.opacity = p; el.style.transform = `translateY(${(1 - p) * dy}px)`; };
+// ---- C: profile chart
+const K = DATA.key;
+q('#cEye').textContent = K.eyebrow; q('#cEye').style.color = K.c; q('#cHead').innerHTML = K.head;
+(function () {
+  const W = 960, H = 420, pl = 70, pr = 30, pt = 60, pb = 60;
+  const P = K.profile, km = P.map(p => p[0]), m = P.map(p => p[1]);
+  const kmax = km[km.length - 1], mmin = Math.floor(Math.min(...m) / 100) * 100, mmax = Math.ceil(Math.max(...m) / 100) * 100;
+  const x = v => pl + (v / kmax) * (W - pl - pr), y = v => pt + (1 - (v - mmin) / (mmax - mmin)) * (H - pt - pb);
+  const s = document.createElementNS(SVG, 'svg'); s.setAttribute('width', W); s.setAttribute('height', H); s.style.position = 'absolute'; s.style.left = '-1px'; s.style.top = '-1px';
+  let area = `M${x(0)},${y(mmin)} ` + P.map(p => `L${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`).join(' ') + ` L${x(kmax)},${y(mmin)} Z`;
+  let html = '';
+  K.shade.forEach(([a, b]) => { html += `<rect x="${x(a)}" y="${pt - 20}" width="${x(b) - x(a)}" height="${H - pt - pb + 20}" fill="${K.c}" opacity="0.10"/>`; });
+  html += `<path d="${area}" fill="#ECE9E2"/>`;
+  // descending segments in the pillar colour, climbing in ink
+  for (let i = 0; i < P.length - 1; i++) {
+    const down = P[i + 1][1] < P[i][1];
+    html += `<line class="seg" x1="${x(P[i][0]).toFixed(1)}" y1="${y(P[i][1]).toFixed(1)}" x2="${x(P[i + 1][0]).toFixed(1)}" y2="${y(P[i + 1][1]).toFixed(1)}" stroke="${down ? K.c : '#1F2328'}" stroke-width="${down ? 6 : 4}" stroke-linecap="round" data-i="${i}"/>`;
+  }
+  html += `<text x="${pl - 12}" y="${y(mmax) + 8}" text-anchor="end" font-family="JetBrains Mono" font-size="20" fill="#5B5F64">${mmax}</text>`;
+  html += `<text x="${pl - 12}" y="${y(mmin) + 8}" text-anchor="end" font-family="JetBrains Mono" font-size="20" fill="#5B5F64">${mmin}</text>`;
+  html += `<text x="${pl - 12}" y="${pt - 28}" text-anchor="end" font-family="JetBrains Mono" font-size="20" fill="#5B5F64">m</text>`;
+  [0, 25, 50, 75, 100].forEach(k => { if (k <= kmax) html += `<text x="${x(k)}" y="${H - 22}" text-anchor="middle" font-family="JetBrains Mono" font-size="20" fill="#5B5F64">${k === 0 ? '0 KM' : k}</text>`; });
+  html += `<text id="cNote" x="${x(K.shade[0][0]) + 10}" y="${pt - 28}" font-family="Inter" font-size="24" font-weight="600" fill="${K.c}">${K.profileNote}</text>`;
+  html += `<rect x="${W - pr - 230}" y="${pt - 44}" width="22" height="6" fill="${K.c}"/><text x="${W - pr - 200}" y="${pt - 34}" font-family="JetBrains Mono" font-size="20" fill="#5B5F64">down</text>`;
+  html += `<rect x="${W - pr - 120}" y="${pt - 44}" width="22" height="6" fill="#1F2328"/><text x="${W - pr - 90}" y="${pt - 34}" font-family="JetBrains Mono" font-size="20" fill="#5B5F64">up</text>`;
+  s.innerHTML = html; q('#cChart').appendChild(s);
+})();
+q('#cRows').innerHTML = K.rows.map(r => `<div class="kv"><span class="l mono">${r[0]}</span><span class="v">${r[1]}</span><span class="s">${r[2]}</span></div>`).join('');
 
-// timing (seconds). Chart is complete and still from about 9.4 s to 12.6 s, then the close holds to the end.
-const HOOK_OUT = 3.6, CHART_IN = 3.9, ROW_START = [4.6, 5.5, 6.4, 7.3, 8.2], CLOSE_AT = 12.6;
-window.DURATION = 15.4;
+// ---- D: weekly ramp bars
+const R = DATA.ramp;
+q('#dEye').textContent = R.eyebrow; q('#dEye').style.color = K.c; q('#dHead').innerHTML = R.head;
+(function () {
+  const W = 960, H = 640, pl = 40, pr = 40, pt = 110, pb = 70;
+  const vmax = Math.max(R.target[0], ...R.weeks.map(w => w[1])) * 1.05;
+  const n = R.weeks.length, slot = (W - pl - pr) / n, bw = slot * 0.62;
+  const y = v => pt + (1 - v / vmax) * (H - pt - pb);
+  let html = `<line x1="${pl}" x2="${W - pr}" y1="${y(R.target[0])}" y2="${y(R.target[0])}" stroke="#1F2328" stroke-width="3" stroke-dasharray="10 8"/>`;
+  html += `<text x="${W - pr}" y="${y(R.target[0]) - 18}" text-anchor="end" font-family="JetBrains Mono" font-size="26" font-weight="600" fill="#15171A">${R.target[0].toLocaleString('en-US')} ${R.unit}</text>`;
+  html += `<text x="${pl}" y="${y(R.target[0]) - 18}" font-family="Inter" font-size="24" fill="#5B5F64">${R.target[1]}</text>`;
+  html += `<text x="${pl}" y="40" font-family="JetBrains Mono" font-size="20" fill="#5B5F64">${R.axisLabel}</text>`;
+  R.weeks.forEach((w, i) => {
+    const cx = pl + slot * i + slot / 2, h = y(0) - y(w[1]), light = w[2] === 'light';
+    html += `<rect class="bar" data-i="${i}" x="${cx - bw / 2}" y="${y(w[1])}" width="${bw}" height="${h}" rx="5" fill="${K.c}" opacity="${light ? 0.4 : 1}" style="transform-origin:${cx}px ${y(0)}px"/>`;
+    html += `<text class="bv" data-i="${i}" x="${cx}" y="${y(w[1]) - 12}" text-anchor="middle" font-family="JetBrains Mono" font-size="${light ? 20 : 22}" fill="${light ? '#5B5F64' : '#15171A'}">${light ? 'lighter' : w[1].toLocaleString('en-US')}</text>`;
+    html += `<text x="${cx}" y="${H - 30}" text-anchor="middle" font-family="JetBrains Mono" font-size="20" fill="#5B5F64">${w[0]}</text>`;
+  });
+  const s = document.createElementNS(SVG, 'svg'); s.setAttribute('width', W); s.setAttribute('height', H); s.style.position = 'absolute'; s.style.left = '-1px'; s.style.top = '-1px';
+  s.innerHTML = html; q('#dChart').appendChild(s);
+})();
+q('#dNotes').innerHTML = `<div class="a">${R.a}</div><div class="b">${R.b}</div>`;
+q('#close .t').textContent = DATA.close; q('#close .s').textContent = DATA.closeSub;
+
+// ---- timing (seconds)
+const T = { aOut: 4.8, bIn: 5.1, rows: [5.7, 6.7, 7.7, 8.7, 9.7], bOut: 13.4, cIn: 13.7, cOut: 19.6, dIn: 19.9, dOut: 26.6, eIn: 26.9 };
+window.DURATION = 28.6;
+const segs = [...document.querySelectorAll('#cChart .seg')], bars = [...document.querySelectorAll('#dChart .bar')], bvs = [...document.querySelectorAll('#dChart .bv')];
 
 window.render = function (t) {
-  const hout = prog(t, HOOK_OUT, 0.4);
-  fadeUp(q('#kicker'), prog(t, 0, 0.35) * (1 - hout), 16);
-  fadeUp(q('#hook'), prog(t, 0.1, 0.45) * (1 - hout), 24);
-  q('#nums').querySelectorAll('.n').forEach((n, i) => fadeUp(n, prog(t, 1.1 + i * 0.3, 0.4) * (1 - hout), 16));
-  const hdIn = prog(t, CHART_IN, 0.45), hdOut = prog(t, CLOSE_AT, 0.4);
-  fadeUp(q('#head'), hdIn * (1 - hdOut), 20);
-  document.querySelectorAll('.axis').forEach(a => a.style.opacity = prog(t, CHART_IN + 0.2, 0.4));
-  document.querySelectorAll('.grid').forEach(g => g.style.transform = `scaleY(${prog(t, CHART_IN + 0.2, 0.6)})`);
-  q('#race').style.transform = `scaleY(${prog(t, CHART_IN + 0.3, 0.6)})`;
+  // A: name, eyebrow, date fully drawn at t = 0
+  const aOut = prog(t, T.aOut, 0.35);
+  q('#A').style.opacity = 1 - aOut;
+  fadeUp(q('#aHook'), prog(t, 0.35, 0.45), 24);
+  q('#aNums').querySelectorAll('.n').forEach((n, i) => fadeUp(n, prog(t, 1.3 + i * 0.3, 0.4), 18));
+  // B
+  const bIn = prog(t, T.bIn, 0.4), bOut = prog(t, T.bOut, 0.35);
+  q('#B').style.opacity = bIn * (1 - bOut);
+  fadeUp(q('#bHead'), bIn, 20);
+  document.querySelectorAll('.axis').forEach(a => a.style.opacity = prog(t, T.bIn + 0.2, 0.4));
+  document.querySelectorAll('.grid').forEach(g => g.style.transform = `scaleY(${prog(t, T.bIn + 0.2, 0.6)})`);
+  q('#race').style.transform = `scaleY(${prog(t, T.bIn + 0.3, 0.6)})`;
   rowEls.forEach((r, i) => {
-    const s = ROW_START[i];
-    fadeUp(r.name, prog(t, s, 0.35), 16);
+    const s = T.rows[i];
+    fadeUp(r.name, prog(t, s, 0.35), 24);
     r.track.style.opacity = prog(t, s, 0.35);
     r.parts.forEach(p => {
-      if (p.kind === 'build') p.el.style.transform = `scaleX(${prog(t, s + 0.15, 0.6)})`;
-      else p.el.style.transform = `scaleX(${prog(t, s + 0.65, 0.4)})`;
+      p.el.style.transform = `scaleX(${p.kind === 'keep' ? prog(t, s + 0.55, 0.4) : prog(t, s + 0.15, 0.6)})`;
     });
-    fadeUp(r.note, prog(t, s + 0.45, 0.4), 10);
+    fadeUp(r.note, prog(t, s + 0.4, 0.4), 12);
   });
-  fadeUp(q('#close'), prog(t, CLOSE_AT + 0.4, 0.5));
+  // C
+  const cIn = prog(t, T.cIn, 0.4), cOut = prog(t, T.cOut, 0.35);
+  q('#C').style.opacity = cIn * (1 - cOut);
+  fadeUp(q('#cHead'), cIn, 20);
+  const draw = prog(t, T.cIn + 0.3, 1.6);
+  segs.forEach((s, i) => s.style.opacity = i / segs.length <= draw ? 1 : 0);
+  q('#cNote').style.opacity = prog(t, T.cIn + 1.4, 0.4);
+  q('#cRows').querySelectorAll('.kv').forEach((k, i) => fadeUp(k, prog(t, T.cIn + 1.6 + i * 0.6, 0.4), 14));
+  // D
+  const dIn = prog(t, T.dIn, 0.4), dOut = prog(t, T.dOut, 0.35);
+  q('#D').style.opacity = dIn * (1 - dOut);
+  fadeUp(q('#dHead'), dIn, 20);
+  bars.forEach((b, i) => { const p = prog(t, T.dIn + 0.4 + i * 0.22, 0.4); b.style.transform = `scaleY(${p})`; bvs[i].style.opacity = p; });
+  q('#dNotes').querySelectorAll('div').forEach((d, i) => fadeUp(d, prog(t, T.dIn + 2.4 + i * 0.5, 0.4), 12));
+  // E
+  const eIn = prog(t, T.eIn, 0.45);
+  q('#E').style.opacity = eIn; fadeUp(q('#close'), eIn, 20);
 };
-
 const P = new URLSearchParams(location.search);
 if (P.get('still')) q('#logoStill').style.display = 'block';
 render(parseFloat(P.get('t') || '0'));

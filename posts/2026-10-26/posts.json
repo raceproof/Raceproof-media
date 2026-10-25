@@ -62,18 +62,19 @@
   {
    "date": "2026-10-28",
    "type": "animated",
-   "title": "Race breakdown: Black Canyon 100K, when to start",
+   "title": "Race breakdown: Black Canyon 100K (v2: intro, when to start, descent deep dive)",
    "file": "wed-race-black-canyon-100k-reel.mp4",
    "cover": "wed-race-black-canyon-100k-reel-cover.png",
-   "caption": "Black Canyon 100K, 2024: overnight snow delayed the desert start to 9:30 am.\n\n100.1 km (62.2 mi) with about 1,591 m of climbing, 2,236 m of descent and a typical high of 17.2°C. The next race is Feb 13, 2027, about 15 weeks out. Here's when each adaptation starts if you count back from race day. General guidelines, not a prescription.\n\nRaceproof isn't affiliated with the race.\n\nFull breakdown: raceproof.ai/races/black-canyon-100k (link in bio).\n\n#blackcanyon100k #ultrarunning #trailrunning #arizona #raceproof",
-   "caption_facebook": "Black Canyon 100K, 2024: overnight snow delayed the desert start to 9:30 am.\n\n100.1 km (62.2 mi) with about 1,591 m of climbing, 2,236 m of descent and a typical high of 17.2°C. The next race is Feb 13, 2027, about 15 weeks out. Here's when each adaptation starts if you count back from race day. General guidelines, not a prescription.\n\nRaceproof isn't affiliated with the race.\n\nRead the full breakdown:\nhttps://raceproof.ai/races/black-canyon-100k\n\n#blackcanyon100k #ultrarunning #trailrunning #arizona #raceproof",
+   "caption": "Black Canyon 100K, 2024: overnight snow delayed the desert start to 9:30 am.\n\n100.1 km (62.2 mi) with about 1,591 m of climbing, 2,236 m of descent and a typical high of 17.2°C. The next race is Feb 13, 2027, about 15 weeks out.\n\nThe key pillar is descent: about 22 m down for every km. Carry that ratio in your long runs, add 10% a week or less from Nov 21, and fit in 1 to 2 steep downhill sessions a week from Jan 9 to 23. New to steep downhills? Start with relaxed downhills inside your long runs.\n\nGeneral guidelines from coaching sources (Roche, Koop) and Byrnes 1985, not a prescription. Raceproof isn't affiliated with the race.\n\nFull breakdown: raceproof.ai/races/black-canyon-100k (link in bio).\n\n#blackcanyon100k #ultrarunning #trailrunning #arizona #raceproof",
+   "caption_facebook": "Black Canyon 100K, 2024: overnight snow delayed the desert start to 9:30 am.\n\n100.1 km (62.2 mi) with about 1,591 m of climbing, 2,236 m of descent and a typical high of 17.2°C. The next race is Feb 13, 2027, about 15 weeks out.\n\nThe key pillar is descent: about 22 m down for every km. Carry that ratio in your long runs, add 10% a week or less from Nov 21, and fit in 1 to 2 steep downhill sessions a week from Jan 9 to 23. New to steep downhills? Start with relaxed downhills inside your long runs.\n\nGeneral guidelines from coaching sources (Roche, Koop) and Byrnes 1985, not a prescription. Raceproof isn't affiliated with the race.\n\nRead the full breakdown:\nhttps://raceproof.ai/races/black-canyon-100k\n\n#blackcanyon100k #ultrarunning #trailrunning #arizona #raceproof",
    "link": "https://raceproof.ai/races/black-canyon-100k",
-   "duration_s": 19.6,
+   "duration_s": 33.2,
    "audio": "A calm, steady instrumental trending track at low volume; no voice.",
    "flags": [
-    "Page confirmed Oct 24 (link sent by Jonathan): Heat rated Low on the page, so Heat stays off the timeline.",
-    "New template templates/reels/race-when-to-start.html (built from adaptation-timeline): please review.",
-    "Timeline dates are the brief's general windows counted back from Feb 13, 2027. The page's chart summary showed '12 weeks (Nov 2)'; 12 weeks before Feb 13 is Nov 21, as the Reel says. Check the page's chart."
+    "v2 built Oct 25 from the new template templates/reels/race-breakdown.html (replaces race-when-to-start.html): please review.",
+    "Descent numbers from the Adaptation rates tab (Black Canyon box); confidence there is low for weekly volume and ramp. The lighter week bar (Dec 19) is drawn back at 600 m as an illustration; the tab gives no value for it.",
+    "Course profile drawn from races/black-canyon-100k/route.json; the 490 m figure is labeled approximate as on the page.",
+    "Runs 33.2 s including the end card; length to be decided."
    ],
    "buffer": {
     "instagram": "6adcf265bd33ce99c337801a",
