@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>sweat-math</title>
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<style>
+:root{--asphalt:#1F2328;--ink:#15171A;--muted:#5B5F64;--line:#DDD9D0;--surface:#F4F2ED;--hyd:#2E9FD8;--hydsoft:#E3F2FA}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:transparent}
+body.card{background:var(--surface)}
+#panel{position:absolute;left:72px;width:936px;box-sizing:border-box;padding:36px 48px 36px;
+  background:#FFFFFF;border:1px solid var(--line);border-radius:28px;
+  font-family:'Inter',system-ui,sans-serif;color:var(--ink);box-shadow:0 18px 50px rgba(21,23,26,.14)}
+body.card #panel,body.green #panel{box-shadow:none}
+body.green{background:#00FF00}
+.head{font-family:'JetBrains Mono',monospace;font-size:26px;font-weight:600;letter-spacing:.08em;color:var(--hyd);margin-bottom:8px}
+.row{display:flex;justify-content:space-between;align-items:baseline;height:58px;font-size:34px;opacity:0;transform:translateY(18px)}
+.row .k{color:var(--muted);font-weight:500}
+.row .v{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:36px;color:var(--ink)}
+.row.sum{border-top:2px solid var(--asphalt);margin-top:4px;padding-top:6px}
+.row.sum .k{color:var(--ink);font-weight:700}
+.op{display:inline-block;width:44px;color:var(--hyd);font-family:'JetBrains Mono',monospace;font-weight:600}
+#res{margin-top:18px;padding:22px 30px;border-radius:20px;background:var(--hydsoft);display:flex;align-items:baseline;gap:22px;opacity:0;transform:scale(.96)}
+#res .big{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:112px;line-height:1;color:var(--asphalt);letter-spacing:-.02em}
+#res .u{font-size:40px;font-weight:700;color:var(--asphalt)}
+#res .m{font-family:'JetBrains Mono',monospace;font-size:26px;color:var(--muted);margin-top:8px}
+.note{margin-top:18px;font-size:24px;color:var(--muted);opacity:0}
+#title{position:absolute;left:72px;right:72px;top:300px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:76px;line-height:1.05;color:var(--asphalt);display:none}
+body.card #title{display:block}
+</style>
+</head>
+<body>
+<div id="title"></div>
+<div id="panel">
+  <div class="head" id="head"></div>
+  <div class="row" data-t="0.25"><span class="k" id="k1"></span><span class="v"><span id="v1"></span> lb</span></div>
+  <div class="row" data-t="0.5"><span class="k" id="k2"></span><span class="v"><span id="v2"></span> lb</span></div>
+  <div class="row sum" data-t="1.2"><span class="k" id="k3"></span><span class="v"><span id="v3"></span> lb</span></div>
+  <div class="row" data-t="2.2"><span class="k"><span class="op">×</span><span id="k4"></span></span><span class="v"><span id="v4"></span> oz</span></div>
+  <div class="row" data-t="3.0"><span class="k"><span class="op">+</span><span id="k5"></span></span><span class="v"><span id="v5"></span> oz</span></div>
+  <div class="row sum" data-t="3.7"><span class="k" id="k6"></span><span class="v"><span id="v6"></span> oz</span></div>
+  <div class="row" data-t="4.6"><span class="k"><span class="op">÷</span><span id="k7"></span></span><span class="v"><span id="v7"></span> h</span></div>
+  <div id="res"><div><span class="big" id="vr"></span></div><div><div class="u" id="ur"></div><div class="m" id="mr"></div></div></div>
+</div>
+<script>
+const Q=new URLSearchParams(location.search);
+const MODE=Q.get('mode')||'overlay';           // overlay (transparent), green (green screen) or card (brand background)
+const D={before:174.4, after:169.4, drank:14, hours:1.5, ozPerLb:16};
+const lost=+(D.before-D.after).toFixed(1), sweatFromLoss=lost*D.ozPerLb, sweat=sweatFromLoss+D.drank;
+const rate=sweat/D.hours, litres=(lost*0.4536+D.drank*0.02957)/D.hours;
+const S={head:'YOUR SWEAT RATE',k1:'Before the run',k2:'After, toweled off',k3:'Weight lost',k4:'16 oz per lb',k5:'Drank on the run',k6:'Sweat lost',k7:'Hours run',
+  ur:'oz an hour',mr:'about '+litres.toFixed(1)+' L/h',note:'1 lb of sweat is about 16 oz (1 kg is about 1 L).',title:'Your sweat rate,<br>in 3 weigh-ins'};
+document.body.className=MODE;
+document.getElementById('panel').style.top=(MODE==='card'?620:730)+'px';
+for(const k in S){const el=document.getElementById(k); if(el) el.innerHTML=S[k];}
+const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
+const rows=[...document.querySelectorAll('.row')];
+const vals=[[ 'v1',D.before,1],['v2',D.after,1],['v3',lost,1],['v4',sweatFromLoss,0],['v5',D.drank,0],['v6',sweat,0],['v7',D.hours,1]];
+const T_RES=5.4;
+window.DUR=9;
+window.render=function(t){
+  const pp=ease(t/0.3), panel=document.getElementById('panel'); panel.style.opacity=pp; panel.style.transform=`translateY(${24*(1-pp)}px)`;
+  rows.forEach((r,i)=>{const t0=+r.dataset.t, p=ease((t-t0)/0.35);
+    r.style.opacity=p; r.style.transform=`translateY(${18*(1-p)}px)`;
+    const [id,v,dec]=vals[i]; const c=ease((t-t0)/0.5);
+    // count up only the computed rows; inputs show their value as they appear
+    const shown=(i===2||i===3||i===5)? v*c : v;
+    document.getElementById(id).textContent=shown.toFixed(dec);});
+  const p=ease((t-T_RES)/0.4); const res=document.getElementById('res');
+  res.style.opacity=p; res.style.transform=`scale(${0.96+0.04*p})`;
+  document.getElementById('vr').textContent=Math.round(rate*ease((t-T_RES)/0.8));
+};
+render(Q.has('t')?+Q.get('t'):(Q.get('still')?9:0));
+</script>
+</body>
+</html>
