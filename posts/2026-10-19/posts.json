@@ -31,7 +31,8 @@
       "buffer": {
         "instagram": "6ad011cd5f62d3c5af0fd4d3",
         "facebook": "6ad011de29c470dd80b4dff8"
-      }
+      },
+      "theme": "light"
     },
     {
       "date": "2026-10-21",
@@ -64,7 +65,8 @@
       "buffer": {
         "instagram": "6ad011ea5f62d3c5af0fd8a5",
         "facebook": "6ad011f5909a59a4d34afab4"
-      }
+      },
+      "theme": "slate"
     },
     {
       "date": "2026-10-22",
@@ -97,7 +99,8 @@
         "facebook": "6ad40e5d938409f1d0aa7b0d"
       },
       "link": "https://raceproof.ai/blog/carbs-per-hour-marathon",
-      "caption_facebook": "60 to 90 g of carbs an hour. Most marathoners take 35.\n\nYour finish time sets your target: about 60 g/h for a 2 to 3 hour race, up to 90 g/h when you're out longer, from mixed sugars and a gut you've trained. At the 2022 Seville Marathon, runners averaged 35 g/h and only 9% reached that range.\n\nThe gut adapts. Two weeks of practice cut gut symptoms by about 60% in one small lab trial.\n\nStudies: ADA, DC and ACSM 2016; Burke et al. 2011; Jeukendrup 2014 (Gatorade Sports Science Institute); Jiménez-Alfageme et al. 2025 (survey of 160 runners); Smyth 2021 (observational race data); Norte et al. 2026 and Costa et al. 2017 (small lab trials).\n\nRead the full article: https://raceproof.ai/blog/carbs-per-hour-marathon\n\nSave this for your next build.\n\n#raceproof #marathontraining #racefueling #guttraining #sportsnutrition"
+      "caption_facebook": "60 to 90 g of carbs an hour. Most marathoners take 35.\n\nYour finish time sets your target: about 60 g/h for a 2 to 3 hour race, up to 90 g/h when you're out longer, from mixed sugars and a gut you've trained. At the 2022 Seville Marathon, runners averaged 35 g/h and only 9% reached that range.\n\nThe gut adapts. Two weeks of practice cut gut symptoms by about 60% in one small lab trial.\n\nStudies: ADA, DC and ACSM 2016; Burke et al. 2011; Jeukendrup 2014 (Gatorade Sports Science Institute); Jiménez-Alfageme et al. 2025 (survey of 160 runners); Smyth 2021 (observational race data); Norte et al. 2026 and Costa et al. 2017 (small lab trials).\n\nRead the full article: https://raceproof.ai/blog/carbs-per-hour-marathon\n\nSave this for your next build.\n\n#raceproof #marathontraining #racefueling #guttraining #sportsnutrition",
+      "theme": "light"
     },
     {
       "date": "2026-10-23",
@@ -119,7 +122,8 @@
       "buffer": {
         "instagram": "6ad011fb5ae624a5af9d5cba",
         "facebook": "6ad012015ae624a5af9d5d56"
-      }
+      },
+      "theme": "peach"
     },
     {
       "date": "2026-10-24",
@@ -138,16 +142,26 @@
       "buffer": {
         "instagram": "6ad0120544227f52a8bd77f2",
         "facebook": "6ad0120844227f52a8bd7848"
-      }
+      },
+      "theme": "slate"
     }
   ],
   "reels": [
+    {
+      "date": "2026-10-20",
+      "type": "animated",
+      "title": "Onboarding demo Reel (posted manually by Jonathan)",
+      "file": "../../assets/video/onboarding-demo/onboarding-demo-en-9x16.mp4",
+      "theme": "light",
+      "posted": "manual"
+    },
     {
       "date": "2026-10-25",
       "type": "filmed",
       "title": "Sweat rate in 3 weigh-ins",
       "script": "See the Reel scripts tab of the social media brief",
-      "status": "to film"
+      "status": "to film",
+      "theme": "photo"
     }
   ]
 }

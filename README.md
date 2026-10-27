@@ -36,11 +36,12 @@ Feed posts on Monday, Wednesday, Friday and Saturday (Monday, Wednesday and Frid
       "caption_facebook": "… (only when the post has a link)",
       "link": "https://raceproof.ai/blog/<slug> (only when the post points to a page)",
       "altText": "…",
+      "theme": "light | slate | lime | peach",
       "flags": ["anything Jonathan must check or fill in"],
       "buffer": {"instagram": "<post id>", "facebook": "<post id>"}
     }
   ],
-  "reels": [{"date": "…", "file": "…-reel.mp4", "cover": "…-reel-cover.png", "caption": "…"}]
+  "reels": [{"date": "…", "file": "…-reel.mp4", "cover": "…-reel-cover.png", "caption": "…", "theme": "light | slate | lime | photo"}]
 }
 ```
 
@@ -54,7 +55,7 @@ Feed posts on Monday, Wednesday, Friday and Saturday (Monday, Wednesday and Frid
 
 ## Rules that every file must follow
 
-Brand system only: asphalt `#1F2328`, surface `#F4F2ED`, lime `#C8F03C` only for "ready", heat `#B83C0B` and heat-soft `#FCE7DC` for problems, pillar colors from the brief. No em or en dashes, no exclamation marks, no AI-sounding phrasing. Every number comes from the brief's stats table or a Research library row, with its source on the slide or in the caption. Feed slides are 1080 x 1350 with the small logo; reels are 1080 x 1920 with text kept out of the top 220 px and bottom 420 px. Reels never open on a blank frame: frame 0 already shows the eyebrow and headline fully drawn (no fade in from empty).
+Brand system only: asphalt `#1F2328`, surface `#F4F2ED`, lime `#C8F03C` for "Ready", primary buttons and the Lime theme, heat `#B83C0B` and heat-soft `#FCE7DC` for problems, pillar colors from the brief. Every feed post and Reel cover uses one post theme (see "Post themes"). No em or en dashes, no exclamation marks, no AI-sounding phrasing. Every number comes from the brief's stats table or a Research library row, with its source on the slide or in the caption. Feed slides are 1080 x 1350 with the small logo; reels are 1080 x 1920 with text kept out of the top 220 px and bottom 420 px. Reels never open on a blank frame: frame 0 already shows the eyebrow and headline fully drawn (no fade in from empty).
 
 ## Links in captions
 
@@ -79,3 +80,22 @@ Fonts: Inter and JetBrains Mono are under the SIL Open Font License 1.1.
 ```
 
 Each point's km and m match the race page's charted profile. Up to 600 points per leg. Maps are drawn by us from these points (no third-party map tiles), so they need no image credit.
+
+## Post themes
+
+Every feed post (all its slides) and every Reel cover uses one theme. Swap only these colors; layouts stay the same.
+
+| Token | Light | Slate | Lime |
+|---|---|---|---|
+| background | `#F4F2ED` | `#1F2328` | `#C8F03C` |
+| text | `#15171A` | `#F2F0EB` | `#15171A` |
+| muted text | `#5B5F64` | `#A4A9AE` | `#3B4512` |
+| lines | `#DDD9D0` | `#3A4047` | `#A6C72E` |
+| cards | `#FFFFFF` | `#2A2F35` | `#FFFFFF` |
+| highlighted numbers, eyebrows | heat `#B83C0B` | `#FF8A5B` | asphalt `#1F2328` (never heat on lime) |
+| logo | `assets/brand/lockup.png` | `assets/brand/lockup-on-dark.png` | `assets/brand/lockup.png` |
+| "Ready" chip | lime | lime | asphalt with lime text |
+
+Peach (heat-soft `#FCE7DC` background) is only for pain posts. Filmed Reels and photo covers count as `photo`.
+
+Rule: a new grid post's theme must differ from the post just before it and from the post 3 back (directly above it in the grid). When two themes fit, use the one used least in the last 9 posts. Lime on at most about 1 post in 3 (best for waitlist, founding offer and pro breakdown covers). Never cycle Light, Slate, Lime in a fixed order (it makes vertical stripes). Read earlier themes from the last two weeks of posts.json (feed posts and Reels in date order) and record `theme` on every new entry.

@@ -1,90 +1,94 @@
 {
- "week": "2026-10-26",
- "posts": [
-  {
-   "date": "2026-10-26",
-   "type": "race-breakdown",
-   "format": "single",
-   "title": "Race breakdown: Tokyo Marathon (single image)",
-   "slides": [
-    "mon-race-tokyo-marathon-1.png"
-   ],
-   "caption": "Tokyo started at 4.7°C in 2024 and hit 20.6°C in 2025.\n\nSame course, very different race days. 42.195 km (26.2 mi) with about 150 m of gain and 180 m of loss, and a typical high of 15.4°C. The next race is Mar 7, 2027, about 19 weeks out, so if it's your spring marathon, your build is starting now.\n\nRaceproof isn't affiliated with the Tokyo Marathon.\n\nFull breakdown: raceproof.ai/races/tokyo-marathon (link in bio).\n\n#tokyomarathon #marathontraining #marathonrunner #tokyo #raceproof",
-   "caption_facebook": "Tokyo started at 4.7°C in 2024 and hit 20.6°C in 2025.\n\nSame course, very different race days. 42.195 km (26.2 mi) with about 150 m of gain and 180 m of loss, and a typical high of 15.4°C. The next race is Mar 7, 2027, about 19 weeks out, so if it's your spring marathon, your build is starting now.\n\nRaceproof isn't affiliated with the Tokyo Marathon.\n\nRead the full breakdown:\nhttps://raceproof.ai/races/tokyo-marathon\n\n#tokyomarathon #marathontraining #marathonrunner #tokyo #raceproof",
-   "link": "https://raceproof.ai/races/tokyo-marathon",
-   "altText": [
-    "Race breakdown, Tokyo Marathon, Mar 7, 2027. Tokyo started at 4.7°C in 2024 and hit 20.6°C in 2025. A temperature scale marks 4.7°C, the typical high of 15.4°C and 20.6°C. Distance 42.195 km, gain 150 m, loss 180 m. Full breakdown on raceproof.ai."
-   ],
-   "flags": [
-    "Page confirmed Oct 24 (link sent by Jonathan): gain and loss are labeled approximate on the page, so the slide now says so. The 2025 figure is the 4 pm reading (the 9 am start was 14.2°C)."
-   ],
-   "buffer": {
-    "instagram": "6adcf2646887a2efc1cc6675",
-    "facebook": "6adcf2653d5b27036b98a491"
-   }
-  },
-  {
-   "date": "2026-10-27",
-   "type": "pro-breakdown",
-   "title": "Pro breakdown: Kilian Jornet, Western States 100 2025",
-   "slides": [
-    "tue-pro-jornet-1.png",
-    "tue-pro-jornet-2.png",
-    "tue-pro-jornet-3.png",
-    "tue-pro-jornet-4.png",
-    "tue-pro-jornet-5.png",
-    "tue-pro-jornet-6.png",
-    "tue-pro-jornet-7.png",
-    "tue-pro-jornet-8.png"
-   ],
-   "caption": "Kilian Jornet burned 16,104 kcal at the 2025 Western States 100. He ate 6,720.\n\nA case study measured his race with doubly labelled water (a traceable drink that measures calories burned) and a swallowed temperature sensor. He averaged about 86 g of carbs an hour, peaking at 110 g/h in the last 5 hours, and drank 12.5 L (0.87 L/h) with 18.5 g of sodium. He finished 3rd in 14:19:22, 4.3% lighter. The authors concluded that about 90 g/h was tolerable even in extreme heat.\n\nLimits: n = 1, one race, and a world-class runner whose gut and physiology differ from most of ours. Field data, so the heat and terrain were real but uncontrolled. Jornet is a co-author of the paper.\n\nHow many grams of carbs an hour do you take on your longest runs?\n\nSource: Mougin, Jornet Burgada et al. 2026, Journal of Applied Physiology, doi.org/10.1152/japplphysiol.01048.2025. Finish from the official Western States 2025 results. Seville average: Jiménez-Alfageme et al. 2025. Raceproof isn't affiliated with Kilian Jornet or Western States.\n\nSave this for your next build.\n\n#raceproof #ultrarunning #westernstates #100miler #racefueling",
-   "altText": [
-    "Pro breakdown, Western States 100. Kilian Jornet burned 16,104 kcal at Western States. He ate 6,720. 3rd in 14:19:22, 2025. Mougin, Jornet Burgada et al. 2026, Journal of Applied Physiology, n = 1.",
-    "The test: a real race, 100 miles, extreme heat, mountain terrain. Doubly labelled water (a traceable drink that measures calories burned), a swallowed temperature sensor and kidney blood markers. A research team, with Jornet as a co-author.",
-    "Finding 1, energy: he ate less than half of what he burned. Bars: burned 16,104 kcal, ate 6,720 kcal. About 18.8 kcal a minute. n = 1.",
-    "Finding 2, carbs: 86 g/h on average, peaking at 110 g/h in the last 5 hours. The authors concluded about 90 g/h was tolerable, even in extreme heat. n = 1.",
-    "Finding 3, fluid and sodium: 0.87 L/h, 12.5 L over the race with 18.5 g of sodium. 4.3% body mass lost by the finish. n = 1.",
-    "You vs the pro, our take: Seville marathoners averaged 35 g/h. He took 86. Bars: Jornet 86 g/h, guideline up to 90 g/h for races over 2.5 to 3 hours, Seville marathoners 35 g/h.",
-    "Test it yourself: take your race fuel on every long run, adding a little each week toward your own race target. Pro numbers are not targets. Raceproof checks: Gut.",
-    "Sources and credits: Mougin, Jornet Burgada et al., Journal of Applied Physiology 2026, doi 10.1152/japplphysiol.01048.2025. Finish from official Western States 2025 results. n = 1. Raceproof isn't affiliated with Kilian Jornet, Western States or his sponsors."
-   ],
-   "flags": [
-    "Recent coverage check (Oct 24): no recent post found on this paper; the only write-up found was OneTrack Club, Dec 15, 2025. Instagram itself wasn't searchable from here, so give @sisu_endurancelab and @rosnerperformance a quick look before approving.",
-    "Slide 6 'guideline up to 90 g/h' leans on ADA, DC and ACSM 2016, marked Knowledge base only: used for one line, not the subject."
-   ],
-   "buffer": {
-    "instagram": "6adcbd73e4be8a4d8661fae3",
-    "facebook": "6adcbd74e4be8a4d8661fb30"
-   }
-  }
- ],
- "reels": [
-  {
-   "date": "2026-10-28",
-   "type": "animated",
-   "title": "Race breakdown: Black Canyon 100K (v2: intro, when to start, descent deep dive)",
-   "file": "wed-race-black-canyon-100k-reel.mp4",
-   "cover": "wed-race-black-canyon-100k-reel-cover.png",
-   "caption": "Black Canyon 100K, 2024: overnight snow delayed the desert start to 9:30 am.\n\n100.1 km (62.2 mi) with about 1,591 m of climbing, 2,236 m of descent and a typical high of 17.2°C. The next race is Feb 13, 2027, about 15 weeks out.\n\nThe key pillar is descent: about 22 m down for every km. Carry that ratio in your long runs, add 10% a week or less from Nov 21, and fit in 1 to 2 steep downhill sessions a week from Jan 9 to 23. New to steep downhills? Start with relaxed downhills inside your long runs.\n\nGeneral guidelines from coaching sources (Roche, Koop) and Byrnes 1985, not a prescription. Raceproof isn't affiliated with the race.\n\nFull breakdown: raceproof.ai/races/black-canyon-100k (link in bio).\n\n#blackcanyon100k #ultrarunning #trailrunning #arizona #raceproof",
-   "caption_facebook": "Black Canyon 100K, 2024: overnight snow delayed the desert start to 9:30 am.\n\n100.1 km (62.2 mi) with about 1,591 m of climbing, 2,236 m of descent and a typical high of 17.2°C. The next race is Feb 13, 2027, about 15 weeks out.\n\nThe key pillar is descent: about 22 m down for every km. Carry that ratio in your long runs, add 10% a week or less from Nov 21, and fit in 1 to 2 steep downhill sessions a week from Jan 9 to 23. New to steep downhills? Start with relaxed downhills inside your long runs.\n\nGeneral guidelines from coaching sources (Roche, Koop) and Byrnes 1985, not a prescription. Raceproof isn't affiliated with the race.\n\nRead the full breakdown:\nhttps://raceproof.ai/races/black-canyon-100k\n\n#blackcanyon100k #ultrarunning #trailrunning #arizona #raceproof",
-   "link": "https://raceproof.ai/races/black-canyon-100k",
-   "duration_s": 32.1,
-   "audio": "A calm, steady instrumental trending track at low volume; no voice.",
-   "flags": [
-    "Approved by Jonathan Oct 25, 2026; template locked as templates/reels/race-breakdown.html."
-   ],
-   "buffer": {
-    "instagram": "6adcf265bd33ce99c337801a",
-    "facebook": "6adcf2660b5343d0709776ca"
-   },
-   "status": "approved"
-  },
-  {
-   "date": "2026-11-01",
-   "type": "filmed",
-   "title": "5. Lake Hodges 50K, 3 gels for 31 miles",
-   "script": "See the Reel scripts tab of the social media brief",
-   "status": "to film"
-  }
- ]
+  "week": "2026-10-26",
+  "posts": [
+    {
+      "date": "2026-10-26",
+      "type": "race-breakdown",
+      "format": "single",
+      "title": "Race breakdown: Tokyo Marathon (single image)",
+      "slides": [
+        "mon-race-tokyo-marathon-1.png"
+      ],
+      "caption": "Tokyo started at 4.7°C in 2024 and hit 20.6°C in 2025.\n\nSame course, very different race days. 42.195 km (26.2 mi) with about 150 m of gain and 180 m of loss, and a typical high of 15.4°C. The next race is Mar 7, 2027, about 19 weeks out, so if it's your spring marathon, your build is starting now.\n\nRaceproof isn't affiliated with the Tokyo Marathon.\n\nFull breakdown: raceproof.ai/races/tokyo-marathon (link in bio).\n\n#tokyomarathon #marathontraining #marathonrunner #tokyo #raceproof",
+      "caption_facebook": "Tokyo started at 4.7°C in 2024 and hit 20.6°C in 2025.\n\nSame course, very different race days. 42.195 km (26.2 mi) with about 150 m of gain and 180 m of loss, and a typical high of 15.4°C. The next race is Mar 7, 2027, about 19 weeks out, so if it's your spring marathon, your build is starting now.\n\nRaceproof isn't affiliated with the Tokyo Marathon.\n\nRead the full breakdown:\nhttps://raceproof.ai/races/tokyo-marathon\n\n#tokyomarathon #marathontraining #marathonrunner #tokyo #raceproof",
+      "link": "https://raceproof.ai/races/tokyo-marathon",
+      "altText": [
+        "Race breakdown, Tokyo Marathon, Mar 7, 2027. Tokyo started at 4.7°C in 2024 and hit 20.6°C in 2025. A temperature scale marks 4.7°C, the typical high of 15.4°C and 20.6°C. Distance 42.195 km, gain 150 m, loss 180 m. Full breakdown on raceproof.ai."
+      ],
+      "flags": [
+        "Page confirmed Oct 24 (link sent by Jonathan): gain and loss are labeled approximate on the page, so the slide now says so. The 2025 figure is the 4 pm reading (the 9 am start was 14.2°C)."
+      ],
+      "buffer": {
+        "instagram": "6adcf2646887a2efc1cc6675",
+        "facebook": "6adcf2653d5b27036b98a491"
+      },
+      "theme": "light"
+    },
+    {
+      "date": "2026-10-27",
+      "type": "pro-breakdown",
+      "title": "Pro breakdown: Kilian Jornet, Western States 100 2025",
+      "slides": [
+        "tue-pro-jornet-1.png",
+        "tue-pro-jornet-2.png",
+        "tue-pro-jornet-3.png",
+        "tue-pro-jornet-4.png",
+        "tue-pro-jornet-5.png",
+        "tue-pro-jornet-6.png",
+        "tue-pro-jornet-7.png",
+        "tue-pro-jornet-8.png"
+      ],
+      "caption": "Kilian Jornet burned 16,104 kcal at the 2025 Western States 100. He ate 6,720.\n\nA case study measured his race with doubly labelled water (a traceable drink that measures calories burned) and a swallowed temperature sensor. He averaged about 86 g of carbs an hour, peaking at 110 g/h in the last 5 hours, and drank 12.5 L (0.87 L/h) with 18.5 g of sodium. He finished 3rd in 14:19:22, 4.3% lighter. The authors concluded that about 90 g/h was tolerable even in extreme heat.\n\nLimits: n = 1, one race, and a world-class runner whose gut and physiology differ from most of ours. Field data, so the heat and terrain were real but uncontrolled. Jornet is a co-author of the paper.\n\nHow many grams of carbs an hour do you take on your longest runs?\n\nSource: Mougin, Jornet Burgada et al. 2026, Journal of Applied Physiology, doi.org/10.1152/japplphysiol.01048.2025. Finish from the official Western States 2025 results. Seville average: Jiménez-Alfageme et al. 2025. Raceproof isn't affiliated with Kilian Jornet or Western States.\n\nSave this for your next build.\n\n#raceproof #ultrarunning #westernstates #100miler #racefueling",
+      "altText": [
+        "Pro breakdown, Western States 100. Kilian Jornet burned 16,104 kcal at Western States. He ate 6,720. 3rd in 14:19:22, 2025. Mougin, Jornet Burgada et al. 2026, Journal of Applied Physiology, n = 1.",
+        "The test: a real race, 100 miles, extreme heat, mountain terrain. Doubly labelled water (a traceable drink that measures calories burned), a swallowed temperature sensor and kidney blood markers. A research team, with Jornet as a co-author.",
+        "Finding 1, energy: he ate less than half of what he burned. Bars: burned 16,104 kcal, ate 6,720 kcal. About 18.8 kcal a minute. n = 1.",
+        "Finding 2, carbs: 86 g/h on average, peaking at 110 g/h in the last 5 hours. The authors concluded about 90 g/h was tolerable, even in extreme heat. n = 1.",
+        "Finding 3, fluid and sodium: 0.87 L/h, 12.5 L over the race with 18.5 g of sodium. 4.3% body mass lost by the finish. n = 1.",
+        "You vs the pro, our take: Seville marathoners averaged 35 g/h. He took 86. Bars: Jornet 86 g/h, guideline up to 90 g/h for races over 2.5 to 3 hours, Seville marathoners 35 g/h.",
+        "Test it yourself: take your race fuel on every long run, adding a little each week toward your own race target. Pro numbers are not targets. Raceproof checks: Gut.",
+        "Sources and credits: Mougin, Jornet Burgada et al., Journal of Applied Physiology 2026, doi 10.1152/japplphysiol.01048.2025. Finish from official Western States 2025 results. n = 1. Raceproof isn't affiliated with Kilian Jornet, Western States or his sponsors."
+      ],
+      "flags": [
+        "Recent coverage check (Oct 24): no recent post found on this paper; the only write-up found was OneTrack Club, Dec 15, 2025. Instagram itself wasn't searchable from here, so give @sisu_endurancelab and @rosnerperformance a quick look before approving.",
+        "Slide 6 'guideline up to 90 g/h' leans on ADA, DC and ACSM 2016, marked Knowledge base only: used for one line, not the subject."
+      ],
+      "buffer": {
+        "instagram": "6adcbd73e4be8a4d8661fae3",
+        "facebook": "6adcbd74e4be8a4d8661fb30"
+      },
+      "theme": "light"
+    }
+  ],
+  "reels": [
+    {
+      "date": "2026-10-28",
+      "type": "animated",
+      "title": "Race breakdown: Black Canyon 100K (v2: intro, when to start, descent deep dive)",
+      "file": "wed-race-black-canyon-100k-reel.mp4",
+      "cover": "wed-race-black-canyon-100k-reel-cover.png",
+      "caption": "Black Canyon 100K, 2024: overnight snow delayed the desert start to 9:30 am.\n\n100.1 km (62.2 mi) with about 1,591 m of climbing, 2,236 m of descent and a typical high of 17.2°C. The next race is Feb 13, 2027, about 15 weeks out.\n\nThe key pillar is descent: about 22 m down for every km. Carry that ratio in your long runs, add 10% a week or less from Nov 21, and fit in 1 to 2 steep downhill sessions a week from Jan 9 to 23. New to steep downhills? Start with relaxed downhills inside your long runs.\n\nGeneral guidelines from coaching sources (Roche, Koop) and Byrnes 1985, not a prescription. Raceproof isn't affiliated with the race.\n\nFull breakdown: raceproof.ai/races/black-canyon-100k (link in bio).\n\n#blackcanyon100k #ultrarunning #trailrunning #arizona #raceproof",
+      "caption_facebook": "Black Canyon 100K, 2024: overnight snow delayed the desert start to 9:30 am.\n\n100.1 km (62.2 mi) with about 1,591 m of climbing, 2,236 m of descent and a typical high of 17.2°C. The next race is Feb 13, 2027, about 15 weeks out.\n\nThe key pillar is descent: about 22 m down for every km. Carry that ratio in your long runs, add 10% a week or less from Nov 21, and fit in 1 to 2 steep downhill sessions a week from Jan 9 to 23. New to steep downhills? Start with relaxed downhills inside your long runs.\n\nGeneral guidelines from coaching sources (Roche, Koop) and Byrnes 1985, not a prescription. Raceproof isn't affiliated with the race.\n\nRead the full breakdown:\nhttps://raceproof.ai/races/black-canyon-100k\n\n#blackcanyon100k #ultrarunning #trailrunning #arizona #raceproof",
+      "link": "https://raceproof.ai/races/black-canyon-100k",
+      "duration_s": 32.1,
+      "audio": "A calm, steady instrumental trending track at low volume; no voice.",
+      "flags": [
+        "Approved by Jonathan Oct 25, 2026; template locked as templates/reels/race-breakdown.html."
+      ],
+      "buffer": {
+        "instagram": "6adcf265bd33ce99c337801a",
+        "facebook": "6adcf2660b5343d0709776ca"
+      },
+      "status": "approved",
+      "theme": "light"
+    },
+    {
+      "date": "2026-11-01",
+      "type": "filmed",
+      "title": "5. Lake Hodges 50K, 3 gels for 31 miles",
+      "script": "See the Reel scripts tab of the social media brief",
+      "status": "to film",
+      "theme": "photo"
+    }
+  ]
 }
