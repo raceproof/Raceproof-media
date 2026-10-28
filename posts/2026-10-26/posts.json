@@ -58,6 +58,120 @@
         "facebook": "6adcbd74e4be8a4d8661fb30"
       },
       "theme": "light"
+    },
+    {
+      "date": "2026-10-29",
+      "type": "research-blog",
+      "title": "Research blog: How long does heat acclimation take? (article 2)",
+      "slides": [
+        "thu-blog-heat-1.png",
+        "thu-blog-heat-2.png",
+        "thu-blog-heat-3.png",
+        "thu-blog-heat-4.png",
+        "thu-blog-heat-5.png",
+        "thu-blog-heat-6.png",
+        "thu-blog-heat-7.png"
+      ],
+      "caption": "Heat acclimation takes 1 to 2 weeks. The first changes start in 5 days.\n\nIn a small trial, 5 days of 90-minute hot rides lowered heart rate 8 bpm and raised plasma volume 7.3%. Sweat runs on its own clock: sodium falls from day 3, sweat rate rises from day 7 to 8. And the gains fade, about 2.5% for every day without heat.\n\nOur take: count heat in days. Aim for 10 to 14 of them, 6 to 2 weeks before your race, then keep 1 or 2 short sessions a week. Heart or blood pressure condition, or pregnant? Talk to your doctor before hot baths or sauna.\n\nStudies: Racinais et al. 2015 (consensus); Tyler et al. 2016 and Daanen et al. 2018 (meta-analyses, mostly lab); Snape et al. 2026 (14 men); Klous et al. 2020 (8 people); Zurawlew et al. 2016 (17 men, controlled trial). Small samples, mostly lab studies.\n\nFull article: raceproof.ai/blog/heat-acclimation-how-long (link in bio). Save this for your next build.\n\n#raceproof #heattraining #marathontraining #ultrarunning #triathlontraining",
+      "caption_facebook": "Heat acclimation takes 1 to 2 weeks. The first changes start in 5 days.\n\nIn a small trial, 5 days of 90-minute hot rides lowered heart rate 8 bpm and raised plasma volume 7.3%. Sweat runs on its own clock: sodium falls from day 3, sweat rate rises from day 7 to 8. And the gains fade, about 2.5% for every day without heat.\n\nOur take: count heat in days. Aim for 10 to 14 of them, 6 to 2 weeks before your race, then keep 1 or 2 short sessions a week. Heart or blood pressure condition, or pregnant? Talk to your doctor before hot baths or sauna.\n\nStudies: Racinais et al. 2015 (consensus); Tyler et al. 2016 and Daanen et al. 2018 (meta-analyses, mostly lab); Snape et al. 2026 (14 men); Klous et al. 2020 (8 people); Zurawlew et al. 2016 (17 men, controlled trial). Small samples, mostly lab studies.\n\nRead the full article:\nhttps://raceproof.ai/blog/heat-acclimation-how-long\n\nSave this for your next build.\n\n#raceproof #heattraining #marathontraining #ultrarunning #triathlontraining",
+      "link": "https://raceproof.ai/blog/heat-acclimation-how-long",
+      "altText": [
+        "Research blog, heat. Heat acclimation takes 1 to 2 weeks. The first changes start in 5 days. Racinais et al. 2015, Snape et al. 2026. From the Raceproof blog: How long does heat acclimation take?",
+        "What the experts say. Plan on 1 to 2 weeks of repeated sessions in the heat (Racinais et al. 2015, consensus of 17 authors). Biggest gains after 14 days; most blocks ran 7 to 14 days (Tyler et al. 2016, meta-analysis of 96 articles).",
+        "Within days. 5 days of hot rides, 90 minutes each: heart rate down 8 bpm, plasma volume up 7.3%. Snape et al. 2026, 14 trained men, 7 per group, lab trial.",
+        "Sweat has its own clock. A day 1 to 10 timeline: day 3 sweat sodium starts to fall, day 7 to 8 sweat rate starts to rise, day 10 arm sweat rate up 58%. Klous et al. 2020, 8 people, lab.",
+        "Hot baths count. 6 days of 40-minute hot baths after easy runs: 5 km time trial in 33°C 4.9% faster, no change at 18°C. Zurawlew et al. 2016, 17 men, controlled trial. Talk to your doctor first if you have a heart or blood pressure condition or are pregnant.",
+        "It fades. 2.5% of the gains lost for every day without heat (Daanen et al. 2018). Timeline from 16 weeks out to race day: build heat 6 to 2 weeks out, then keep it. General guideline.",
+        "Our take, not a finding of the studies: count heat in days. Aim for 10 to 14 heat days, 6 to 2 weeks before your race, then 1 or 2 short sessions a week. Example card: Heat, 9 runs above 80°F, Ready. Raceproof checks: Heat. Full article on raceproof.ai."
+      ],
+      "theme": "slate",
+      "flags": [
+        "Link not machine-checked this run: the fetch tool was blocked (permission timed out), so I could not confirm https://raceproof.ai/blog/heat-acclimation-how-long loads. The Research blog tab says the article was published Oct 23 (page date Oct 28). Tap the link before approving.",
+        "Built from blog/drafts/02-heat-acclimation-how-long/review.md (approved carousel plan); every number from the article.",
+        "Heat appears Thu (this carousel), Fri (Panama, a hot race) and Sat (heat timing education, from the calendar). Pillars differ each day, but the topic repeats; consider swapping Saturday for a Backup item if it feels like too much heat."
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "type": "race-breakdown",
+      "format": "carousel",
+      "title": "Race breakdown: IRONMAN 70.3 Panama (carousel)",
+      "slides": [
+        "fri-race-ironman-70-3-panama-1.png",
+        "fri-race-ironman-70-3-panama-2.png",
+        "fri-race-ironman-70-3-panama-3.png",
+        "fri-race-ironman-70-3-panama-4.png",
+        "fri-race-ironman-70-3-panama-5.png",
+        "fri-race-ironman-70-3-panama-6.png"
+      ],
+      "caption": "Panama's water was 78°F in 2026, above the 76.1°F age-group wetsuit cutoff. Plan for a swim without a wetsuit.\n\n113.1 km (70.3 mi) with 463 m of gain and 457 m of loss, a typical high of 32.0°C and water around 25.6°C. The next race is Feb 28, 2027, about 17 weeks out.\n\nWhen to start, counted back from race day: open-water swims from Nov 8, gut training from Dec 6, heat sessions Jan 17 to Feb 14, a weigh-in in race-like heat around Jan 31 to Feb 7, then a 10 to 14 day taper. General guidelines, not a prescription. The taper length comes from coaches, not studies. Never swim open water alone.\n\nWetsuit figure: Quagliarotti 2021 (up to 11%, mostly pool studies). Open-water plan: Hayes, 220 Triathlon 2026. Raceproof isn't affiliated with IRONMAN or the race.\n\nFull breakdown: raceproof.ai/races/ironman-70-3-panama (link in bio).\n\nEn español: en 2026 el agua estuvo a 25.6°C, por encima del límite para usar traje. Guía completa en raceproof.ai.\n\n#ironman703panama #ironman703 #triathlon #panama #raceproof",
+      "caption_facebook": "Panama's water was 78°F in 2026, above the 76.1°F age-group wetsuit cutoff. Plan for a swim without a wetsuit.\n\n113.1 km (70.3 mi) with 463 m of gain and 457 m of loss, a typical high of 32.0°C and water around 25.6°C. The next race is Feb 28, 2027, about 17 weeks out.\n\nWhen to start, counted back from race day: open-water swims from Nov 8, gut training from Dec 6, heat sessions Jan 17 to Feb 14, a weigh-in in race-like heat around Jan 31 to Feb 7, then a 10 to 14 day taper. General guidelines, not a prescription. The taper length comes from coaches, not studies. Never swim open water alone.\n\nWetsuit figure: Quagliarotti 2021 (up to 11%, mostly pool studies). Open-water plan: Hayes, 220 Triathlon 2026. Raceproof isn't affiliated with IRONMAN or the race.\n\nRead the full breakdown:\nhttps://raceproof.ai/races/ironman-70-3-panama\n\nEn español: en 2026 el agua estuvo a 25.6°C, por encima del límite para usar traje. Guía completa en raceproof.ai.\n\n#ironman703panama #ironman703 #triathlon #panama #raceproof",
+      "link": "https://raceproof.ai/races/ironman-70-3-panama",
+      "altText": [
+        "Race breakdown, IRONMAN 70.3 Panama, Feb 28, 2027. Panama's water was 78°F in 2026, above the 76.1°F wetsuit cutoff. Plan for a swim without a wetsuit. A temperature scale marks the 76.1°F age-group cutoff and 78°F on race day 2026.",
+        "The course in numbers: 113.1 km (70.3 mi), gain 463 m, loss 457 m, typical high 32.0°C, water 25.6°C. Bike profile, 90.1 km, three flat loops with short ramps. Run profile, 21.1 km, three flat loops in Amador.",
+        "What Panama asks of you. Pillar demand: Heat high (typical high 32.0°C, water 25.6°C). Hydration high (know your sweat rate in race-like heat). Terrain low (463 m of gain over 113.1 km).",
+        "The hardest part: swimming without a wetsuit. Wetsuits improved swim performance by up to 11% in studies, mostly in pools. Swim open water often; in the final 8 weeks, 2 to 4 swims a week, mixing open water and pool. Never swim open water alone. Quagliarotti 2021; Hayes, 220 Triathlon 2026.",
+        "When to start, counted back from Feb 28. Open water from Nov 8, 2 to 4 swims a week from Jan 3. Gut from Dec 6, race carbs by Jan 17 to 31. Heat Jan 17 to Feb 14, then keep it. Sweat rate weigh-in after 10+ heat days, Jan 31 to Feb 7. Taper the final 10 to 14 days, from Feb 14. General guidelines.",
+        "Full breakdown on raceproof.ai: raceproof.ai/races/ironman-70-3-panama. Every pillar, checked against your training. Coming spring 2027. Raceproof isn't affiliated with IRONMAN or the race."
+      ],
+      "theme": "lime",
+      "es_story": [
+        "fri-race-ironman-70-3-panama-es-story-1.png",
+        "fri-race-ironman-70-3-panama-es-story-2.png",
+        "fri-race-ironman-70-3-panama-es-story-3.png",
+        "fri-race-ironman-70-3-panama-es-story-4.png",
+        "fri-race-ironman-70-3-panama-es-story-5.png",
+        "fri-race-ironman-70-3-panama-es-story-6.png"
+      ],
+      "flags": [
+        "NOT loaded into Buffer: I could not open the race page (the fetch tool was blocked, permission timed out), so the link and the page-only details are unchecked. Check before adding the drafts: (1) the link loads, (2) whether the page labels gain and loss approximate, (3) the pillar demand ratings on slide 3 (Heat High, Hydration High, Terrain Low are mine, from the typical high and the Adaptation rates tab, which calls Panama a flat course), (4) slide 4 calls the non-wetsuit swim the hardest part, based on the queue hook, not the page.",
+        "Queue row left at Scheduled (not Drafted) until it is in Buffer.",
+        "Spanish Stories carousel (1080 x 1920) rendered for Stories and WhatsApp: fri-race-ironman-70-3-panama-es-story-1..6.png. Not for Buffer.",
+        "Wetsuit 11% (Quagliarotti 2021), the 76.1°F cutoff and the open-water plan (Hayes) come from the Adaptation rates tab; taper 10 to 14 days from the Coach consensus Recommended rule (coaches, not studies)."
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "type": "education",
+      "title": "Education: Heat timing (adaptation windows)",
+      "slides": [
+        "sat-edu-heat-timing-1.png",
+        "sat-edu-heat-timing-2.png",
+        "sat-edu-heat-timing-3.png",
+        "sat-edu-heat-timing-4.png",
+        "sat-edu-heat-timing-5.png",
+        "sat-edu-heat-timing-6.png"
+      ],
+      "caption": "Heat training 20 weeks out is wasted.\n\nHeat adaptation builds over about 10 to 14 days of regular sessions, and it fades without exposure: about 2.5% of the heart rate and core temperature gains for every day without heat (Daanen 2018). So timing matters as much as the work. Build it 6 to 2 weeks before a hot race, then keep 1 or 2 short sessions a week.\n\nWhy bother: across 7 marathons, top men finished 1.7% off the course record in the coolest races and 4.5% off in the hottest, and slower runners lost more (Ely et al. 2007, observational).\n\nGeneral guidelines, not a prescription. Heart condition, pregnant or on medication that affects heat tolerance? Talk to your doctor first.\n\nStudies: Ely et al. 2007; Daanen et al. 2018 and Tyler et al. 2016 (meta-analyses, mostly lab studies).\n\nSave this for your next build.\n\n#raceproof #heattraining #marathontraining #triathlontraining #raceprep",
+      "altText": [
+        "Education, heat, adaptation windows. Heat training 20 weeks out is wasted. It builds in about two weeks and fades in a few. When you do it matters as much as how much.",
+        "Why it matters: how far top men finished off the course record. Coolest marathons 1.7%, hottest marathons 4.5%. Slower runners lost more as it warmed up. Ely et al. 2007, 7 marathons, observational.",
+        "It builds fast: about 10 to 14 days of regular heat sessions. 5 or more days of heat start to adapt heart rate and core temperature. 7 to 14 days is the most common block; longer ones worked better. Daanen et al. 2018, Tyler et al. 2016.",
+        "And fades: 2.5% of heart rate and core temperature gains lost per day without heat. Getting it back is 8 to 12 times faster than the first time, so short top-ups keep most of it. Daanen et al. 2018.",
+        "Too early, too late, just right, on a timeline from 20 weeks out to race day. 20 weeks out: too early, faded long before race day. Race week: too late, no time for 10 to 14 days of sessions. 6 to 2 weeks out: just right, build it then keep 1 or 2 short sessions a week.",
+        "Our take: count back from race day, then start the heat. Raceproof schedules each adaptation in its own window. Talk to your doctor first if you have a heart condition, are pregnant or take medication that affects heat. Example card: Heat, 3 heat sessions done, Building. Raceproof checks: Heat. Save this for your next build."
+      ],
+      "theme": "slate",
+      "flags": [
+        "8 to 12x faster re-acclimation and \"short top-ups keep most of it\" come from the Adaptation rates tab (Heat row, citing Daanen 2018); the Research library row for Daanen does not list the 8 to 12x figure."
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "slot": "second",
+      "time": "17:00",
+      "type": "coaches",
+      "title": "Coaches: Coach dashboard (Free for coaches)",
+      "slides": [
+        "sat-coaches-dashboard-1.png"
+      ],
+      "caption": "Every athlete's race readiness, in one place. Free for coaches.\n\nYour athletes link to you once with an invite code. Their readiness reports reach you automatically after every training session, checked against each athlete's race. Add notes, then review and approve race-day plans. No TrainingPeaks access needed, and Raceproof never changes your plan.\n\n10 founding coach spots: your athletes get 60% off their first year. Coming spring 2027.\n\nCoach? Apply for a founding coach spot. Link in bio.\n\n#raceproof #runningcoach #triathloncoach #endurancecoach #raceprep",
+      "altText": [
+        "For coaches, free. Every athlete's race readiness, in one place. A coach dashboard concept: Your athletes, 4 athletes, 2 need review. Daniel K., Boston Marathon, 3 weeks out, 74%, terrain flag, plan ready to review. Maya R., Western States 100, 6 weeks out, 81%, hydration gap, needs review. Priya S., Black Canyon 100K, 9 weeks out, 91%, on track. Tom W., IRONMAN Arizona, 12 weeks out, 79%, run off the bike, watching. Reports reach you after every training session. 10 founding coach spots. Concept preview, coming spring 2027."
+      ],
+      "theme": "light",
+      "flags": []
     }
   ],
   "reels": [
