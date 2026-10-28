@@ -89,7 +89,11 @@
         "Link not machine-checked this run: the fetch tool was blocked (permission timed out), so I could not confirm https://raceproof.ai/blog/heat-acclimation-how-long loads. The Research blog tab says the article was published Oct 23 (page date Oct 28). Tap the link before approving.",
         "Built from blog/drafts/02-heat-acclimation-how-long/review.md (approved carousel plan); every number from the article.",
         "Heat appears Thu (this carousel), Fri (Panama, a hot race) and Sat (heat timing education, from the calendar). Pillars differ each day, but the topic repeats; consider swapping Saturday for a Backup item if it feels like too much heat."
-      ]
+      ],
+      "buffer": {
+        "instagram": "6ae203b683b065614fe9e4fe",
+        "facebook": "6ae203c783b065614fe9e858"
+      }
     },
     {
       "date": "2026-10-30",
@@ -155,7 +159,11 @@
       "theme": "slate",
       "flags": [
         "8 to 12x faster re-acclimation and \"short top-ups keep most of it\" come from the Adaptation rates tab (Heat row, citing Daanen 2018); the Research library row for Daanen does not list the 8 to 12x figure."
-      ]
+      ],
+      "buffer": {
+        "instagram": "6ae203ea9bcf8f4f823b5b77",
+        "facebook": "6ae203eb9bcf8f4f823b5bb2"
+      }
     },
     {
       "date": "2026-10-31",
@@ -171,7 +179,11 @@
         "For coaches, free. Every athlete's race readiness, in one place. A coach dashboard concept: Your athletes, 4 athletes, 2 need review. Daniel K., Boston Marathon, 3 weeks out, 74%, terrain flag, plan ready to review. Maya R., Western States 100, 6 weeks out, 81%, hydration gap, needs review. Priya S., Black Canyon 100K, 9 weeks out, 91%, on track. Tom W., IRONMAN Arizona, 12 weeks out, 79%, run off the bike, watching. Reports reach you after every training session. 10 founding coach spots. Concept preview, coming spring 2027."
       ],
       "theme": "light",
-      "flags": []
+      "flags": [],
+      "buffer": {
+        "instagram": "6ae203ec4a3ecdea2a6a407e",
+        "facebook": "6ae203ec9bcf8f4f823b5be5"
+      }
     }
   ],
   "reels": [
