@@ -132,7 +132,8 @@
         "Race page checked Oct 29 (it loads). Slide 3 now uses the page's headline (\"Heat, not hills, is the challenge\") and all seven pillar ratings from the page. Slide 4 no longer calls the swim the hardest part (Jonathan, Oct 29). Gain and loss labeled approximate (the page footer says course details are approximate). Taper changed to the page's final 2 weeks, from Feb 14.",
         "Water shown as 26°C, as on the race page (IRONMAN average and race day 2026); the queue row says 25.6°C (78°F).",
         "Spanish Stories carousel (1080 x 1920) for Stories and WhatsApp: fri-race-ironman-70-3-panama-es-story-1..6.png. Not for Buffer.",
-        "The wetsuit figure (11%, Quagliarotti 2021), the 76.1°F cutoff and the open-water plan (Hayes) come from the Adaptation rates tab."
+        "The wetsuit figure (11%, Quagliarotti 2021), the 76.1°F cutoff and the open-water plan (Hayes) come from the Adaptation rates tab.",
+        "Buffer drafts updated Oct 29 to the revised slides (commit d84f6e2) and caption."
       ],
       "buffer": {
         "instagram": "6ae368e8a87e7858ef177727",
@@ -165,7 +166,11 @@
         "Backup item 3 (Education: Altitude), used at Jonathan's request on Oct 29 because Thu, Fri and Sat were all about heat. Items 1 (needs your race graphs) and 2 (needs a new Reel template) were skipped. Marked [used Sat Oct 31] in the Backup list.",
         "All numbers come from the Adaptation rates tab (Terrain (ultra), Altitude row, and the How long adaptations last table): Pittman (CTS) and Dudney are coaching sources; Foss 2017 is the study. The Western States 2,667 m figure is from the same row; 8,750 ft is from the brief's Ultra card.",
         "The heat timing carousel moved to Sat Dec 12 (calendar updated). Its files stay in this folder as sat-edu-heat-timing-1..6; it is no longer in Buffer."
-      ]
+      ],
+      "buffer": {
+        "instagram": "6ae3b2895fe54c45e206932c",
+        "facebook": "6ae3b294f3a9d5311bce5237"
+      }
     },
     {
       "date": "2026-10-31",
