@@ -129,11 +129,15 @@
         "fri-race-ironman-70-3-panama-es-story-6.png"
       ],
       "flags": [
-        "NOT loaded into Buffer: I could not open the race page (the fetch tool was blocked, permission timed out), so the link and the page-only details are unchecked. Check before adding the drafts: (1) the link loads, (2) whether the page labels gain and loss approximate, (3) the pillar demand ratings on slide 3 (Heat High, Hydration High, Terrain Low are mine, from the typical high and the Adaptation rates tab, which calls Panama a flat course), (4) slide 4 calls the non-wetsuit swim the hardest part, based on the queue hook, not the page.",
+        "Loaded Oct 29 after checking the page in Chrome: link loads; Heat High, Hydration High, Terrain Low match the page; water changed to 26°C as on the page; gain and loss labeled approximate in captions. Slide 4 calls the wetsuit-free swim the hardest part, while the page says heat is the challenge: check before approving.",
         "Queue row left at Scheduled (not Drafted) until it is in Buffer.",
         "Spanish Stories carousel (1080 x 1920) rendered for Stories and WhatsApp: fri-race-ironman-70-3-panama-es-story-1..6.png. Not for Buffer.",
         "Wetsuit 11% (Quagliarotti 2021), the 76.1°F cutoff and the open-water plan (Hayes) come from the Adaptation rates tab; taper 10 to 14 days from the Coach consensus Recommended rule (coaches, not studies)."
-      ]
+      ],
+      "buffer": {
+        "instagram": "6ae368e8a87e7858ef177727",
+        "facebook": "6ae368f5e079e57982e4c0c3"
+      }
     },
     {
       "date": "2026-10-31",
