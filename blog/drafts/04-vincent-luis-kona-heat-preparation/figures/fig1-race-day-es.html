@@ -1,0 +1,39 @@
+<style>
+.rp-fig{--ink:#15171A;--muted:#5B5F64;--line:#DDD9D0;--card:#FFFFFF;--pc:#B83C0B;--pc2:#FCE7DC;--heat:#B83C0B;--ref:#A4A9AE;
+ position:relative;margin:32px 0;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:10px;font-family:Inter,system-ui,sans-serif;color:var(--ink)}
+.rp-fig *{box-sizing:border-box}
+.rp-fig h4{margin:0;font-family:"Inter Display",Inter,sans-serif;font-weight:800;font-size:20px;line-height:1.25;letter-spacing:-0.01em}
+.rp-fig .rp-sub{margin:4px 0 16px;font-size:14px;color:var(--muted)}
+.rp-fig .rp-row{display:grid;grid-template-columns:minmax(120px,40%) 1fr;gap:10px;align-items:center;margin:10px 0}
+.rp-fig .rp-lab{font-size:14px;font-weight:600;line-height:1.25}
+.rp-fig .rp-lab small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.rp-fig .rp-track{position:relative;height:24px}
+.rp-fig .rp-grid{position:absolute;top:0;bottom:0;border-left:1px solid var(--line)}
+.rp-fig .rp-bar{position:absolute;top:2px;height:20px;border-radius:0 4px 4px 0}
+.rp-fig .rp-val{position:absolute;top:2px;line-height:20px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:var(--ink);white-space:nowrap;padding-left:8px}
+.rp-fig .rp-val.rp-left{padding-left:0;padding-right:8px;transform:translateX(-100%);color:#FFFFFF}
+.rp-fig .rp-axis{position:relative;height:18px;margin-left:calc(40% + 10px);border-top:1px solid var(--line);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;color:var(--muted)}
+.rp-fig .rp-axis span{position:absolute;top:3px;transform:translateX(-50%);white-space:nowrap}
+.rp-fig .rp-axis span:last-child{transform:translateX(-100%)}
+.rp-fig .rp-axl{margin:6px 0 0 calc(40% + 10px);font-size:12px;color:var(--muted)}
+.rp-fig .rp-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rp-fig .rp-card{background:var(--pc2);border-radius:10px;padding:14px 16px}
+.rp-fig .rp-card b{display:block;font-family:"Inter Display",Inter,sans-serif;font-weight:800;font-size:28px;line-height:1.1;letter-spacing:-0.02em;color:var(--pc)}
+.rp-fig .rp-card span{display:block;margin-top:4px;font-size:14px;line-height:1.35;color:var(--ink)}
+.rp-fig .rp-card small{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
+.rp-fig figcaption{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;line-height:1.5;color:var(--muted)}
+.rp-fig figcaption a{color:var(--muted)}
+.rp-fig .rp-sr{position:absolute;left:0;top:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.rp-fig .rp-steps{list-style:none;margin:0;padding:0;position:relative}
+.rp-fig .rp-steps:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;border-left:2px solid var(--line)}
+.rp-fig .rp-step{position:relative;padding:8px 10px 8px 30px;margin:4px 0;border-radius:10px}
+.rp-fig .rp-step:before{content:"";position:absolute;left:2px;top:13px;width:12px;height:12px;border-radius:50%;background:var(--card);border:2px solid var(--pc)}
+.rp-fig .rp-step.rp-in{background:var(--pc2)}
+.rp-fig .rp-step.rp-in:before{background:var(--pc)}
+.rp-fig .rp-step b{display:block;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;font-weight:600;color:var(--pc);letter-spacing:0.02em}
+.rp-fig .rp-step span{display:block;font-size:14px;line-height:1.35}
+.rp-fig .rp-step small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.rp-fig .rp-tag{display:inline-block;margin:0 0 10px;padding:3px 10px;border-radius:999px;background:var(--pc2);font-size:12px;color:var(--pc);font-weight:600}
+@media (max-width:480px){.rp-fig{padding:16px}.rp-fig h4{font-size:18px}.rp-fig .rp-row{grid-template-columns:132px 1fr}.rp-fig .rp-axis,.rp-fig .rp-axl{margin-left:142px}.rp-fig .rp-cards{grid-template-columns:1fr}.rp-fig .rp-card b{font-size:24px}}
+</style>
+<figure class="rp-fig" aria-label="Kona 2026: un día caluroso y húmedo"><h4>Kona 2026: un día caluroso y húmedo</h4><p class="rp-sub">El resultado y las condiciones de la carrera</p><div class="rp-cards" aria-hidden="true"><div class="rp-card"><b>7:47:27</b><span>1.º, Campeonato Mundial IRONMAN, 10 de octubre de 2026</span><small>Resultados oficiales de IRONMAN</small></div><div class="rp-card"><b>88°F</b><span>máxima en el aeropuerto internacional de Kona (PHKO)</span><small>Historial de Weather Underground</small></div><div class="rp-card"><b>88%</b><span>de humedad a las 6:53 am, ya con 79°F</span><small>PHKO, fuera del recorrido</small></div><div class="rp-card"><b>79°F (26°C)</b><span>temperatura promedio del agua</span><small>Página oficial del recorrido</small></div></div><div class="rp-sr"><table><caption>El resultado y las condiciones de la carrera</caption><thead><tr><th>Número</th><th>Qué es</th><th>Fuente</th></tr></thead><tbody><tr><td>7:47:27</td><td>1.º, Campeonato Mundial IRONMAN, 10 de octubre de 2026</td><td>Resultados oficiales de IRONMAN</td></tr><tr><td>88°F</td><td>máxima en el aeropuerto internacional de Kona (PHKO)</td><td>Historial de Weather Underground</td></tr><tr><td>88%</td><td>de humedad a las 6:53 am, ya con 79°F</td><td>PHKO, fuera del recorrido</td></tr><tr><td>79°F (26°C)</td><td>temperatura promedio del agua</td><td>Página oficial del recorrido</td></tr></tbody></table></div><figcaption>Fuentes: resultados oficiales y página del recorrido de IRONMAN; historial de Weather Underground para PHKO, 10 de octubre de 2026. El aeropuerto no está en el recorrido. n = 1.</figcaption></figure>
