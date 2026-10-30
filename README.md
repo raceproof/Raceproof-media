@@ -100,8 +100,10 @@ Every feed post (all its slides) and every Reel cover uses one theme. Swap only 
 | lines | `#DDD9D0` | `#3A4047` | `#A6C72E` |
 | cards | `#FFFFFF` | `#2A2F35` | `#FFFFFF` |
 | highlighted numbers, eyebrows | heat `#B83C0B` | `#FF8A5B` | asphalt `#1F2328` (never heat on lime) |
-| logo | `assets/brand/lockup.png` | `assets/brand/lockup-on-dark.png` | `assets/brand/lockup-on-lime.png` (one color: the mark's lime segment is asphalt so it doesn't vanish) |
+| logo | `assets/brand/lockup.png` | `assets/brand/lockup-on-dark.png` | `assets/brand/lockup.png` on a white pill (see below) |
 | "Ready" chip | lime | lime | asphalt with lime text |
+
+Lime logo: the normal `lockup.png` inside a white pill, never straight on lime (the mark's lime segment would vanish): `<span style="display:inline-flex;align-items:center;background:#FFFFFF;border-radius:999px;padding:9px 18px;margin:-9px 0 -9px -18px"><img src="../../assets/brand/lockup.png" alt="raceproof" style="width:230px;height:53px;display:block"></span>` (the negative margin keeps the logo itself where the template puts it).
 
 Peach (heat-soft `#FCE7DC` background) is only for pain posts. Filmed Reels and photo covers count as `photo`.
 
