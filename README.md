@@ -57,6 +57,13 @@ Feed posts on Monday, Wednesday, Friday and Saturday (Monday, Wednesday and Frid
 
 Brand system only: asphalt `#1F2328`, surface `#F4F2ED`, lime `#C8F03C` for "Ready", primary buttons and the Lime theme, heat `#B83C0B` and heat-soft `#FCE7DC` for problems, pillar colors from the brief. Every feed post and Reel cover uses one post theme (see "Post themes"). No em or en dashes, no exclamation marks, no AI-sounding phrasing. Every number comes from the brief's stats table or a Research library row, with its source on the slide or in the caption. Feed slides are 1080 x 1350 with the small logo; reels are 1080 x 1920 with text kept out of the top 220 px and bottom 420 px. Reels never open on a blank frame: frame 0 already shows the eyebrow and headline fully drawn (no fade in from empty).
 
+## Caption and slide rules
+
+- **Units:** always give both, imperial first with metric in parentheses right after it: 78°F (26°C), 70.3 mi (113.1 km), 1,519 ft (463 m), 16 oz (473 ml). On slides the imperial number is the big one and the metric sits next to or under it. Never one system alone.
+- **Race posts open with the race:** the first sentence names the race and its date, then the pillar or variable that matters most there. The first paragraph states the problem plainly so the reader knows what is being broken down.
+- **Adaptation windows ("when to start") in captions:** one line per variable, each starting with ✅ (or a plain bullet), e.g. `✅ Heat: sessions Jan 17 to Feb 14, then keep it`.
+- **Never include** a Spanish line or paragraph in captions, or the line "Never swim open water alone" (captions or slides).
+
 ## Links in captions
 
 Any post about a blog article or a race page points to that exact page, never the homepage.
