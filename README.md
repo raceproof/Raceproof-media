@@ -63,7 +63,7 @@ Brand system only: asphalt `#1F2328`, surface `#F4F2ED`, lime `#C8F03C` for "Rea
 - **Race posts open with the race:** the first sentence names the race and its date, then the pillar or variable that matters most there. The first paragraph states the problem plainly so the reader knows what is being broken down.
 - **Adaptation windows ("when to start") in captions:** one line per variable, each starting with ✅ (or a plain bullet), e.g. `✅ Heat: sessions Jan 17 to Feb 14, then keep it`. The list is its own paragraph: a blank line above it (after the "When to start..." line) and below it (before "General guidelines...").
 - **Sources paragraph:** starts with `SOURCES:` and lists every source used, e.g. `SOURCES: Wetsuit figure: Quagliarotti 2021. Weather: Open-Meteo, race mornings 2024 and 2026.`
-- **No affiliation line:** never write "Raceproof isn't affiliated with ..." (or the Spanish version) for any race or organizer, in captions, slides or alt text. Still never use race logos or official photos.
+- **No affiliation line:** never write "Raceproof isn't affiliated with ..." (or the Spanish version) for any race, organizer or brand (including Garmin, COROS and TrainingPeaks on concept screens), in captions, slides, alt text or Reels. Still never use race logos or official photos.
 - **Never include** a Spanish line or paragraph in captions, or the line "Never swim open water alone" (captions or slides).
 
 ## Links in captions
