@@ -137,7 +137,11 @@
         "Backup item used: the Fri Nov 6 ultra carousel slot (Transgrancanaria Classic, Scheduled) could not be built because its race page on raceproof.ai could not be read from this run.",
         "Skipped earlier Backup items: 'Read your own race file' needs your own race graphs; the research blog Reel would put the research blog pillar two days in a row; the stats recap repeats Thursday's 28% hook.",
         "Chip is Durability (fatigue) rather than Gut, so it doesn't repeat Saturday's gut myth post."
-      ]
+      ],
+      "buffer": {
+        "instagram": "6aeb4b3cc7c81a178892772c",
+        "facebook": "6aeb4b3c3792c9d846bd6ec5"
+      }
     },
     {
       "date": "2026-11-07",
@@ -153,7 +157,11 @@
       "theme": "slate",
       "flags": [
         "Calendar says 'gut training needs about 12 weeks'; the coach consensus gives an 8 to 10 week build and the windows start at 12 weeks out, so the post says 'start 12 weeks out' and gives 8 to 10 weeks as the coaches' build time."
-      ]
+      ],
+      "buffer": {
+        "instagram": "6aeb4b3dc7c81a17889277b2",
+        "facebook": "6aeb4b3e55381ceedcbe094f"
+      }
     },
     {
       "date": "2026-11-07",
@@ -167,7 +175,11 @@
         "Founding Athlete offer. Founding Athletes: 50% off year one. Race-day plan: free. Marathon pass $39, now $19.50. Ultra or long-course tri pass $59, now $29.50. Season pass $99, now $49.50 a year. Season pass with ultras and tri $129, now $64.50 a year. Join the waitlist: free, 60 seconds. Claim within 30 days of launch. Coming spring 2027."
       ],
       "theme": "lime",
-      "flags": []
+      "flags": [],
+      "buffer": {
+        "instagram": "6aeb4b3e2652cc015f752219",
+        "facebook": "6aeb4b3f55381ceedcbe09a9"
+      }
     }
   ],
   "reels": []
