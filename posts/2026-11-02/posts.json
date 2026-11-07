@@ -1,186 +1,194 @@
 {
-  "week": "2026-11-02",
-  "posts": [
-    {
-      "date": "2026-11-02",
-      "type": "works-with-your-plan",
-      "title": "Works with your plan: the four cards (Backup item, race slot)",
-      "slides": [
-        "mon-works-with-your-plan-1.png"
-      ],
-      "caption": "Keep your coach. Keep your plan.\n\nSelf-coached, an online plan, an app, or a coach you work with: Raceproof sits on top of whatever you already follow. It checks your real training against what your race will demand, across gut, hydration, heat, terrain, durability, pacing and taper. It never writes or changes your plan.\n\nCoached? Link your coach once. Your readiness reports reach them after every training session.\n\nComing spring 2027. Join the waitlist. Link in bio.\n\n#raceproof #raceprep #marathontraining #triathlontraining #ultrarunning",
-      "theme": "lime",
-      "flags": [
-        "Backup item used: the Mon Nov 2 triathlon slot (IRONMAN 70.3 Puerto Rico) is still Waiting for publish.",
-        "Same four cards as the Oct 14 post, new headline and Lime theme."
-      ],
-      "altText": [
-        "Works with the plan you already have. Four cards: Self-coached: you write the plan, we check the details. Online plan: it covers the miles, we check the rest. App or AI coach: it sets the workouts, we check if they fit your race. Human coach: link your coach once, your readiness reports reach them after every training session. Raceproof never writes or changes your plan."
-      ],
-      "buffer": {
-        "instagram": "6ae5f652cf3a3112f3a71903",
-        "facebook": "6ae5f6525fdbd4dd628fdc97"
-      }
-    },
-    {
-      "date": "2026-11-03",
-      "type": "research",
-      "title": "Research: Western States carb plans (Mougin et al. 2026, J Sci Med Sport)",
-      "slides": [
-        "tue-research-wser-carbs-1.png",
-        "tue-research-wser-carbs-2.png",
-        "tue-research-wser-carbs-3.png",
-        "tue-research-wser-carbs-4.png",
-        "tue-research-wser-carbs-5.png",
-        "tue-research-wser-carbs-6.png",
-        "tue-research-wser-carbs-7.png"
-      ],
-      "caption": "Every finisher under 18 hours at the 2025 Western States 100 had a structured carb plan. Among 24 to 30 hour finishers, 69% did.\n\nMougin and colleagues surveyed 106 runners before the race and 66 after. 90% did heat preparation, and over 70% reported more than 10 days or exposures. Faster finishers also took in more sodium.\n\nLimits: these are self-reported surveys at one race, so it's a link, not proof, and fewer runners answered after the race than before.\n\nOur take, not a finding of the study: write the plan, then prove it on your long runs.\n\nDo you race with a written carb plan?\n\nSave this for your next build.\n\nSOURCES: Mougin et al. 2026, Heat preparation and nutrition strategies for a 100-mile ultramarathon in extreme heat: A questionnaire study at the Western States Endurance Run, Journal of Science and Medicine in Sport. Race distance: the Western States 100 page on raceproof.ai.\n\n#raceproof #ultrarunning #westernstates #100miler #racefueling",
-      "theme": "slate",
-      "flags": [
-        "Slide 5 uses the Research library summary, not the authors' own words (paper not opened); replace with their wording if you have it.",
-        "No DOI or full author names in the library row; slide 7 thanks \"Mougin and colleagues\" and shows the ScienceDirect link.",
-        "Research posts queue had this study as \"Scheduled: Mon Nov 9\"; the calendar puts it on Tue Nov 3, which this follows."
-      ],
-      "altText": [
-        "Research, gut, Western States 100. Every finisher under 18 hours had a structured carb plan. Among 24 to 30 hour finishers: 69%. Mougin et al. 2026, Journal of Science and Medicine in Sport.",
-        "What they found: 90% did heat preparation, over 70% reported more than 10 days or exposures. 92% planned to cool themselves during the race. 63% of finishers had gut symptoms, and 38% of runners who dropped out.",
-        "The key finding, bar chart: structured carb plan in 100% of finishers under 18 hours and 69% of finishers in 24 to 30 hours, P = 0.015. Faster finishers also took in more sodium. A link, not proof.",
-        "The study: 106 runners answered a survey before the 2025 Western States 100, 66 after. Race 100.2 mi (161.3 km) in extreme heat. Groups under 18 h, 18 to 24 h, 24 to 30 h. Self-reported, one race.",
-        "What the study points to: go into a hot 100-miler with a written carb plan, and give heat preparation more than 10 days. Summary from the Raceproof research library, not the authors' words.",
-        "Our take, not a finding of the study: write the carb plan, then prove it in training. Example card: Gut, 55 of 80 g/h proven, Building. Raceproof checks: Gut.",
-        "Source and thanks: Heat preparation and nutrition strategies for a 100-mile ultramarathon in extreme heat, Mougin et al., Journal of Science and Medicine in Sport, 2026. Thank you to Mougin and colleagues for this work. Save this for your next build."
-      ],
-      "buffer": {
-        "instagram": "6ae5f689ab019b9087085d89",
-        "facebook": "6ae5f68acf3a3112f3a7260e"
-      }
-    },
-    {
-      "date": "2026-11-04",
-      "type": "education",
-      "title": "Education: Hydration, sweat rate with a scale (Backup item, race Reel slot)",
-      "slides": [
-        "wed-edu-sweat-rate-1.png",
-        "wed-edu-sweat-rate-2.png",
-        "wed-edu-sweat-rate-3.png",
-        "wed-edu-sweat-rate-4.png",
-        "wed-edu-sweat-rate-5.png",
-        "wed-edu-sweat-rate-6.png"
-      ],
-      "caption": "Find your sweat rate with a bathroom scale. No sensor needed.\n\nWeigh yourself before a run in as little as possible, note everything you drink, then towel off and weigh again. Each pound lost is about 16 oz of sweat (each kilo is about 1 L). Add what you drank and divide by the hours you ran.\n\nDo it in easy and hard sessions, on cool and hot days, because your sweat rate moves with intensity, weather and heat acclimation. Racing somewhere hot? Re-test in race-like heat after 10 or more days of heat work, about 4 to 3 weeks out.\n\nThen drink to a plan, never more than you sweat. Training guidance, not medical advice.\n\nSave this for your next build.\n\nSOURCES: Weigh-in method: Baker 2017, Sports Medicine (the author works at the Gatorade Sports Science Institute, PepsiCo). Heat and sweat: Klous et al. 2020, Journal of Thermal Biology. Overdrinking: Hew-Butler et al. 2015, Clinical Journal of Sport Medicine. Test timing: coaching practice, not studies. Example numbers: Jonathan's own 1.5 hour run.\n\n#raceproof #sweatrate #racefueling #marathontraining #triathlon",
-      "theme": "light",
-      "flags": [
-        "Backup item used: the Wed Nov 4 marathon Reel slot (Los Angeles Marathon) is still Waiting for publish.",
-        "Same topic as the Oct 25 filmed Reel script, which the tracker still shows as Ready to film; uses your 174.4 to 169.4 lb run from that script."
-      ],
-      "altText": [
-        "Education, hydration. Find your sweat rate with a bathroom scale. No sensor needed. Weighing before and after a session is the simplest accurate way to measure it. Baker 2017.",
-        "How to do it: 1, weigh before, in as little clothing as possible. 2, note what you drink. 3, towel off and weigh after.",
-        "The math: weight lost plus what you drank, divided by hours. 1 lb is about 16 oz of sweat (1 kg is about 1 L). Jonathan's 1.5 hour run: 5.0 lb (2.3 kg) lost, 25 oz (0.74 L) drunk, 105 oz (3.1 L) of sweat, about 70 oz (2.1 L) an hour. His number, not a target.",
-        "One test isn't enough: your sweat rate changes with intensity, weather and heat acclimation. Test easy and cool, hard and warm, and in race-like heat. Raceproof asks for 3 or more weigh-ins.",
-        "When to test: first weigh-ins 16 to 12 weeks out. Hot race: one weigh-in in race-like heat after 10 or more days of heat work, 4 to 3 weeks out. After 10 days of heat training, arm sweat rate rose 58% and sweat sodium fell to about 60% (Klous 2020). Timing from coaching practice.",
-        "Drink to a plan, never more than you sweat. Example card: Hydration, 1 of 3 weigh-ins done, Building. Raceproof checks: Hydration. Coming spring 2027."
-      ],
-      "buffer": {
-        "instagram": "6ae5f68bcf3a3112f3a72645",
-        "facebook": "6ae5f68bf0984eef33120471"
-      }
-    },
-    {
-      "date": "2026-11-05",
-      "type": "research-blog",
-      "title": "Research blog: How do I avoid hitting the wall in a marathon? (article 3)",
-      "slides": [
-        "thu-blog-wall-1.png",
-        "thu-blog-wall-2.png",
-        "thu-blog-wall-3.png",
-        "thu-blog-wall-4.png",
-        "thu-blog-wall-5.png",
-        "thu-blog-wall-6.png",
-        "thu-blog-wall-7.png"
-      ],
-      "caption": "28% of men and 17% of women hit the wall in a marathon. It usually starts around mile 18 (km 29 to 30) and costs about half an hour.\n\nStart more than 5% faster than your average pace and 26.6% hit the wall. Start near it: 1.5%. Most runners also under-fuel: Seville marathoners averaged 35 g of carbs an hour, while guidelines go up to 90 g/h for efforts over 2.5 to 3 hours.\n\nLimits: race records and surveys are observational, so these are links, not proof. The pacing numbers come from Boston qualifiers on one net-downhill course, and the Seville intake is self-reported.\n\nOur take, not a finding of the studies: the wall is decided in the first 6 miles (10 km) and in the weeks before. Go out at a goal pace you've held in long runs, with a fueling plan you've practiced.\n\nWhen to start:\n\n✅ Pacing: goal-pace work from 10 weeks out\n✅ Gut: start about 12 weeks out, race-level carbs by 4 to 6 weeks out\n\nGeneral guidelines, not a prescription.\n\nFull article: raceproof.ai/blog/avoid-hitting-the-wall-marathon (link in bio). Save this for your next build.\n\nSOURCES: Smyth 2021, PLOS ONE. Dong & Li 2026, PLOS ONE. Jiménez-Alfageme et al. 2025, Sports Medicine Open. ADA, DC and ACSM 2016 joint position statement. When to start: Raceproof adaptation windows.\n\n#raceproof #marathontraining #marathonrunner #racefueling #runningcommunity",
-      "caption_facebook": "28% of men and 17% of women hit the wall in a marathon. It usually starts around mile 18 (km 29 to 30) and costs about half an hour.\n\nStart more than 5% faster than your average pace and 26.6% hit the wall. Start near it: 1.5%. Most runners also under-fuel: Seville marathoners averaged 35 g of carbs an hour, while guidelines go up to 90 g/h for efforts over 2.5 to 3 hours.\n\nLimits: race records and surveys are observational, so these are links, not proof. The pacing numbers come from Boston qualifiers on one net-downhill course, and the Seville intake is self-reported.\n\nOur take, not a finding of the studies: the wall is decided in the first 6 miles (10 km) and in the weeks before. Go out at a goal pace you've held in long runs, with a fueling plan you've practiced.\n\nWhen to start:\n\n✅ Pacing: goal-pace work from 10 weeks out\n✅ Gut: start about 12 weeks out, race-level carbs by 4 to 6 weeks out\n\nGeneral guidelines, not a prescription.\n\nRead the full article:\nhttps://raceproof.ai/blog/avoid-hitting-the-wall-marathon\n\nSave this for your next build.\n\nSOURCES: Smyth 2021, PLOS ONE. Dong & Li 2026, PLOS ONE. Jiménez-Alfageme et al. 2025, Sports Medicine Open. ADA, DC and ACSM 2016 joint position statement. When to start: Raceproof adaptation windows.\n\n#raceproof #marathontraining #marathonrunner #racefueling #runningcommunity",
-      "link": "https://raceproof.ai/blog/avoid-hitting-the-wall-marathon",
-      "altText": [
-        "Research blog, pacing. 28% of men and 17% of women hit the wall in a marathon. Smyth 2021, PLOS ONE, more than 4 million race records. From the Raceproof blog: How do I avoid hitting the wall in a marathon?",
-        "Where it hits: late in the race, for about half an hour. Men: average start at 18.4 mi (29.6 km), lasted 6.7 mi (10.72 km), cost about 31.50 min. Women: 18.2 mi (29.3 km), lasted 6.0 mi (9.61 km), cost about 33.20 min. Smyth 2021, 270 races, observational.",
-        "The fast start, bar chart: 26.6% of runners who started more than 5% faster than their average pace hit the wall, against 1.5% of those who started near it. A link, not proof. Dong & Li 2026, 78,912 Boston finishers, 2015 to 2017.",
-        "Even pacing, bar chart: 82.0% of runners under 3:00 paced evenly, 44.4% at 3:30 to 4:30, 19.6% over 4:30. Among 3:30 to 4:30 runners, even pacers finished 13.2 min faster than runners who slowed a lot. Dong & Li 2026, observational.",
-        "The fuel: Seville Marathon 2022 runners averaged 35 g of carbs an hour, and 9.0% reached 60 to 90 g/h. Guidelines go up to 90 g/h for efforts over 2.5 to 3 hours. Jiménez-Alfageme et al. 2025, 160 runners, self-reported; ADA, DC and ACSM 2016.",
-        "Our take, not a finding of the studies: the wall is decided in the first 6 miles (10 km). Go out at a goal pace you've held in long runs, with a fueling plan you've practiced. Example card: Pacing, 3 goal-pace long runs done, Ready. Raceproof checks: Pacing.",
-        "When to start, timeline from 16 weeks out to race day: Pacing, goal-pace work from 10 weeks out. Gut, start 12 weeks out, race-level carbs by 4 to 6 weeks out, then race fuel in every long session. General guidelines. Full article on raceproof.ai."
-      ],
-      "theme": "slate",
-      "flags": [
-        "No Buffer drafts: raceproof.ai could not be reached from this run (proxy refused the connection), so the link could not be confirmed as the README requires. If the article is live, add the IG and FB drafts from these files (Thu Nov 5, 08:00).",
-        "Hook changed from the review's slide 1 (26.6% vs 1.5%, the same hook as the Oct 19 research post) to the review's alternative, 28% of men and 17% of women; the fast start is slide 3.",
-        "Slide 7 is the when-to-start timeline plus the 'Full article on raceproof.ai' CTA, since the review's slide 7 was CTA only."
-      ]
-    },
-    {
-      "date": "2026-11-06",
-      "type": "pain",
-      "title": "Pain: Ultra, 30% of UTMB 2026 didn't finish (Backup item, ultra carousel slot)",
-      "slides": [
-        "fri-pain-utmb-dnf-1.png",
-        "fri-pain-utmb-dnf-2.png"
-      ],
-      "caption": "30% of UTMB 2026 starters didn't finish. Of 2,407 starters, the ones who stopped cited fatigue, digestive problems and falling behind on food.\n\nLate-race fatigue is something you can test in training: heart rate and pace late in your long sessions.\n\nCoaches put the longest sessions 8 to 4 weeks out, every 1 to 2 weeks. For 50 to 100 mi (80 to 161 km) races, that's a 31 to 50 mi (50 to 80 km) run, or back-to-backs of 25 to 30 mi (40 to 48 km) a day. Those numbers come from coaches, not studies. New to long runs? Keep each one within about 10% of your longest in the past 30 days.\n\nRaceproof checks durability every week, alongside the plan you already follow. Coming spring 2027. Join the waitlist. Link in bio.\n\nSOURCES: UTMB 2026 finish data: Reference Trail. Long-session timing and lengths: Raceproof's coach consensus (Roche, Friel, McCrann, Sayer and 7 more coaches, coaching practice). 10% session cap: Frandsen 2025.\n\n#raceproof #ultrarunning #trailrunning #ultramarathon #100miler",
-      "altText": [
-        "30% of UTMB 2026 starters didn't finish, citing fatigue, gut problems and falling behind on food. 100 dots, 30 filled orange: 30 of every 100 of the 2,407 starters. Raceproof flags a durability gap while there's time to train it. Source: Reference Trail. Raceproof checks: Durability.",
-        "The fix. Example card: Durability, heart rate drifts after 2:40, Building. Your longest runs: every 1 to 2 weeks, 8 to 4 weeks out. New to long runs? Keep each within about 10% of your longest in the past 30 days. Timing from coaches, not studies; 10% cap from Frandsen 2025. That's what Raceproof checks, every week."
-      ],
-      "theme": "peach",
-      "flags": [
-        "Backup item used: the Fri Nov 6 ultra carousel slot (Transgrancanaria Classic, Scheduled) could not be built because its race page on raceproof.ai could not be read from this run.",
-        "Skipped earlier Backup items: 'Read your own race file' needs your own race graphs; the research blog Reel would put the research blog pillar two days in a row; the stats recap repeats Thursday's 28% hook.",
-        "Chip is Durability (fatigue) rather than Gut, so it doesn't repeat Saturday's gut myth post."
-      ],
-      "buffer": {
-        "instagram": "6aeb4b3cc7c81a178892772c",
-        "facebook": "6aeb4b3c3792c9d846bd6ec5"
-      }
-    },
-    {
-      "date": "2026-11-07",
-      "type": "myth",
-      "title": "Myth vs proof: you can fix fueling in the last month",
-      "slides": [
-        "sat-myth-gut-last-month-1.png"
-      ],
-      "caption": "Myth: you can fix fueling in the last month.\n\nProof: your gut adapts, but it takes weeks of practice. In a small controlled trial, 2 weeks of gut training cut gut symptoms by about 60%. Building up to race-level carbs takes longer.\n\nWhen to start:\n\n✅ Gut: race fuel in long sessions from 12 weeks out, adding about 10 g/h a week\n✅ Gut: race-level carbs by 4 to 6 weeks out\n✅ Gut: race fueling in every long session after that\n\nGeneral guidelines, not a prescription. The 10 g/h steps and an 8 to 10 week build come from coaches, not studies. Moderate or worse gut symptoms after a session? Drop back 10 g/h. Ongoing gut problems or diabetes: talk to your doctor first.\n\nShare this with a training partner who fuels on feel.\n\nSOURCES: Gut training trial: Costa et al. 2017, Applied Physiology, Nutrition, and Metabolism. Steps and build time: Raceproof's coach consensus (Nijbroek, Pittman, coaching practice). Windows: Raceproof adaptation windows.\n\n#raceproof #guttraining #racefueling #marathontraining #ultrarunning",
-      "altText": [
-        "Myth: you can fix fueling in the last month. Proof: your gut needs weeks. Start 12 weeks out. 12 weeks out: race fuel in long sessions, add about 10 g/h a week. 4 to 6 weeks out: race-level carbs. After that: race fuel in every long session. General guidelines; gut symptoms, drop back 10 g/h. Steps from coaches, not studies. 2 weeks of practice cut gut symptoms about 60%, Costa et al. 2017. Raceproof checks: Gut."
-      ],
-      "theme": "slate",
-      "flags": [
-        "Calendar says 'gut training needs about 12 weeks'; the coach consensus gives an 8 to 10 week build and the windows start at 12 weeks out, so the post says 'start 12 weeks out' and gives 8 to 10 weeks as the coaches' build time."
-      ],
-      "buffer": {
-        "instagram": "6aeb4b3dc7c81a17889277b2",
-        "facebook": "6aeb4b3e55381ceedcbe094f"
-      }
-    },
-    {
-      "date": "2026-11-07",
-      "type": "pricing",
-      "title": "Founding pricing: 50% off year one (second Saturday post, 17:00)",
-      "slides": [
-        "sat-pricing-founding-1.png"
-      ],
-      "caption": "Founding Athletes get 50% off their first year.\n\nRace-day plan: free for everyone. Marathon pass $19.50 (normally $39). Ultra or long-course triathlon pass $29.50 (normally $59). Season pass $49.50 a year (normally $99), or $64.50 with ultras and triathlons (normally $129).\n\nJoining the waitlist is free and takes about 60 seconds. Claim within 30 days of launch; the discount lasts your whole first year. Raceproof is coming spring 2027.\n\nFree to join. Lock in 50% off your first year. Link in bio.\n\n#raceproof #raceprep #marathontraining #ultrarunning #triathlontraining",
-      "altText": [
-        "Founding Athlete offer. Founding Athletes: 50% off year one. Race-day plan: free. Marathon pass $39, now $19.50. Ultra or long-course tri pass $59, now $29.50. Season pass $99, now $49.50 a year. Season pass with ultras and tri $129, now $64.50 a year. Join the waitlist: free, 60 seconds. Claim within 30 days of launch. Coming spring 2027."
-      ],
-      "theme": "lime",
-      "flags": [],
-      "buffer": {
-        "instagram": "6aeb4b3e2652cc015f752219",
-        "facebook": "6aeb4b3f55381ceedcbe09a9"
-      }
-    }
-  ],
-  "reels": []
+ "week": "2026-11-02",
+ "posts": [
+  {
+   "date": "2026-11-02",
+   "type": "works-with-your-plan",
+   "title": "Works with your plan: the four cards (Backup item, race slot)",
+   "slides": [
+    "mon-works-with-your-plan-1.png"
+   ],
+   "caption": "Keep your coach. Keep your plan.\n\nSelf-coached, an online plan, an app, or a coach you work with: Raceproof sits on top of whatever you already follow. It checks your real training against what your race will demand, across gut, hydration, heat, terrain, durability, pacing and taper. It never writes or changes your plan.\n\nCoached? Link your coach once. Your readiness reports reach them after every training session.\n\nComing spring 2027. Join the waitlist. Link in bio.\n\n#raceproof #raceprep #marathontraining #triathlontraining #ultrarunning",
+   "theme": "lime",
+   "flags": [
+    "Backup item used: the Mon Nov 2 triathlon slot (IRONMAN 70.3 Puerto Rico) is still Waiting for publish.",
+    "Same four cards as the Oct 14 post, new headline and Lime theme."
+   ],
+   "altText": [
+    "Works with the plan you already have. Four cards: Self-coached: you write the plan, we check the details. Online plan: it covers the miles, we check the rest. App or AI coach: it sets the workouts, we check if they fit your race. Human coach: link your coach once, your readiness reports reach them after every training session. Raceproof never writes or changes your plan."
+   ],
+   "buffer": {
+    "instagram": "6ae5f652cf3a3112f3a71903",
+    "facebook": "6ae5f6525fdbd4dd628fdc97"
+   }
+  },
+  {
+   "date": "2026-11-03",
+   "type": "research",
+   "title": "Research: Western States carb plans (Mougin et al. 2026, J Sci Med Sport)",
+   "slides": [
+    "tue-research-wser-carbs-1.png",
+    "tue-research-wser-carbs-2.png",
+    "tue-research-wser-carbs-3.png",
+    "tue-research-wser-carbs-4.png",
+    "tue-research-wser-carbs-5.png",
+    "tue-research-wser-carbs-6.png",
+    "tue-research-wser-carbs-7.png"
+   ],
+   "caption": "Every finisher under 18 hours at the 2025 Western States 100 had a structured carb plan. Among 24 to 30 hour finishers, 69% did.\n\nMougin and colleagues surveyed 106 runners before the race and 66 after. 90% did heat preparation, and over 70% reported more than 10 days or exposures. Faster finishers also took in more sodium.\n\nLimits: these are self-reported surveys at one race, so it's a link, not proof, and fewer runners answered after the race than before.\n\nOur take, not a finding of the study: write the plan, then prove it on your long runs.\n\nDo you race with a written carb plan?\n\nSave this for your next build.\n\nSOURCES: Mougin et al. 2026, Heat preparation and nutrition strategies for a 100-mile ultramarathon in extreme heat: A questionnaire study at the Western States Endurance Run, Journal of Science and Medicine in Sport. Race distance: the Western States 100 page on raceproof.ai.\n\n#raceproof #ultrarunning #westernstates #100miler #racefueling",
+   "theme": "slate",
+   "flags": [
+    "Slide 5 uses the Research library summary, not the authors' own words (paper not opened); replace with their wording if you have it.",
+    "No DOI or full author names in the library row; slide 7 thanks \"Mougin and colleagues\" and shows the ScienceDirect link.",
+    "Research posts queue had this study as \"Scheduled: Mon Nov 9\"; the calendar puts it on Tue Nov 3, which this follows."
+   ],
+   "altText": [
+    "Research, gut, Western States 100. Every finisher under 18 hours had a structured carb plan. Among 24 to 30 hour finishers: 69%. Mougin et al. 2026, Journal of Science and Medicine in Sport.",
+    "What they found: 90% did heat preparation, over 70% reported more than 10 days or exposures. 92% planned to cool themselves during the race. 63% of finishers had gut symptoms, and 38% of runners who dropped out.",
+    "The key finding, bar chart: structured carb plan in 100% of finishers under 18 hours and 69% of finishers in 24 to 30 hours, P = 0.015. Faster finishers also took in more sodium. A link, not proof.",
+    "The study: 106 runners answered a survey before the 2025 Western States 100, 66 after. Race 100.2 mi (161.3 km) in extreme heat. Groups under 18 h, 18 to 24 h, 24 to 30 h. Self-reported, one race.",
+    "What the study points to: go into a hot 100-miler with a written carb plan, and give heat preparation more than 10 days. Summary from the Raceproof research library, not the authors' words.",
+    "Our take, not a finding of the study: write the carb plan, then prove it in training. Example card: Gut, 55 of 80 g/h proven, Building. Raceproof checks: Gut.",
+    "Source and thanks: Heat preparation and nutrition strategies for a 100-mile ultramarathon in extreme heat, Mougin et al., Journal of Science and Medicine in Sport, 2026. Thank you to Mougin and colleagues for this work. Save this for your next build."
+   ],
+   "buffer": {
+    "instagram": "6ae5f689ab019b9087085d89",
+    "facebook": "6ae5f68acf3a3112f3a7260e"
+   }
+  },
+  {
+   "date": "2026-11-04",
+   "type": "education",
+   "title": "Education: Hydration, sweat rate with a scale (Backup item, race Reel slot)",
+   "slides": [
+    "wed-edu-sweat-rate-1.png",
+    "wed-edu-sweat-rate-2.png",
+    "wed-edu-sweat-rate-3.png",
+    "wed-edu-sweat-rate-4.png",
+    "wed-edu-sweat-rate-5.png",
+    "wed-edu-sweat-rate-6.png"
+   ],
+   "caption": "Find your sweat rate with a bathroom scale. No sensor needed.\n\nWeigh yourself before a run in as little as possible, note everything you drink, then towel off and weigh again. Each pound lost is about 16 oz of sweat (each kilo is about 1 L). Add what you drank and divide by the hours you ran.\n\nDo it in easy and hard sessions, on cool and hot days, because your sweat rate moves with intensity, weather and heat acclimation. Racing somewhere hot? Re-test in race-like heat after 10 or more days of heat work, about 4 to 3 weeks out.\n\nThen drink to a plan, never more than you sweat. Training guidance, not medical advice.\n\nSave this for your next build.\n\nSOURCES: Weigh-in method: Baker 2017, Sports Medicine (the author works at the Gatorade Sports Science Institute, PepsiCo). Heat and sweat: Klous et al. 2020, Journal of Thermal Biology. Overdrinking: Hew-Butler et al. 2015, Clinical Journal of Sport Medicine. Test timing: coaching practice, not studies. Example numbers: Jonathan's own 1.5 hour run.\n\n#raceproof #sweatrate #racefueling #marathontraining #triathlon",
+   "theme": "light",
+   "flags": [
+    "Backup item used: the Wed Nov 4 marathon Reel slot (Los Angeles Marathon) is still Waiting for publish.",
+    "Same topic as the Oct 25 filmed Reel script, which the tracker still shows as Ready to film; uses your 174.4 to 169.4 lb run from that script."
+   ],
+   "altText": [
+    "Education, hydration. Find your sweat rate with a bathroom scale. No sensor needed. Weighing before and after a session is the simplest accurate way to measure it. Baker 2017.",
+    "How to do it: 1, weigh before, in as little clothing as possible. 2, note what you drink. 3, towel off and weigh after.",
+    "The math: weight lost plus what you drank, divided by hours. 1 lb is about 16 oz of sweat (1 kg is about 1 L). Jonathan's 1.5 hour run: 5.0 lb (2.3 kg) lost, 25 oz (0.74 L) drunk, 105 oz (3.1 L) of sweat, about 70 oz (2.1 L) an hour. His number, not a target.",
+    "One test isn't enough: your sweat rate changes with intensity, weather and heat acclimation. Test easy and cool, hard and warm, and in race-like heat. Raceproof asks for 3 or more weigh-ins.",
+    "When to test: first weigh-ins 16 to 12 weeks out. Hot race: one weigh-in in race-like heat after 10 or more days of heat work, 4 to 3 weeks out. After 10 days of heat training, arm sweat rate rose 58% and sweat sodium fell to about 60% (Klous 2020). Timing from coaching practice.",
+    "Drink to a plan, never more than you sweat. Example card: Hydration, 1 of 3 weigh-ins done, Building. Raceproof checks: Hydration. Coming spring 2027."
+   ],
+   "buffer": {
+    "instagram": "6ae5f68bcf3a3112f3a72645",
+    "facebook": "6ae5f68bf0984eef33120471"
+   }
+  },
+  {
+   "date": "2026-11-05",
+   "type": "research-blog",
+   "title": "Research blog: How do I avoid hitting the wall in a marathon? (article 3)",
+   "slides": [
+    "thu-blog-wall-1.png",
+    "thu-blog-wall-2.png",
+    "thu-blog-wall-3.png",
+    "thu-blog-wall-4.png",
+    "thu-blog-wall-5.png",
+    "thu-blog-wall-6.png",
+    "thu-blog-wall-7.png"
+   ],
+   "caption": "28% of men and 17% of women hit the wall in a marathon. It usually starts around mile 18 (km 29 to 30) and costs about half an hour.\n\nStart more than 5% faster than your average pace and 26.6% hit the wall. Start near it: 1.5%. Most runners also under-fuel: Seville marathoners averaged 35 g of carbs an hour, while guidelines go up to 90 g/h for efforts over 2.5 to 3 hours.\n\nLimits: race records and surveys are observational, so these are links, not proof. The pacing numbers come from Boston qualifiers on one net-downhill course, and the Seville intake is self-reported.\n\nOur take, not a finding of the studies: the wall is decided in the first 6 miles (10 km) and in the weeks before. Go out at a goal pace you've held in long runs, with a fueling plan you've practiced.\n\nWhen to start:\n\n✅ Pacing: goal-pace work from 10 weeks out\n✅ Gut: start about 12 weeks out, race-level carbs by 4 to 6 weeks out\n\nGeneral guidelines, not a prescription.\n\nFull article: raceproof.ai/blog/avoid-hitting-the-wall-marathon (link in bio). Save this for your next build.\n\nSOURCES: Smyth 2021, PLOS ONE. Dong & Li 2026, PLOS ONE. Jiménez-Alfageme et al. 2025, Sports Medicine Open. ADA, DC and ACSM 2016 joint position statement. When to start: Raceproof adaptation windows.\n\n#raceproof #marathontraining #marathonrunner #racefueling #runningcommunity",
+   "caption_facebook": "28% of men and 17% of women hit the wall in a marathon. It usually starts around mile 18 (km 29 to 30) and costs about half an hour.\n\nStart more than 5% faster than your average pace and 26.6% hit the wall. Start near it: 1.5%. Most runners also under-fuel: Seville marathoners averaged 35 g of carbs an hour, while guidelines go up to 90 g/h for efforts over 2.5 to 3 hours.\n\nLimits: race records and surveys are observational, so these are links, not proof. The pacing numbers come from Boston qualifiers on one net-downhill course, and the Seville intake is self-reported.\n\nOur take, not a finding of the studies: the wall is decided in the first 6 miles (10 km) and in the weeks before. Go out at a goal pace you've held in long runs, with a fueling plan you've practiced.\n\nWhen to start:\n\n✅ Pacing: goal-pace work from 10 weeks out\n✅ Gut: start about 12 weeks out, race-level carbs by 4 to 6 weeks out\n\nGeneral guidelines, not a prescription.\n\nRead the full article:\nhttps://raceproof.ai/blog/avoid-hitting-the-wall-marathon\n\nSave this for your next build.\n\nSOURCES: Smyth 2021, PLOS ONE. Dong & Li 2026, PLOS ONE. Jiménez-Alfageme et al. 2025, Sports Medicine Open. ADA, DC and ACSM 2016 joint position statement. When to start: Raceproof adaptation windows.\n\n#raceproof #marathontraining #marathonrunner #racefueling #runningcommunity",
+   "link": "https://raceproof.ai/blog/avoid-hitting-the-wall-marathon",
+   "altText": [
+    "Research blog, pacing. 28% of men and 17% of women hit the wall in a marathon. Smyth 2021, PLOS ONE, more than 4 million race records. From the Raceproof blog: How do I avoid hitting the wall in a marathon?",
+    "Where it hits: late in the race, for about half an hour. Men: average start at 18.4 mi (29.6 km), lasted 6.7 mi (10.72 km), cost about 31.50 min. Women: 18.2 mi (29.3 km), lasted 6.0 mi (9.61 km), cost about 33.20 min. Smyth 2021, 270 races, observational.",
+    "The fast start, bar chart: 26.6% of runners who started more than 5% faster than their average pace hit the wall, against 1.5% of those who started near it. A link, not proof. Dong & Li 2026, 78,912 Boston finishers, 2015 to 2017.",
+    "Even pacing, bar chart: 82.0% of runners under 3:00 paced evenly, 44.4% at 3:30 to 4:30, 19.6% over 4:30. Among 3:30 to 4:30 runners, even pacers finished 13.2 min faster than runners who slowed a lot. Dong & Li 2026, observational.",
+    "The fuel: Seville Marathon 2022 runners averaged 35 g of carbs an hour, and 9.0% reached 60 to 90 g/h. Guidelines go up to 90 g/h for efforts over 2.5 to 3 hours. Jiménez-Alfageme et al. 2025, 160 runners, self-reported; ADA, DC and ACSM 2016.",
+    "Our take, not a finding of the studies: the wall is decided in the first 6 miles (10 km). Go out at a goal pace you've held in long runs, with a fueling plan you've practiced. Example card: Pacing, 3 goal-pace long runs done, Ready. Raceproof checks: Pacing.",
+    "When to start, timeline from 16 weeks out to race day: Pacing, goal-pace work from 10 weeks out. Gut, start 12 weeks out, race-level carbs by 4 to 6 weeks out, then race fuel in every long session. General guidelines. Full article on raceproof.ai."
+   ],
+   "theme": "slate",
+   "flags": [
+    "No Buffer drafts: raceproof.ai could not be reached from this run (proxy refused the connection), so the link could not be confirmed as the README requires. If the article is live, add the IG and FB drafts from these files (Thu Nov 5, 08:00).",
+    "Hook changed from the review's slide 1 (26.6% vs 1.5%, the same hook as the Oct 19 research post) to the review's alternative, 28% of men and 17% of women; the fast start is slide 3.",
+    "Slide 7 is the when-to-start timeline plus the 'Full article on raceproof.ai' CTA, since the review's slide 7 was CTA only."
+   ]
+  },
+  {
+   "date": "2026-11-06",
+   "type": "pain",
+   "title": "Pain: Ultra, 30% of UTMB 2026 didn't finish (Backup item, ultra carousel slot)",
+   "slides": [
+    "fri-pain-utmb-dnf-1.png",
+    "fri-pain-utmb-dnf-2.png"
+   ],
+   "caption": "30% of UTMB 2026 starters didn't finish. Of 2,407 starters, the ones who stopped cited fatigue, digestive problems and falling behind on food.\n\nLate-race fatigue is something you can test in training: heart rate and pace late in your long sessions.\n\nCoaches put the longest sessions 8 to 4 weeks out, every 1 to 2 weeks. For 50 to 100 mi (80 to 161 km) races, that's a 31 to 50 mi (50 to 80 km) run, or back-to-backs of 25 to 30 mi (40 to 48 km) a day. Those numbers come from coaches, not studies. New to long runs? Keep each one within about 10% of your longest in the past 30 days.\n\nRaceproof checks durability every week, alongside the plan you already follow. Coming spring 2027. Join the waitlist. Link in bio.\n\nSOURCES: UTMB 2026 finish data: Reference Trail. Long-session timing and lengths: Raceproof's coach consensus (Roche, Friel, McCrann, Sayer and 7 more coaches, coaching practice). 10% session cap: Frandsen 2025.\n\n#raceproof #ultrarunning #trailrunning #ultramarathon #100miler",
+   "altText": [
+    "30% of UTMB 2026 starters didn't finish, citing fatigue, gut problems and falling behind on food. 100 dots, 30 filled orange: 30 of every 100 of the 2,407 starters. Raceproof flags a durability gap while there's time to train it. Source: Reference Trail. Raceproof checks: Durability.",
+    "The fix. Example card: Durability, heart rate drifts after 2:40, Building. Your longest runs: every 1 to 2 weeks, 8 to 4 weeks out. New to long runs? Keep each within about 10% of your longest in the past 30 days. Timing from coaches, not studies; 10% cap from Frandsen 2025. That's what Raceproof checks, every week."
+   ],
+   "theme": "peach",
+   "flags": [
+    "Backup item used: the Fri Nov 6 ultra carousel slot (Transgrancanaria Classic, Scheduled) could not be built because its race page on raceproof.ai could not be read from this run.",
+    "Skipped earlier Backup items: 'Read your own race file' needs your own race graphs; the research blog Reel would put the research blog pillar two days in a row; the stats recap repeats Thursday's 28% hook.",
+    "Chip is Durability (fatigue) rather than Gut, so it doesn't repeat Saturday's gut myth post."
+   ],
+   "buffer": {
+    "instagram": "6aeb4b3cc7c81a178892772c",
+    "facebook": "6aeb4b3c3792c9d846bd6ec5"
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "type": "myth",
+   "title": "Myth vs proof: you can fix fueling in the last month",
+   "slides": [
+    "sat-myth-gut-last-month-1.png"
+   ],
+   "caption": "Myth: you can fix fueling in the last month.\n\nProof: your gut adapts, but it takes weeks of practice. In a small controlled trial, 2 weeks of gut training cut gut symptoms by about 60%. Building up to race-level carbs takes longer.\n\nWhen to start:\n\n✅ Gut: race fuel in long sessions from 12 weeks out, adding about 10 g/h a week\n✅ Gut: race-level carbs by 4 to 6 weeks out\n✅ Gut: race fueling in every long session after that\n\nGeneral guidelines, not a prescription. The 10 g/h steps and an 8 to 10 week build come from coaches, not studies. Moderate or worse gut symptoms after a session? Drop back 10 g/h. Ongoing gut problems or diabetes: talk to your doctor first.\n\nShare this with a training partner who fuels on feel.\n\nSOURCES: Gut training trial: Costa et al. 2017, Applied Physiology, Nutrition, and Metabolism. Steps and build time: Raceproof's coach consensus (Nijbroek, Pittman, coaching practice). Windows: Raceproof adaptation windows.\n\n#raceproof #guttraining #racefueling #marathontraining #ultrarunning",
+   "altText": [
+    "Myth: you can fix fueling in the last month. Proof: your gut needs weeks. Start 12 weeks out. 12 weeks out: race fuel in long sessions, add about 10 g/h a week. 4 to 6 weeks out: race-level carbs. After that: race fuel in every long session. General guidelines; gut symptoms, drop back 10 g/h. Steps from coaches, not studies. 2 weeks of practice cut gut symptoms about 60%, Costa et al. 2017. Raceproof checks: Gut."
+   ],
+   "theme": "slate",
+   "flags": [
+    "Calendar says 'gut training needs about 12 weeks'; the coach consensus gives an 8 to 10 week build and the windows start at 12 weeks out, so the post says 'start 12 weeks out' and gives 8 to 10 weeks as the coaches' build time."
+   ],
+   "buffer": {
+    "instagram": "6aeb4b3dc7c81a17889277b2",
+    "facebook": "6aeb4b3e55381ceedcbe094f"
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "type": "pricing",
+   "title": "Founding pricing: 50% off year one (second Saturday post, 17:00)",
+   "slides": [
+    "sat-pricing-founding-1.png"
+   ],
+   "caption": "Founding Athletes get 50% off their first year.\n\nRace-day plan: free for everyone. Marathon pass $19.50 (normally $39). Ultra or long-course triathlon pass $29.50 (normally $59). Season pass $49.50 a year (normally $99), or $64.50 with ultras and triathlons (normally $129).\n\nJoining the waitlist is free and takes about 60 seconds. Claim within 30 days of launch; the discount lasts your whole first year. Raceproof is coming spring 2027.\n\nFree to join. Lock in 50% off your first year. Link in bio.\n\n#raceproof #raceprep #marathontraining #ultrarunning #triathlontraining",
+   "altText": [
+    "Founding Athlete offer. Founding Athletes: 50% off year one. Race-day plan: free. Marathon pass $39, now $19.50. Ultra or long-course tri pass $59, now $29.50. Season pass $99, now $49.50 a year. Season pass with ultras and tri $129, now $64.50 a year. Join the waitlist: free, 60 seconds. Claim within 30 days of launch. Coming spring 2027."
+   ],
+   "theme": "lime",
+   "flags": [],
+   "buffer": {
+    "instagram": "6aeb4b3e2652cc015f752219",
+    "facebook": "6aeb4b3f55381ceedcbe09a9"
+   }
+  }
+ ],
+ "reels": [
+  {
+   "date": "2026-11-08",
+   "type": "filmed",
+   "title": "3. What an hour of race fuel looks like",
+   "theme": "photo",
+   "note": "Filmed by Jonathan from the Reel scripts tab and posted from the Instagram app; not in Buffer."
+  }
+ ]
 }
