@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fuel bars reel</title>
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<!-- Fuel bars Reel (NEW, Nov 11, 2026, for Jonathan's review; built on the adaptation-timeline structure).
+     Research blog Reel: three finish times fill fuel bars to their carb guideline, a dashed line marks what runners
+     actually take, then the takeaway and the article link. Lime theme (the theme picker can switch it: THEME block).
+     Scenes: (A) eyebrow + headline, fully drawn at frame 0, kept through (B) the bar chart in a white card;
+     (C) the takeaway rows; (E) the closing line, kept over the standard end card by scripts/add_endcard.py.
+     Change only the DATA and THEME blocks. Specs: 1080 x 1920, 30 fps, text inside y 220 to 1500,
+     ease-out motion of 300 ms or more, never a blank first frame. -->
+<style>
+  :root{--bg:#C8F03C;--ink:#15171A;--muted:#3B4512;--line:#A6C72E;--card:#FFFFFF;--hl:#1F2328}
+  html,body{margin:0;background:var(--bg)}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--bg);color:var(--ink);font-family:"Inter",sans-serif}
+  .disp{text-wrap:balance;font-family:"Inter Display","Inter",sans-serif;font-weight:800;letter-spacing:-0.02em}
+  .mono{font-family:"JetBrains Mono",monospace}
+  .abs{position:absolute}
+  .scene{position:absolute;inset:0}
+  .eyebrow{font-size:28px;letter-spacing:0.08em;color:var(--hl)}
+  /* A */
+  #aEye{left:60px;top:250px}
+  #aHead{left:60px;top:300px;width:960px;font-size:92px;line-height:98px}
+  /* B */
+  #bCard{left:60px;top:540px;width:960px;height:820px;background:var(--card);border-radius:10px;box-sizing:border-box}
+  #bSrc{left:60px;top:1390px;width:960px;font-size:24px;line-height:32px;color:var(--muted)}
+  /* C */
+  #cEye{left:60px;top:250px}
+  #cHead{left:60px;top:300px;width:960px;font-size:104px;line-height:108px}
+  #cRows{left:60px;top:560px;width:960px;display:flex;flex-direction:column}
+  .kv{display:flex;flex-direction:column;gap:6px;padding:30px 0;border-top:2px solid var(--line)}
+  .kv .v{font-size:76px;line-height:80px;font-weight:800;letter-spacing:-0.02em;color:var(--hl);font-family:"Inter Display","Inter",sans-serif}
+  .kv .s{font-size:36px;line-height:46px;color:var(--ink)}
+  /* E */
+  #close{left:60px;top:250px;width:960px}
+  #close .t{font-size:72px;line-height:78px}
+  #close .s{font-size:30px;line-height:40px;color:var(--muted);margin-top:18px}
+  #logoStill{left:60px;top:150px;display:none;align-items:center;background:#FFFFFF;border-radius:999px;padding:9px 18px}
+  #logoStill img{width:191px;height:44px;display:block}
+</style>
+</head>
+<body>
+<div id="stage">
+  <span id="logoStill" class="abs"><img src="../../assets/brand/lockup.png" alt="raceproof"></span>
+  <div id="A" class="scene">
+    <div id="aEye" class="abs mono eyebrow"></div>
+    <div id="aHead" class="abs disp"></div>
+  </div>
+  <div id="B" class="scene">
+    <div id="bCard" class="abs"></div>
+    <div id="bSrc" class="abs"></div>
+  </div>
+  <div id="C" class="scene">
+    <div id="cEye" class="abs mono eyebrow"></div>
+    <div id="cHead" class="abs disp"></div>
+    <div id="cRows" class="abs"></div>
+  </div>
+  <div id="E" class="scene">
+    <div id="close" class="abs"><div class="t disp"></div><div class="s mono"></div></div>
+  </div>
+</div>
+<script>
+// ===== DATA (change only this block and THEME) =====
+const DATA = {
+  eyebrow: 'FROM THE RACEPROOF BLOG · GUT',
+  head: 'Your finish time sets your carb target.',
+  yMax: 100, yTicks: [0, 30, 60, 90], unit: 'g/h',
+  xLabel: 'MARATHON FINISH TIME',
+  bars: [
+    { x: '2:45', v: 60, label: 'about 60' },
+    { x: '3:45', v: 90, label: 'up to 90' },
+    { x: '4:45', v: 90, label: 'up to 90' }
+  ],
+  ref: { v: 35, label: 'WHAT RUNNERS TOOK · 35 g/h' },
+  src: 'Guidelines: ADA, DC and ACSM 2016. Intake: 160 runners, 2022 Seville Marathon (Jiménez-Alfageme et al. 2025).',
+  cEye: 'SEVILLE MARATHON 2022',
+  cHead: 'Most runners take 35.',
+  rows: [
+    { v: '35 g/h', s: 'average carbs per hour, 160 runners' },
+    { v: '9%', s: 'reached the 60 to 90 g/h guideline' },
+    { v: '12 weeks out', s: 'when to start training your gut toward that target' }
+  ],
+  close: 'Pick your target from your finish time. Then train your gut to take it.',
+  closeSub: 'Full article:<br>raceproof.ai/blog/carbs-per-hour-marathon'
+};
+const BAR_COLOR = '#1F5FAF';   // Gut pillar color
+// ===== THEME (lime by default) =====
+const THEME = null;            // e.g. {bg:'#F4F2ED', ink:'#15171A', muted:'#5B5F64', line:'#DDD9D0', card:'#FFFFFF', hl:'#B83C0B'}
+// ====================================
+
+const q = s => document.querySelector(s);
+if (THEME) Object.entries(THEME).forEach(([k, v]) => document.documentElement.style.setProperty('--' + k, v));
+q('#aEye').textContent = DATA.eyebrow; q('#aHead').textContent = DATA.head;
+q('#bSrc').textContent = DATA.src;
+q('#cEye').textContent = DATA.cEye; q('#cHead').textContent = DATA.cHead;
+q('#cRows').innerHTML = DATA.rows.map(r => `<div class="kv"><div class="v">${r.v}</div><div class="s">${r.s}</div></div>`).join('');
+q('#close .t').textContent = DATA.close; q('#close .s').innerHTML = DATA.closeSub;
+
+// chart (SVG inside the white card)
+const W = 960, H = 820, L = 130, R = 50, TOP = 90, BOT = 150;
+const PH = H - TOP - BOT, PW = W - L - R;
+const Y = v => TOP + PH * (1 - v / DATA.yMax);
+const SVG = 'http://www.w3.org/2000/svg';
+let html = '';
+html += `<text x="${L}" y="54" font-family="JetBrains Mono, monospace" font-size="24" letter-spacing="1.5" fill="#5B5F64">CARBS PER HOUR (${DATA.unit})</text>`;
+DATA.yTicks.forEach(v => {
+  html += `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#E6E2DA" stroke-width="2"/>`;
+  html += `<text x="${L - 20}" y="${Y(v) + 9}" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="26" fill="#5B5F64">${v}</text>`;
+});
+const slot = PW / DATA.bars.length, bw = 170;
+DATA.bars.forEach((b, i) => {
+  const cx = L + slot * (i + 0.5);
+  html += `<rect class="bar" x="${cx - bw / 2}" y="${Y(b.v)}" width="${bw}" height="${Y(0) - Y(b.v)}" rx="6" fill="${BAR_COLOR}" style="transform-box:fill-box;transform-origin:bottom"/>`;
+  html += `<text class="bv" x="${cx}" y="${Y(b.v) - 22}" text-anchor="middle" font-family="Inter Display, Inter, sans-serif" font-weight="800" font-size="46" letter-spacing="-1" fill="#15171A">${b.label}</text>`;
+  html += `<text class="bx" x="${cx}" y="${Y(0) + 58}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="500" font-size="40" fill="#15171A">${b.x}</text>`;
+});
+html += `<text x="${L + PW / 2}" y="${H - 30}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="24" letter-spacing="1.5" fill="#5B5F64">${DATA.xLabel}</text>`;
+html += `<g id="ref"><line id="refLine" x1="${L}" x2="${W - R}" y1="${Y(DATA.ref.v)}" y2="${Y(DATA.ref.v)}" stroke="#15171A" stroke-width="4" stroke-dasharray="14 10"/>`;
+html += `<rect x="${L + 10}" y="${Y(DATA.ref.v) - 50}" width="${DATA.ref.label.length * 15.6 + 24}" height="38" rx="6" fill="#15171A"/>`;
+html += `<text x="${L + 22}" y="${Y(DATA.ref.v) - 23}" font-family="JetBrains Mono, monospace" font-size="24" font-weight="500" letter-spacing="1" fill="#F2F0EB">${DATA.ref.label}</text></g>`;
+const svg = document.createElementNS(SVG, 'svg');
+svg.setAttribute('width', W); svg.setAttribute('height', H); svg.style.position = 'absolute'; svg.style.left = '0'; svg.style.top = '0';
+svg.innerHTML = html; q('#bCard').appendChild(svg);
+const bars = [...document.querySelectorAll('.bar')], bvs = [...document.querySelectorAll('.bv')], bxs = [...document.querySelectorAll('.bx')];
+const refG = q('#ref'), refLine = q('#refLine'), refLen = PW;
+refLine.setAttribute('stroke-dasharray', '14 10');
+
+const clamp = v => Math.max(0, Math.min(1, v));
+const ease = v => 1 - Math.pow(1 - clamp(v), 3);
+const prog = (t, a, d) => ease((t - a) / d);
+const fadeUp = (el, p, dy = 20) => { el.style.opacity = p; el.style.transform = `translateY(${(1 - p) * dy}px)`; };
+
+// ---- timing (seconds)
+const T = { bIn: 0.9, bars: [1.7, 3.0, 4.3], ref: 6.0, abOut: 9.6, cIn: 9.9, cOut: 14.8, eIn: 15.1 };
+window.DURATION = 17.0;
+
+window.render = function (t) {
+  // A: eyebrow and headline fully drawn at t = 0
+  const abOut = prog(t, T.abOut, 0.35);
+  q('#A').style.opacity = 1 - abOut;
+  // B
+  const bIn = prog(t, T.bIn, 0.45);
+  q('#B').style.opacity = bIn * (1 - abOut);
+  fadeUp(q('#bCard'), bIn, 30);
+  bars.forEach((b, i) => {
+    const p = prog(t, T.bars[i], 0.7);
+    b.style.transform = `scaleY(${p})`;
+    bxs[i].style.opacity = prog(t, T.bars[i] - 0.2, 0.35);
+    bvs[i].style.opacity = prog(t, T.bars[i] + 0.5, 0.35);
+  });
+  const r = prog(t, T.ref, 0.8);
+  refG.style.opacity = prog(t, T.ref, 0.3);
+  refLine.setAttribute('x2', 130 + refLen * r);
+  q('#bSrc').style.opacity = bIn * prog(t, T.ref + 0.6, 0.4);
+  // C
+  const cIn = prog(t, T.cIn, 0.4), cOut = prog(t, T.cOut, 0.35);
+  q('#C').style.opacity = cIn * (1 - cOut);
+  fadeUp(q('#cEye'), cIn, 14); fadeUp(q('#cHead'), cIn, 24);
+  q('#cRows').querySelectorAll('.kv').forEach((k, i) => fadeUp(k, prog(t, T.cIn + 0.7 + i * 0.9, 0.4), 16));
+  // E
+  const eIn = prog(t, T.eIn, 0.45);
+  q('#E').style.opacity = eIn; fadeUp(q('#close'), eIn, 20);
+};
+const P = new URLSearchParams(location.search);
+if (P.get('still')) q('#logoStill').style.display = 'inline-flex';
+render(parseFloat(P.get('t') || '0'));
+</script>
+</body>
+</html>

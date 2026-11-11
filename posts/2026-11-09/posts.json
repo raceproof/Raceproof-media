@@ -97,7 +97,103 @@
     "instagram": "6aef3ea0229bf05daf59c480",
     "facebook": "6aef3ea051492b796ee3b5a9"
    }
+  },
+  {
+   "date": "2026-11-13",
+   "type": "product",
+   "format": "carousel",
+   "title": "Product: what Raceproof checks, Heat and Hydration close-up (Backup item, marathon carousel slot)",
+   "slides": [
+    "fri-product-heat-hydration-1.png",
+    "fri-product-heat-hydration-2.png",
+    "fri-product-heat-hydration-3.png",
+    "fri-product-heat-hydration-4.png",
+    "fri-product-heat-hydration-5.png"
+   ],
+   "caption": "Racing somewhere hot? Two pillars decide most of it: heat and hydration. Here's how Raceproof checks both.\n\nHeat is automatic. Raceproof compares the sessions you've trained in heat with your race forecast, for races with a typical high of 80°F (27°C) or more. Heat builds in about 10 to 14 days of regular sessions and fades within a few weeks without them.\n\nHydration takes a quick log. Weigh in before and after a few sessions, or enter an hDrop or lab sweat test, and Raceproof tracks your sweat rate against your race plan. Coaches use 3 or more weigh-ins across easy and hard sessions and different temperatures. Those numbers come from coaches, not studies. Then drink to a plan, never more than you sweat.\n\nWhen to start, counted back from your race:\n\n✅ Hydration: first weigh-ins 16 to 12 weeks out; for a hot race, one in race-like heat 4 to 3 weeks out\n✅ Heat: build 6 to 2 weeks out, then 1 or 2 short sessions a week to race day\n\nGeneral guidelines, not a prescription. Heart condition, pregnancy or medication that affects heat tolerance? Talk to your doctor before heat sessions.\n\nRaceproof never writes or changes your plan. Coming spring 2027. Join the waitlist. Link in bio.\n\nSOURCES: Heat windows: Raceproof adaptation windows (Racinais 2015, Tyler 2016, Daanen 2018, Périard 2015). Weigh-in count and timing: Raceproof coach consensus (coaching practice). Overdrinking: Hew-Butler et al. 2015, Clinical Journal of Sport Medicine.\n\n#raceproof #heattraining #sweatrate #raceprep #marathontraining",
+   "altText": [
+    "What Raceproof checks, close-up. Racing somewhere hot? Two pillars decide it. Heat comes from your watch. Hydration takes a quick weigh-in. Chips: Heat, Hydration. Coming spring 2027.",
+    "Heat, automatic: sessions trained in heat vs your race forecast. Your watch handles it. It counts for races with a typical high of 80°F (27°C) or more. Example card: Heat, 9 runs above 80°F (27°C), Ready.",
+    "Heat, when to start: heat builds in about 10 to 14 days and fades within weeks. Build 6 to 2 weeks out with regular heat sessions. Keep it with 1 or 2 short sessions a week from 2 weeks out to race day. General guidelines; talk to your doctor first with a heart condition, pregnancy or medication that affects heat tolerance. Source: Raceproof adaptation windows.",
+    "Hydration, quick log: your sweat rate and sodium vs your race plan. Weigh in before and after a few sessions, or enter an hDrop or lab sweat test. Example card: Hydration, no sweat rate yet, Gap.",
+    "Hydration, when to test: 3 or more weigh-ins, easy and hard, cool and hot. First weigh-ins 16 to 12 weeks out. For a hot race, one in race-like heat 4 to 3 weeks out, after 10 or more days of heat work. Timing from coaches, not studies. Drink to a plan, never more than you sweat (Hew-Butler 2015). Raceproof never writes or changes your plan. Join the waitlist. Coming spring 2027."
+   ],
+   "theme": "light",
+   "time": "17:00",
+   "flags": [
+    "Backup item used: the Fri Nov 13 marathon carousel slot belongs to Surf City Marathon, which is still Waiting for publish (not on the race picks doc's Published line, no email). Its post window closes Nov 15, so it has no other slot.",
+    "Skipped Backup items, in order: 'Read your own race file' (needs your race graphs); 'Research blog Reel: Gut' went to Thursday; Altitude, Stats recap and Pain: Ultra already used; this is the next one.",
+    "Set for 17:00, not 08:00: the Luis pro breakdown drafts were moved to Fri Nov 13 08:00 in Buffer (I assume by you), so this is Friday's second post.",
+    "80°F converted to 27°C (26.7°C rounded). 'Heat · 9 runs above 80°F' and 'Hydration · no sweat rate yet' are the site's example cards."
+   ]
+  },
+  {
+   "date": "2026-11-14",
+   "type": "pain",
+   "format": "carousel",
+   "title": "Pain: Durability, your legs quit late",
+   "slides": [
+    "sat-pain-durability-1.png",
+    "sat-pain-durability-2.png"
+   ],
+   "caption": "Your legs quit late. Your long runs never tested goal pace on tired legs.\n\nIf your long runs are always easy and your goal-pace work is always fresh, race day is the first time you hold goal pace on tired legs.\n\nThe fix: run long every 1 to 2 weeks, with your longest runs 8 to 4 weeks out, and in the last 10 weeks finish some of those runs at goal pace. That timing comes from coaches, not studies. In one study, runners who regularly ran 90 minutes or more lost less running economy late in a 90-minute threshold run than runners whose runs stayed under 70 minutes (3.1% vs 6.0%): a link, not proof. New to long runs? Keep each one within about 10% of your longest in the past 30 days.\n\nGeneral guidelines, not a prescription.\n\nRaceproof checks durability every week, alongside the plan you already follow. Coming spring 2027. Join the waitlist. Link in bio.\n\nSOURCES: Long-run timing: Raceproof coach consensus (Roche, Friel, McCrann, Sayer and 7 more coaches; coaching practice). Goal-pace window: Raceproof adaptation windows. Late-run economy: Zanini et al. 2026, Medicine & Science in Sports & Exercise. 10% cap: Frandsen et al. 2025, British Journal of Sports Medicine.\n\n#raceproof #marathontraining #raceprep #runningcommunity #endurancesports",
+   "altText": [
+    "Your legs quit late. Your long runs never tested goal pace on tired legs. Illustration of your pace through a long race: it holds goal pace, then slips late, in the part of the race never trained at goal pace. Raceproof flags it with 9 weeks to fix it. Raceproof checks: Durability.",
+    "The fix. Example card: Durability, HR drifts after 2:40, Building. Run long every 1 to 2 weeks. In the last 10 weeks, finish some of those runs at goal pace. Longest runs 8 to 4 weeks out: timing from coaches, not studies. New to long runs? Keep each within about 10% of your longest in the past 30 days (Frandsen 2025). That's what Raceproof checks, every week."
+   ],
+   "theme": "peach",
+   "time": "08:00",
+   "flags": [
+    "The Fri Nov 6 pain post (UTMB) also used the Durability chip and the 'HR drifts after 2:40' card; this one is about goal pace on tired legs instead of long-run length.",
+    "Zanini 2026 and Frandsen 2025 are Knowledge base rows; each backs one line only.",
+    "Slide 1 chart is an illustration, labeled as one; it has no numbers."
+   ]
+  },
+  {
+   "date": "2026-11-14",
+   "type": "community-data",
+   "format": "carousel",
+   "title": "Community data: what the first X athletes told us (second Saturday post, placeholders)",
+   "slides": [
+    "sat-community-worries-1.png",
+    "sat-community-worries-2.png",
+    "sat-community-worries-3.png"
+   ],
+   "caption": "We asked the first [X] athletes on the waitlist about their next race. Their biggest worry: [TOP WORRY], at [%].\n\n[WORRY 2] came next at [%], then [WORRY 3] at [%] and [WORRY 4] at [%].\n\nEvery one of these shows up in training first. Raceproof checks your training against what your race will demand, while there's still time to fix it. Coming spring 2027.\n\nTell us your goal race in the 60-second poll. Link in bio. Share with a training partner: 3 friends get you a free race pass.\n\nSOURCES: Raceproof waitlist poll, [N] answers as of [DATE].\n\n#raceproof #raceprep #endurancesports #marathontraining #ultrarunning",
+   "altText": [
+    "What the first [X] athletes told us: their biggest worry for their next race.",
+    "Top race worries from [N] answers: [WORRY 1] [%], [WORRY 2] [%], [WORRY 3] [%], [WORRY 4] [%]. Source: Raceproof waitlist poll, [DATE].",
+    "Every one of these shows up in training first. Raceproof checks your training against what your race will demand, while there's still time to fix it. Coming spring 2027. Tell us your goal race. It takes 60 seconds."
+   ],
+   "theme": "slate",
+   "time": "17:00",
+   "flags": [
+    "Not rendered and not in Buffer: needs the real poll numbers from /admin. Fill every [ ] in sat-community-worries-1 to 3.html (bar widths too: replace [WIDTH = %] with each percentage), then render with scripts/render_stills.py and add the drafts for Sat Nov 14, 17:00.",
+    "Buffer is at its 10-post limit with this batch, so this one has to wait until earlier posts go out anyway."
+   ]
   }
  ],
- "reels": []
+ "reels": [
+  {
+   "date": "2026-11-12",
+   "type": "animated",
+   "title": "Research blog Reel: Your finish time sets your carb target (Backup item, Thursday blog slot)",
+   "file": "thu-blog-carbs-reel.mp4",
+   "cover": "thu-blog-carbs-reel-cover.png",
+   "template": "templates/reels/fuel-bars.html (NEW)",
+   "caption": "Your finish time sets your carb target. Most marathoners take far less.\n\nGuidelines put a 2 to 3 hour effort at about 60 g of carbs an hour, and races longer than about 2.5 to 3 hours at up to 90 g/h. At the 2022 Seville Marathon, 160 runners averaged 35 g/h, and only 9% reached 60 to 90 g/h. That's self-reported intake at one race: a link, not proof.\n\nYour gut can be trained to take more, but it needs weeks, not a race-week fix.\n\nWhen to start, counted back from your race:\n\n✅ Gut: race fuel in long runs from 12 to 8 weeks out, race-level carbs by 4 to 6 weeks out\n\nGeneral guidelines, not a prescription.\n\nHow many g/h do you take in a marathon?\n\nFull article: raceproof.ai/blog/carbs-per-hour-marathon (link in bio).\n\nSOURCES: Guidelines: ADA, DC and ACSM 2016. Seville intake: Jiménez-Alfageme et al. 2025, Sports Medicine Open. Gut window: Raceproof adaptation windows.\n\n#raceproof #marathontraining #racefueling #guttraining #sportsnutrition",
+   "caption_facebook": "Your finish time sets your carb target. Most marathoners take far less.\n\nGuidelines put a 2 to 3 hour effort at about 60 g of carbs an hour, and races longer than about 2.5 to 3 hours at up to 90 g/h. At the 2022 Seville Marathon, 160 runners averaged 35 g/h, and only 9% reached 60 to 90 g/h. That's self-reported intake at one race: a link, not proof.\n\nYour gut can be trained to take more, but it needs weeks, not a race-week fix.\n\nWhen to start, counted back from your race:\n\n✅ Gut: race fuel in long runs from 12 to 8 weeks out, race-level carbs by 4 to 6 weeks out\n\nGeneral guidelines, not a prescription.\n\nHow many g/h do you take in a marathon?\n\nRead the full article:\nhttps://raceproof.ai/blog/carbs-per-hour-marathon\n\nSOURCES: Guidelines: ADA, DC and ACSM 2016. Seville intake: Jiménez-Alfageme et al. 2025, Sports Medicine Open. Gut window: Raceproof adaptation windows.\n\n#raceproof #marathontraining #racefueling #guttraining #sportsnutrition",
+   "link": "https://raceproof.ai/blog/carbs-per-hour-marathon",
+   "altText": "Animated Reel, Gut. Your finish time sets your carb target. Bar chart of carbs per hour by marathon finish time: 2:45 about 60 g/h, 3:45 up to 90, 4:45 up to 90. A dashed line marks what runners took: 35 g/h. Seville Marathon 2022: 160 runners averaged 35 g/h, 9% reached 60 to 90 g/h, start training your gut 12 weeks out. Pick your target from your finish time, then train your gut to take it. Full article on raceproof.ai.",
+   "theme": "lime",
+   "time": "08:00",
+   "audio": "Calm, low-tempo instrumental or lo-fi trending audio; the Reel reads with sound off.",
+   "flags": [
+    "No Buffer drafts: raceproof.ai couldn't be opened from this run (the fetch permission timed out), so the article link couldn't be confirmed as the README requires. The article has been live since Oct 17 and earlier posts linked it; if it loads, add IG and FB Reel drafts for Thu Nov 12, 08:00 from this entry.",
+    "Backup item used: no new research article is published. Article 05 (how to calculate sweat rate) is still 'Draft for review' in the Research blog queue (planned publish Nov 10, carousel Nov 12), so the blog is a week behind. 'Read your own race file' (first Backup item) skipped: it needs your race graphs.",
+    "NEW Reel template for your review: templates/reels/fuel-bars.html (lime theme, white chart card, Gut blue bars). Body 17 s plus the standard end card, 21.6 s in total.",
+    "Theme is Lime because Light was used on Nov 11 and Nov 9 (just before and 3 back), and Lime was the least used of the other two in the last 9 posts."
+   ]
+  }
+ ]
 }
